@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tvd12</groupId>
+		<artifactId>ezyfox-server</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<artifactId>ezyfox-chat</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ezyfox-chat</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<directory.apps>apps</directory.apps>
+		<directory.entries>entries</directory.entries>
+		<core.version>1.0.0</core.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-transport</artifactId>
+			<version>${core.version}</version>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>deploy</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-assembly-plugin</artifactId>
+							<version>2.2.1</version>
+							<configuration>
+								<descriptors>
+									<descriptor>assembly.xml</descriptor>
+								</descriptors>
+							</configuration>
+							<executions>
+								<execution>
+									<id>make-assembly</id>
+									<phase>package</phase>
+									<goals>
+										<goal>single</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>install</phase>
+								<configuration>
+									<tasks>
+										<mkdir dir="${deploy.path}/${directory.apps}/${directory.entries}/${project.name}"/>
+										<copy todir="${deploy.path}/${directory.apps}/${directory.entries}/${project.name}">
+											<fileset file="target/${project.name}-${project.version}-bin/lib/${project.name}-${project.version}.jar"/>
+										</copy>
+										<!--<delete dir="${deploy.path}/${directory.lib}/classes"/> -->
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

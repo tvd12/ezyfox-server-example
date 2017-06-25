@@ -1,4 +1,13 @@
+*.project
+*.classpath
+*.class
+*.settings/
+*/target/
 target/
+
+ezyfox-chat-client/.idea/
+ezyfox-chat-client/output/
+
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" blendMode="MULTIPLY" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="177.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <Text layoutX="53.0" layoutY="42.0" scaleX="1.2549407575666975" scaleY="1.313264806656877" strokeType="OUTSIDE" strokeWidth="0.0" text="Host">
+      <font>
+        <Font size="10.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="54.0" layoutY="96.0" scaleX="1.345079246759678" scaleY="1.2082044025175929" strokeType="OUTSIDE" strokeWidth="0.0" text="Port" />
+    <TextField id="host" fx:id="hostTextField" layoutX="107.0" layoutY="29.0" prefWidth="200.0" promptText="host name" text="localhost" />
+    <TextField id="port" fx:id="portTextField" layoutX="107.0" layoutY="81.0" prefWidth="200.0" promptText="port" text="3005" />
+      <Button fx:id="connectButton" layoutX="107.0" layoutY="125.0" mnemonicParsing="false" onAction="#onConnectActive" text="Connect" />
+      <Button fx:id="cancelButton" layoutX="207.0" layoutY="125.0" mnemonicParsing="false" onAction="#onCancelActive" prefHeight="27.0" prefWidth="70.0" text="Cancel" />
+  </children>
+</AnchorPane>
