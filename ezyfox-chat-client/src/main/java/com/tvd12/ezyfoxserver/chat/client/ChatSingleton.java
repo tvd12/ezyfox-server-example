@@ -2,10 +2,7 @@ package com.tvd12.ezyfoxserver.chat.client;
 
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatControllerFactory;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModelFactory;
-import com.tvd12.ezyfoxserver.chat.client.socket.ChatAcessAppSuccessController;
-import com.tvd12.ezyfoxserver.chat.client.socket.ChatHandShakeController;
-import com.tvd12.ezyfoxserver.chat.client.socket.ChatLoginController;
-import com.tvd12.ezyfoxserver.chat.client.socket.ChatMessageResponseListener;
+import com.tvd12.ezyfoxserver.chat.client.socket.*;
 import com.tvd12.ezyfoxserver.chat.client.view.ChatViewFactory;
 import com.tvd12.ezyfoxserver.client.EzyClient;
 import com.tvd12.ezyfoxserver.client.constants.EzyClientCommand;
@@ -45,6 +42,7 @@ public class ChatSingleton {
 	private void setupClient(EzyClient client) {
 		client.addController(EzyClientCommand.HAND_SHAKE, new ChatHandShakeController());
 		client.addController(EzyClientCommand.LOGIN, new ChatLoginController());
+		client.addController(EzyClientCommand.DISCONNECT, new ChatDisconnectController());
 		client.addAppController(EzyClientCommand.ACESS_APP_SUCCESS, new ChatAcessAppSuccessController());
 		client.addClientAppResponseListener("1", new ChatMessageResponseListener());
 	}
