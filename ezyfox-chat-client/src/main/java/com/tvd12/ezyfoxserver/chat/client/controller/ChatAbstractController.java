@@ -26,9 +26,7 @@ public abstract class ChatAbstractController<M extends ChatModel> implements Cha
 		return getModelFactory().newModel(getEventType(event));
 	}
 	
-	protected void controlModelResult(ActionEvent event, M model, String result) {
-		hideCurrentView(event);
-	}
+	protected void controlModelResult(ActionEvent event, M model, String result) {}
 	
 	protected abstract ChatEventType getEventType(ActionEvent event);
 	

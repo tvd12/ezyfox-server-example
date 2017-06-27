@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Message {
+public class ChatMessage {
 
     private String sender;
     private String message;

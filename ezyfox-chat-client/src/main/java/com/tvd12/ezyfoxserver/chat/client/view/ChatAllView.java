@@ -9,7 +9,7 @@ import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatViewPath;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatAllController;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
-import com.tvd12.ezyfoxserver.chat.client.data.Message;
+import com.tvd12.ezyfoxserver.chat.client.data.ChatMessage;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 
 import javafx.scene.control.ListView;
@@ -28,13 +28,13 @@ public class ChatAllView extends ChatAbstractView {
 	
 	@Override
 	public void update(Object data) {
-		ListView<Message> listView  = getMessageListView();
-		listView.getItems().add((Message) data);
+		ListView<ChatMessage> listView  = getMessageListView();
+		listView.getItems().add((ChatMessage) data);
 	}
 	
 	@SuppressWarnings("unchecked")
-	private ListView<Message> getMessageListView() {
-		return (ListView<Message>) loader.getNamespace().get("messageList");
+	private ListView<ChatMessage> getMessageListView() {
+		return (ListView<ChatMessage>) loader.getNamespace().get("messageList");
 	}
 	
 	@Override

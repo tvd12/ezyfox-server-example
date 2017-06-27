@@ -2,7 +2,7 @@ package com.tvd12.ezyfoxserver.chat.client.socket;
 
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
-import com.tvd12.ezyfoxserver.chat.client.data.Message;
+import com.tvd12.ezyfoxserver.chat.client.data.ChatMessage;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 import com.tvd12.ezyfoxserver.chat.client.view.ChatAllView;
 import com.tvd12.ezyfoxserver.client.context.EzyClientAppContext;
@@ -21,11 +21,11 @@ public class ChatMessageResponseListener implements EzyClientAppResponseListener
 	@Override
     public void execute(EzyClientAppContext ezyClientAppContext, EzyArray array) {
         String messageContent = array.get(0, String.class);
-        Message message = new Message();
-        message.setSender("me");
-        message.setMessage(messageContent);
-        message.setReceiveDate(new Date());
-        Platform.runLater(() -> getView().update(message));
+        ChatMessage chatMessage = new ChatMessage();
+        chatMessage.setSender("me");
+        chatMessage.setMessage(messageContent);
+        chatMessage.setReceiveDate(new Date());
+        Platform.runLater(() -> getView().update(chatMessage));
     }
 
     protected ChatAllView getView() {

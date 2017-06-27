@@ -9,15 +9,15 @@ import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyAbstractAppEventController;
 import com.tvd12.ezyfoxserver.entity.EzyArray;
 import com.tvd12.ezyfoxserver.entity.EzyUser;
-import com.tvd12.ezyfoxserver.event.EzyRequestAppEvent;
+import com.tvd12.ezyfoxserver.event.EzyUserRequestAppEvent;
 
 public class EzyUserRequestController 
-		extends EzyAbstractAppEventController<EzyRequestAppEvent> {
+		extends EzyAbstractAppEventController<EzyUserRequestAppEvent> {
 
 	private Map<String, EzyClientRequestHandler> handlers = defaultHandlers();
 	
 	@Override
-	public void handle(EzyAppContext context, EzyRequestAppEvent event) {
+	public void handle(EzyAppContext context, EzyUserRequestAppEvent event) {
 		EzyUser user = event.getUser();
 		EzyArray data = event.getData();
 		String cmd = data.get(0, String.class);

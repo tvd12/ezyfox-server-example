@@ -1,5 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.client.controller;
 
+import com.tvd12.ezyfoxserver.chat.client.ChatApplication;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatLoginModel;
 
@@ -28,7 +29,7 @@ public class ChatLoginController extends ChatAbstractController<ChatLoginModel> 
 	}
 	
 	public void onExitActive(ActionEvent event) {
-		System.exit(0);
+		ChatApplication.exit(0);
 	}
 	
 	@Override

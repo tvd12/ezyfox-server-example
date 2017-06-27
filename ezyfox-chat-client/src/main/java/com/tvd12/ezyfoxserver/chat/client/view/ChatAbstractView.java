@@ -1,5 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.client.view;
 
+import com.tvd12.ezyfoxserver.chat.client.ChatApplication;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
@@ -47,7 +48,9 @@ public abstract class ChatAbstractView implements ChatView {
     
     protected void updateScene(Scene scene) {}
 
-    protected void updateStage(Stage stage) {}
+    protected void updateStage(Stage stage) {
+        stage.setOnCloseRequest(e -> exitApplication());
+    }
     
     protected void updateLoader(FXMLLoader loader) {}
     
@@ -76,6 +79,10 @@ public abstract class ChatAbstractView implements ChatView {
     
     protected void doHide() {
     	stage.hide();
+    }
+
+    protected void exitApplication() {
+        ChatApplication.exit(0);
     }
     
     protected ChatViewFactory getViewFactory() {
