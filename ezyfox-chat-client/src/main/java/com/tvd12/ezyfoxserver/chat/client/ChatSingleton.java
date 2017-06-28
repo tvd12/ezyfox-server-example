@@ -40,7 +40,7 @@ public class ChatSingleton {
 	}
 	
 	private void setupClient(EzyClient client) {
-		client.addController(EzyClientCommand.HAND_SHAKE, new ChatHandShakeController());
+		client.addController(EzyClientCommand.HANDSHAKE, new ChatHandShakeController());
 		client.addController(EzyClientCommand.LOGIN, new ChatLoginController());
 		client.addController(EzyClientCommand.DISCONNECT, new ChatDisconnectController());
 		client.addAppController(EzyClientCommand.ACESS_APP_SUCCESS, new ChatAcessAppSuccessController());
