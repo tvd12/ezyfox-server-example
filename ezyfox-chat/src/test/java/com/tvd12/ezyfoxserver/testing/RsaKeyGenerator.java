@@ -10,7 +10,7 @@ public class RsaKeyGenerator {
 	public static void main(String[] args) {
 		KeyPair keyPair = EzyKeysGenerator.builder()
 				.algorithm("RSA")
-				.keyLength(512)
+				.keysize(512)
 				.build().generate();
 		System.out.println(EzyBase64.encode2utf(keyPair.getPublic().getEncoded()));
 	}
