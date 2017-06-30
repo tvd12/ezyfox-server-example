@@ -5,11 +5,17 @@
  */
 package com.tvd12.ezyfoxserver.chat.client.view;
 
+import java.util.Map;
+
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatViewPath;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatLoginController;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
+import com.tvd12.ezyfoxserver.client.constants.EzyClientCommand;
+import com.tvd12.ezyfoxserver.function.EzyApply;
+
+import javafx.scene.control.Label;
 
 /**
  *
@@ -30,5 +36,19 @@ public class ChatLoginView extends ChatAbstractView {
 	@Override
 	protected ChatController getController() {
 		return new ChatLoginController();
+	}
+	
+	@Override
+	protected void addUpdaters(Map<Object, EzyApply<Object>> updaters) {
+		updaters.put(EzyClientCommand.LOGIN, (data) ->  {
+			getMessageLabel().setText("");
+		});
+		updaters.put(EzyClientCommand.LOGIN_ERROR, (data) -> {
+			getMessageLabel().setText("Login error: " + data.toString());
+		});
+	}
+	
+	protected Label getMessageLabel() {
+		return getViewItem("messageLabel");
 	}
 }
