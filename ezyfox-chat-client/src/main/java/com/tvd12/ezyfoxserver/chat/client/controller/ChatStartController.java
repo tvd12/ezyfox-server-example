@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 /**
  * Created by tavandung12 on 6/22/17.
  */
-@SuppressWarnings("restriction")
 public class ChatStartController extends ChatAbstractController<ChatStartModel> {
 	
 	@Override

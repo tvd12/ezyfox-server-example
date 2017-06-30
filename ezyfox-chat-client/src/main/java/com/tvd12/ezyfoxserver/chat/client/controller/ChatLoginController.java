@@ -15,7 +15,6 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-@SuppressWarnings("restriction")
 public class ChatLoginController extends ChatAbstractController<ChatLoginModel> {
 
 	@FXML

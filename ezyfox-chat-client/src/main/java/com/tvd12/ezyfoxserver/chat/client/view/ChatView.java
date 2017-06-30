@@ -4,8 +4,8 @@ public interface ChatView {
 
     void show();
 
-    void update(Object data);
-
     void hide();
+    
+    void update(Object cmd, Object data);
 
 }

@@ -18,7 +18,6 @@ import javafx.scene.control.ListView;
  *
  * @author MyPC
  */
-@SuppressWarnings("restriction")
 public class ChatAllView extends ChatAbstractView {
 
 	@Override
@@ -27,14 +26,13 @@ public class ChatAllView extends ChatAbstractView {
 	}
 	
 	@Override
-	public void update(Object data) {
+	public void update(Object cmd, Object data) {
 		ListView<ChatMessage> listView  = getMessageListView();
 		listView.getItems().add((ChatMessage) data);
 	}
 	
-	@SuppressWarnings("unchecked")
 	private ListView<ChatMessage> getMessageListView() {
-		return (ListView<ChatMessage>) loader.getNamespace().get("messageList");
+		return getViewItem("messageList");
 	}
 	
 	@Override

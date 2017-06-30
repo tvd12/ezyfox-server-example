@@ -9,7 +9,6 @@ import com.tvd12.ezyfoxserver.client.entity.EzySimpleClientUser;
 import com.tvd12.ezyfoxserver.entity.EzyArray;
 import javafx.application.Platform;
 
-@SuppressWarnings("restriction")
 public class ChatAcessAppSuccessController implements EzyClientAppController<EzyArray> {
 
 	@Override

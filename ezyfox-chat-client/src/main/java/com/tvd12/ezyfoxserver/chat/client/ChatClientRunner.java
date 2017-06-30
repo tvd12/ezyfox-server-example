@@ -5,7 +5,6 @@ import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-@SuppressWarnings("restriction")
 public class ChatClientRunner extends Application {
 
 	@Override

@@ -12,7 +12,6 @@ import com.tvd12.ezyfoxserver.entity.EzyArray;
 
 import lombok.AllArgsConstructor;
 
-@SuppressWarnings("restriction")
 @AllArgsConstructor
 public class ChatHandShakeController extends EzyHandShakeController {
 

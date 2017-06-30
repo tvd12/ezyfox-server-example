@@ -12,7 +12,6 @@ import lombok.Setter;
 
 @Setter
 @Getter
-@SuppressWarnings("restriction")
 public class ChatConnectionController 
 		extends ChatAbstractController<ChatConnectionModel> {
 

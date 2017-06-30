@@ -12,7 +12,6 @@ import javafx.application.Platform;
 /**
  * Created by tavandung12 on 6/27/17.
  */
-@SuppressWarnings("restriction")
 public class ChatDisconnectController extends EzyDisconnectController {
 
     @Override

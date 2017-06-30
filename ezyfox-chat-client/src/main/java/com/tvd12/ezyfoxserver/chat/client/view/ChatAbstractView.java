@@ -1,9 +1,13 @@
 package com.tvd12.ezyfoxserver.chat.client.view;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import com.tvd12.ezyfoxserver.chat.client.ChatApplication;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
+import com.tvd12.ezyfoxserver.function.EzyApply;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +18,6 @@ import javafx.stage.Stage;
 /**
  * Created by tavandung12 on 6/22/17.
  */
-@SuppressWarnings("restriction")
 public abstract class ChatAbstractView implements ChatView {
 
 	protected final Scene scene;
@@ -22,6 +25,7 @@ public abstract class ChatAbstractView implements ChatView {
 	protected final Parent parent;
     protected final FXMLLoader loader;
 	protected final ChatController controller;
+	protected final Map<Object, EzyApply<Object>> updaters = defaultUpdaters();
 
     public ChatAbstractView() {
     	try {
@@ -55,7 +59,10 @@ public abstract class ChatAbstractView implements ChatView {
     protected void updateLoader(FXMLLoader loader) {}
     
     @Override
-    public void update(Object data) {}
+    public void update(Object cmd, Object data) {
+    	if(updaters.containsKey(cmd))
+    		updaters.get(cmd).apply(data);
+    }
 
     @Override
     public void show() {
@@ -91,5 +98,19 @@ public abstract class ChatAbstractView implements ChatView {
     
     protected ChatView getView(ChatEventType chatEventType, String modelResult) {
     	return getViewFactory().getView(chatEventType, modelResult);
+    }
+    
+    @SuppressWarnings("unchecked")
+	protected <T> T getViewItem(String itemName) {
+		return (T) loader.getNamespace().get(itemName);
+	}
+    
+    protected Map<Object, EzyApply<Object>> defaultUpdaters() {
+    	Map<Object, EzyApply<Object>> answer = new ConcurrentHashMap<>();
+    	addUpdaters(answer);
+    	return answer;
+    }
+    
+    protected void addUpdaters(Map<Object, EzyApply<Object>> updaters) {
     }
 }

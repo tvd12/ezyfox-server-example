@@ -15,7 +15,6 @@ import java.util.Date;
 /**
  * Created by tavandung12 on 6/24/17.
  */
-@SuppressWarnings("restriction")
 public class ChatMessageResponseListener implements EzyClientAppResponseListener<EzyArray> {
 
 	@Override
@@ -25,7 +24,7 @@ public class ChatMessageResponseListener implements EzyClientAppResponseListener
         chatMessage.setSender("me");
         chatMessage.setMessage(messageContent);
         chatMessage.setReceiveDate(new Date());
-        Platform.runLater(() -> getView().update(chatMessage));
+        Platform.runLater(() -> getView().update("1", chatMessage));
     }
 
     protected ChatAllView getView() {

@@ -12,7 +12,6 @@ import javafx.scene.Node;
 /**
  * Created by tavandung12 on 6/22/17.
  */
-@SuppressWarnings({"restriction"})
 public abstract class ChatAbstractController<M extends ChatModel> implements ChatController {
 
 	@Override
