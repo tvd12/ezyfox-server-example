@@ -3,7 +3,8 @@ package com.tvd12.ezyfoxserver.chat.controller;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.tvd12.ezyfoxserver.chat.handler.EzyChatMessageRequestHandler;
+import com.tvd12.ezyfoxserver.chat.handler.EzyChatSystemRequestHandler;
+import com.tvd12.ezyfoxserver.chat.handler.EzyChatUserRequestHandler;
 import com.tvd12.ezyfoxserver.chat.handler.EzyClientRequestHandler;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyAbstractAppEventController;
@@ -32,7 +33,8 @@ public class EzyUserRequestController
 	}
 	
 	private void addHandler(Map<String, EzyClientRequestHandler> handlers) {
-		handlers.put("1", new EzyChatMessageRequestHandler());
+		handlers.put("1", new EzyChatSystemRequestHandler());
+		handlers.put("2", new EzyChatUserRequestHandler());
 	}
 	
 }

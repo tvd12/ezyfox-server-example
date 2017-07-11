@@ -20,11 +20,12 @@ public class ChatMessageResponseListener implements EzyClientAppResponseListener
 	@Override
     public void execute(EzyClientAppContext ezyClientAppContext, EzyArray array) {
         String messageContent = array.get(0, String.class);
+        String messageSender = array.get(2, String.class);
         ChatMessage chatMessage = new ChatMessage();
-        chatMessage.setSender("me");
+        chatMessage.setSender(messageSender);
         chatMessage.setMessage(messageContent);
         chatMessage.setReceiveDate(new Date());
-        Platform.runLater(() -> getView().update("1", chatMessage));
+        Platform.runLater(() -> getView().update("2", chatMessage));
     }
 
     protected ChatAllView getView() {

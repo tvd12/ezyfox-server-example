@@ -5,14 +5,24 @@ import com.tvd12.ezyfoxserver.context.EzyContext;
 import com.tvd12.ezyfoxserver.entity.EzyArray;
 import com.tvd12.ezyfoxserver.entity.EzyUser;
 
-public class EzyChatMessageRequestHandler extends EzyAbstractClientRequestHandler {
+public class EzyChatUserRequestHandler extends EzyAbstractClientRequestHandler {
 
 	@Override
 	public void handle(EzyContext context, EzyUser user, EzyArray params) {
 		String message = params.get(0, String.class);
-		EzyArray response = newArrayBuilder().append(message + ", too!").build();
+		String receiver = params.get(1, String.class);
+		EzyArray response = newArrayBuilder()
+				.append(message)
+				.append(receiver)
+				.append(user.getName())
+				.build();
 		getLogger().info("user {} chat {}", user.getName(), message);
-		context.get(EzyAppResponse.class).user(user).command("1").params(response).execute();
+		context.get(EzyAppResponse.class)
+			.command("2")
+			.params(response)
+			.recipient(user)
+			.recipient(receiver)
+			.execute();
 	}
 
 }

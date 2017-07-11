@@ -18,7 +18,10 @@ public class ChatAllModel extends ChatAbstractModel {
 	}
 
 	protected void sendChatMessageRequest() {
-		EzyArray params = newArrayBuilder().append(message).build();
-		getAppContext().sendRequest("1", params);
+		EzyArray params = newArrayBuilder()
+				.append(message)
+				.append("quydk")
+				.build();
+		getAppContext().sendRequest("2", params);
 	}
 }
