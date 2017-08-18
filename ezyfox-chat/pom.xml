@@ -10,7 +10,7 @@
 
 	<artifactId>ezyfox-chat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>ezyfox-chat</name>
 	<url>http://maven.apache.org</url>
@@ -19,14 +19,27 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<directory.apps>apps</directory.apps>
 		<directory.entries>entries</directory.entries>
+		<directory.common>common</directory.common>
 		<core.version>1.0.0</core.version>
+		<bean.version>1.0.0</bean.version>
+		<binding.version>1.0.0</binding.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-transport</artifactId>
+			<artifactId>ezyfox-server-core</artifactId>
 			<version>${core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-bean</artifactId>
+			<version>${bean.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-binding</artifactId>
+			<version>${binding.version}</version>
 		</dependency>
 	</dependencies>
 	<profiles>
@@ -56,29 +69,11 @@
 						</plugin>
 					</plugins>
 				</pluginManagement>
-				<plugins>
-					<plugin>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<executions>
-							<execution>
-								<phase>install</phase>
-								<configuration>
-									<tasks>
-										<mkdir dir="${deploy.path}/${directory.apps}/${directory.entries}/${project.name}"/>
-										<copy todir="${deploy.path}/${directory.apps}/${directory.entries}/${project.name}">
-											<fileset file="target/${project.name}-${project.version}-bin/lib/${project.name}-${project.version}.jar"/>
-										</copy>
-										<!--<delete dir="${deploy.path}/${directory.lib}/classes"/> -->
-									</tasks>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
 			</build>
 		</profile>
 	</profiles>
+	<modules>
+		<module>ezyfox-chat-api</module>
+		<module>ezyfox-chat-entry</module>
+	</modules>
 </project>

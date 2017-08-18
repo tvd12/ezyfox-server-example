@@ -22,6 +22,7 @@ public class ChatAllModel extends ChatAbstractModel {
 				.append(message)
 				.append("quydk")
 				.build();
-		getAppContext().sendRequest("2", params);
+//		for(int i = 0 ; i < 100 ; i++)
+			getAppContext().sendRequest("2", params);
 	}
 }

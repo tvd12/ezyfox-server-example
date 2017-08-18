@@ -11,12 +11,7 @@ import com.tvd12.ezyfoxserver.entity.EzyObject;
 public class ChatLoginController extends EzyLoginController {
 
 	@Override
-	public void handle(EzyClientContext ctx, EzyClientSession session, EzyArray data) {
-		super.handle(ctx, session, data);
-		sendAccessAppsRequest(ctx);
-	}
-	
-	protected void sendAccessAppsRequest(EzyClientContext ctx) {
+	protected void processNotReconnect(EzyClientContext ctx, EzyClientSession session, EzyArray data) {
 		ctx.get(EzySendRequest.class)
 			.sender(ctx.getMe())
 			.request(newAccessAppRequest())
