@@ -16,7 +16,7 @@ import lombok.Setter;
 })
 @EzyArrayBinding(indexes = {"message", "receiver"})
 @Setter
-public class EzyChatUserRequestHandler2 
+public class EzyChatUserRequestHandler 
 		extends EzyClientRequestHandler
 		implements EzyDataBinding {
 	
@@ -41,7 +41,7 @@ public class EzyChatUserRequestHandler2
 	}
 	
 	private void response(EzyChatMessage cmessage) {
-		responseFactory.newObjectResponse()
+		responseFactory.newArrayResponse()
 			.command("2")
 			.data(cmessage)
 			.user(user)

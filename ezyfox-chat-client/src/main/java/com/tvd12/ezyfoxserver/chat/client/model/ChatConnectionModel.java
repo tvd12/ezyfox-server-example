@@ -3,7 +3,7 @@ package com.tvd12.ezyfoxserver.chat.client.model;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.client.EzyClientStarter;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
-import com.tvd12.ezyfoxserver.codec.MsgPackCodecCreator;
+import com.tvd12.ezyfoxserver.netty.codec.MsgPackCodecCreator;
 import com.tvd12.ezyfoxserver.util.EzyProcessor;
 
 import lombok.Getter;

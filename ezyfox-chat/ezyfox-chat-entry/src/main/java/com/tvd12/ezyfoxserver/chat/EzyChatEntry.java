@@ -3,6 +3,7 @@
  */
 package com.tvd12.ezyfoxserver.chat;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
@@ -16,6 +17,7 @@ import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractAppEntry;
+import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
 import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
 
 /**
@@ -42,6 +44,9 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
 			eventControllerAdder.add(eventType, (EzyEventController) controller);
 			getLogger().debug("add event {} controller {}", eventType, controller);
 		}
+		EzyAppSetting setting = getSetting(ctx);
+		File file = new File(setting.getConfigFile());
+		System.out.println("\n\n file = " + file.getAbsolutePath() + "\n\n");
 	}
 	
     @Override
@@ -73,6 +78,10 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     			.scan("com.tvd12.ezyfoxserver.chat")
     			.build();
     	return bindingContext;
+    }
+    
+    private EzyAppSetting getSetting(EzyAppContext context) {
+    	return context.getApp().getSetting();
     }
     
 }
