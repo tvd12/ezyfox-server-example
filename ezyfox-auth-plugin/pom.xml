@@ -25,7 +25,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-transport</artifactId>
+			<artifactId>ezyfox-server-core</artifactId>
 			<version>${core.version}</version>
 		</dependency>
 		<dependency>
