@@ -7,6 +7,7 @@ import com.tvd12.ezyfoxserver.binding.EzyDataBinding;
 import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
 import com.tvd12.ezyfoxserver.chat.component.EzyResponseFactory;
 import com.tvd12.ezyfoxserver.chat.data.EzyChatMessage;
+import com.tvd12.ezyfoxserver.chat.repo.EzyChatMessageRepo;
 
 import lombok.Setter;
 
@@ -24,12 +25,17 @@ public class EzyChatUserRequestHandler
 	private String receiver;
 	
 	@EzyAutoBind
+	private EzyChatMessageRepo ezyChatMessageRepo;
+	
+	@EzyAutoBind
 	private EzyResponseFactory responseFactory;
 
 	@Override
 	public void handle() {
 		getLogger().info("user {} chat {}", user.getName(), message);
-		response(newChatMessage());
+		EzyChatMessage message = newChatMessage();
+		response(message);
+		ezyChatMessageRepo.save(message);
 	}
 	
 	private EzyChatMessage newChatMessage() {

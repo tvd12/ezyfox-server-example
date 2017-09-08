@@ -7,6 +7,14 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ezyfox-chat-entry</artifactId>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-mongodb</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

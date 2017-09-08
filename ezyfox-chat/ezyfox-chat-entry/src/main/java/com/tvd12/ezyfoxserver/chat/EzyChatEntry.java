@@ -7,7 +7,11 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import org.mongodb.morphia.Datastore;
+
+import com.mongodb.MongoClient;
 import com.tvd12.ezyfoxserver.bean.EzyBeanContext;
+import com.tvd12.ezyfoxserver.bean.EzyBeanContextBuilder;
 import com.tvd12.ezyfoxserver.bean.EzySingletonFactory;
 import com.tvd12.ezyfoxserver.binding.EzyBindingContext;
 import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
@@ -17,6 +21,11 @@ import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractAppEntry;
+import com.tvd12.ezyfoxserver.mongodb.EzyDataStoreBuilder;
+import com.tvd12.ezyfoxserver.mongodb.bean.EzyRepositoriesImplementor;
+import com.tvd12.ezyfoxserver.mongodb.loader.EzyMongoClientLoader;
+import com.tvd12.ezyfoxserver.mongodb.loader.EzyPropertiesMongoClientLoader;
+import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
 import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
 
@@ -63,14 +72,51 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     	EzyBindingContext bindingContext = createBindingContext();
     	EzyMarshaller marshaller = bindingContext.newMarshaller();
     	EzyUnmarshaller unmarshaller = bindingContext.newUnmarshaller();
-    	EzyBeanContext beanContext = EzyBeanContext.builder()
+    	EzyBeanContextBuilder beanContextBuilder = EzyBeanContext.builder()
     			.addSingleton("appContext", context)
     			.addSingleton("userManager", context.getApp().getUserManager())
     			.addSingleton("marshaller", marshaller)
     			.addSingleton("unmarshaller", unmarshaller)
     			.scan("com.tvd12.ezyfoxserver.chat")
+    			.scan("com.tvd12.ezyfoxserver.repo.impl");
+    	
+    	MongoClient mongoClient = loadMongoClient();
+    	Datastore datastore = newDataStore(mongoClient);
+    	
+    	beanContextBuilder.addSingleton("mongoClient", mongoClient);
+    	beanContextBuilder.addSingleton("datastore", datastore);
+    	
+    	Map<Class<?>, Object> additionalRepo = implementMongoRepo(datastore);
+    	for(Class<?> repoType : additionalRepo.keySet()) {
+    		beanContextBuilder.addSingleton(
+    				EzyClasses.getVariableName(repoType), additionalRepo.get(repoType));
+    	}
+    	
+    	return beanContextBuilder.build();
+    }
+    
+    private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
+    	return EzyRepositoriesImplementor.newInstance()
+    			.scan("com.tvd12.ezyfoxserver.chat.repo")
+    			.implement(datastore);
+    }
+    
+    private Datastore newDataStore(MongoClient mongoClient) {
+    	return EzyDataStoreBuilder.newInstance()
+    			.mongoClient(mongoClient)
+    			.databaseName("test")
+    			.scan("com.tvd12.ezyfoxserver.chat.data")
     			.build();
-    	return beanContext;
+    }
+    
+    private MongoClient loadMongoClient() {
+    	return new EzyPropertiesMongoClientLoader()
+    			.property(EzyMongoClientLoader.HOST, "127.0.0.1")
+    			.property(EzyMongoClientLoader.PORT, "27017")
+    			.property(EzyMongoClientLoader.DATABASE, "test")
+    			.property(EzyMongoClientLoader.USERNAME, "root")
+    			.property(EzyMongoClientLoader.PASSWORD, "123456")
+    			.load();
     }
     
     private EzyBindingContext createBindingContext() {

@@ -104,6 +104,6 @@ public abstract class EzyAbstractResponse<T extends EzyChatResponse<T>>
         	.params(data)
         	.sessions(recipients)
         	.execute();
-    }
+     }
 	
 }
