@@ -1,6 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.controller;
 
-import com.tvd12.ezyfoxserver.bean.annotation.EzyKeyValue;
+import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
 import com.tvd12.ezyfoxserver.bean.annotation.EzySingleton;
 import com.tvd12.ezyfoxserver.command.EzyAppResponse;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;

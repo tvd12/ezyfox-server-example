@@ -1,6 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.handler;
 
-import com.tvd12.ezyfoxserver.bean.annotation.EzyKeyValue;
+import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
 import com.tvd12.ezyfoxserver.bean.annotation.EzyPrototype;
 import com.tvd12.ezyfoxserver.binding.EzyDataBinding;
 import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
