@@ -1,5 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.client;
 
+import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 
 import javafx.application.Application;

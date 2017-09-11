@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <TextField fx:id="messageTextField" layoutX="53.0" layoutY="310.0" onAction="#sendMessage" prefHeight="51.0" prefWidth="423.0" promptText="type..." />
+      <Button fx:id="sendButton" layoutX="489.0" layoutY="321.0" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
+      <Button fx:id="attachButton" layoutX="417.0" layoutY="273.0" mnemonicParsing="false" text="Attach" />
+      <ListView fx:id="messageList" layoutX="52.0" layoutY="51.0" prefHeight="212.0" prefWidth="488.0" />
+  </children>
+</AnchorPane>
