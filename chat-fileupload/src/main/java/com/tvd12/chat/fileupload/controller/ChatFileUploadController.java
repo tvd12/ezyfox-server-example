@@ -28,7 +28,7 @@ import com.tvd12.chat.fileupload.data.ChatSaveFileResult;
 import com.tvd12.chat.fileupload.service.ChatFileUploadService;
 import com.tvd12.chat.fileupload.service.ChatLoggingService;
 import com.tvd12.ezyfoxserver.exception.EzyFileNotFoundException;
-import com.tvd12.ezyfoxserver.file.EzyFiles;
+import com.tvd12.ezyfoxserver.mapping.file.EzyFiles;
 import com.tvd12.ezyfoxserver.util.EzyLoggable;
 
 @RestController

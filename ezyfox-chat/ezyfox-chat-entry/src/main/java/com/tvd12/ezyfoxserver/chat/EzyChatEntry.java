@@ -77,8 +77,8 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     			.addSingleton("userManager", context.getApp().getUserManager())
     			.addSingleton("marshaller", marshaller)
     			.addSingleton("unmarshaller", unmarshaller)
-    			.scan("com.tvd12.ezyfoxserver.chat")
-    			.scan("com.tvd12.ezyfoxserver.repo.impl");
+    			.scan("com.tvd12.ezyfoxserver.mapping.chat")
+    			.scan("com.tvd12.ezyfoxserver.mapping.repo.impl");
     	
     	MongoClient mongoClient = loadMongoClient();
     	Datastore datastore = newDataStore(mongoClient);
@@ -97,7 +97,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
     	return EzyRepositoriesImplementor.newInstance()
-    			.scan("com.tvd12.ezyfoxserver.chat.repo")
+    			.scan("com.tvd12.ezyfoxserver.mapping.chat.repo")
     			.implement(datastore);
     }
     
@@ -105,7 +105,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     	return EzyDataStoreBuilder.newInstance()
     			.mongoClient(mongoClient)
     			.databaseName("test")
-    			.scan("com.tvd12.ezyfoxserver.chat.data")
+    			.scan("com.tvd12.ezyfoxserver.mapping.chat.data")
     			.build();
     }
     
@@ -121,7 +121,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     
     private EzyBindingContext createBindingContext() {
     	EzyBindingContext bindingContext = EzyBindingContext.builder()
-    			.scan("com.tvd12.ezyfoxserver.chat")
+    			.scan("com.tvd12.ezyfoxserver.mapping.chat")
     			.build();
     	return bindingContext;
     }
