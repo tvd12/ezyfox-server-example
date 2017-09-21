@@ -31,6 +31,7 @@ public class EzyUserLoginController extends EzyAbstractPluginEventController<Ezy
 		ChatUser userLogin = newChatUser(event);
 		try {
 			chatUserRepo.save(userLogin);
+			getLogger().debug("Save User Susscess!!");
 		} catch (Exception e) {
 			getLogger().error("save user login infomation error", e);
 		}
