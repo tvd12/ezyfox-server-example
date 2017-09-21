@@ -5,6 +5,7 @@ import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatConnectionModel;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import lombok.Getter;
@@ -22,7 +23,7 @@ public class ChatConnectionController
 	private TextField portTextField;
 	
 	@Override
-	protected ChatConnectionModel getModel(ActionEvent event) {
+	protected ChatConnectionModel getModel(Event event) {
 		ChatConnectionModel model = super.getModel(event);
 		model.setHost(hostTextField.getText());
 		model.setPort(Integer.parseInt(portTextField.getText()));
@@ -38,7 +39,7 @@ public class ChatConnectionController
 	}
 	
 	@Override
-	protected ChatEventType getEventType(ActionEvent event) {
+	protected ChatEventType getEventType(Event event) {
 		return ChatEventType.CONNECT;
 	}
 	

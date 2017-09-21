@@ -1,6 +1,5 @@
 package com.tvd12.ezyfoxserver.chat.data;
 
-import java.io.Serializable;
 
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
@@ -15,9 +14,9 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-@Entity(value = "message")
+@Entity(value = "messages")
 @EzyArrayBinding(indexes = {"message", "receiver", "sender"})
-public class EzyChatMessage implements Serializable {
+public class EzyChatMessage extends EzyChatData {
 	private static final long serialVersionUID = 6130168551127865806L;
 
 	@Id

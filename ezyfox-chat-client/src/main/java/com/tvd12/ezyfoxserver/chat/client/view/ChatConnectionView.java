@@ -36,7 +36,7 @@ public class ChatConnectionView extends ChatAbstractView {
 			getMessageLabel().setText("");
 		});
 		updaters.put(EzyClientCommand.CONNECT_FAILURE, (data) -> {
-			getMessageLabel().setText("Connection failure: " + data);
+			getMessageLabel().setText("Connection failure: " + data.toString());
 		});
 	}
 

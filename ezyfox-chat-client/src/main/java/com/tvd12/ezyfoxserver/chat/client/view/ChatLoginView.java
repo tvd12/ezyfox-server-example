@@ -40,6 +40,7 @@ public class ChatLoginView extends ChatAbstractView {
 	
 	@Override
 	protected void addUpdaters(Map<Object, EzyApply<Object>> updaters) {
+		System.out.println("Chat login View");
 		updaters.put(EzyClientCommand.LOGIN, (data) ->  {
 			getMessageLabel().setText("");
 		});

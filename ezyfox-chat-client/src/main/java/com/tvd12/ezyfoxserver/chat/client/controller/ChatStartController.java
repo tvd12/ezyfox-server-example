@@ -5,6 +5,7 @@ import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatStartModel;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 
 /**
  * Created by tavandung12 on 6/22/17.
@@ -12,12 +13,12 @@ import javafx.event.ActionEvent;
 public class ChatStartController extends ChatAbstractController<ChatStartModel> {
 	
 	@Override
-	protected void controlModelResult(ActionEvent event, ChatStartModel model, String result) {
+	protected void controlModelResult(Event event, ChatStartModel model, String result) {
 		getViewFactory().getView(ChatEventType.CONNECT, ChatModel.SUCCESS).show();
 	}
 	
 	@Override
-	protected ChatEventType getEventType(ActionEvent event) {
+	protected ChatEventType getEventType(Event event) {
 		return ChatEventType.START;
 	}
 	

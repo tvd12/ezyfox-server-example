@@ -10,7 +10,8 @@ public enum ChatEventType {
     START("start"),
     CONNECT("connectButton"),
     LOGIN("loginButton"),
-    CHAT("chatButton");
+    CHAT("chatButton"),
+	SEARCH("searchButton");
 
     @Getter
     private String nodeId;

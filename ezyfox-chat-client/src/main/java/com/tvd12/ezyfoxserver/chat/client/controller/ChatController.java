@@ -1,12 +1,13 @@
 package com.tvd12.ezyfoxserver.chat.client.controller;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 
 /**
  * Created by tavandung12 on 6/22/17.
  */
 public interface ChatController {
 
-	void control(ActionEvent event);
+	void control(Event event);
 
 }

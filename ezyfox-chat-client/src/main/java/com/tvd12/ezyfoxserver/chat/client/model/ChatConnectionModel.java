@@ -1,5 +1,7 @@
 package com.tvd12.ezyfoxserver.chat.client.model;
 
+import org.hibernate.validator.internal.util.privilegedactions.GetClassLoader;
+
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.client.EzyClientStarter;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
@@ -22,7 +24,7 @@ public class ChatConnectionModel implements ChatModel {
     @Override
     public String execute() {
     	EzyProcessor.processWithLogException(this::connectToServer);
-        return SUCCESS;
+    	return SUCCESS;
     }
     
     private void connectToServer() throws Exception {

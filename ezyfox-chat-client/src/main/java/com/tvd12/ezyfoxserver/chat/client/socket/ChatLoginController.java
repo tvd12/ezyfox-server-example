@@ -19,6 +19,7 @@ public class ChatLoginController extends EzyLoginController {
 	}
 	
 	protected EzyAccessAppRequest newAccessAppRequest() {
+		System.out.println("Chat Login SOcket COnect");
 		return EzyAccessAppRequest.builder()
 				.appName("ezyfox-chat")
 				.data(newAccessAppData())

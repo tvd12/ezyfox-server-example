@@ -15,7 +15,7 @@ public final class ChatViewPath {
 	}
 
 	public static final String LOGIN 			= "/fxml/login.fxml";
-	public static final String CHAT_ALL 		= "/fxml/chat.fxml";
+	public static final String CHAT_ALL 		= "/fxml/chatwithsearching.fxml";
 	public static final String CONNECTION 		= "/fxml/connection.fxml";
 
 }

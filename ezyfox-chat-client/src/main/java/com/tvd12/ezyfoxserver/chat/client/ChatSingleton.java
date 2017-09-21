@@ -47,6 +47,9 @@ public class ChatSingleton {
 		client.addController(EzyClientCommand.CONNECT_FAILURE, new ChatConnectFailureController());
 		client.addAppController(EzyClientCommand.ACESS_APP_SUCCESS, new ChatAcessAppSuccessController());
 		client.addClientAppResponseListener("2", new ChatMessageResponseListener());
+		client.addClientAppResponseListener("search_online_user", new ChatUserOnlineReponseListener());
+		client.addClientAppResponseListener("select_receiver", new ChatSelectReceiverListener());
+		client.addClientAppResponseListener("SaveUser", new ChatLoginSavedController() );
 	}
 	
 }
