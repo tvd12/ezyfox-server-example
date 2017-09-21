@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <Text layoutX="62.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+    <Text layoutX="61.0" layoutY="110.0" scaleX="1.0308785830808669" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+    <TextField fx:id="usernameTextField" layoutX="154.0" layoutY="42.0" prefHeight="30.0" prefWidth="200.0" promptText="username" text="dungtv" />
+    <Button fx:id="loginButton" layoutX="152.0" layoutY="136.0" mnemonicParsing="false" onAction="#onLoginActive" prefWidth="79.0" text="Login" />
+    <Button fx:id="exitButton" layoutX="252.0" layoutY="136.0" mnemonicParsing="false" onAction="#onExitActive" prefWidth="79.0" text="Exit" textFill="#202020" wrapText="false" />
+    <PasswordField id="password" fx:id="passwordTextField" layoutX="152.0" layoutY="94.0" prefHeight="30.0" prefWidth="200.0" promptText="password" text="123456" />
+      <VBox alignment="CENTER" layoutY="6.0" prefHeight="30.0" prefWidth="415.0">
+         <children>
+            <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" textFill="#f80000" />
+         </children>
+      </VBox>
+  </children>
+</AnchorPane>

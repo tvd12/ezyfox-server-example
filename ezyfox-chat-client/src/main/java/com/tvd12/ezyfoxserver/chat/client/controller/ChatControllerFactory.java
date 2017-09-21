@@ -23,6 +23,7 @@ public class ChatControllerFactory {
 		answer.put(ChatEventType.CONNECT, () -> new ChatConnectionController());
 		answer.put(ChatEventType.LOGIN, () -> new ChatLoginController());
 		answer.put(ChatEventType.CHAT, () -> new ChatAllController());
+		//answer.put(ChatEventType.SEARCH, () -> new ChatSearchController());
 		return answer;
 	}
 }

@@ -77,8 +77,8 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     			.addSingleton("userManager", context.getApp().getUserManager())
     			.addSingleton("marshaller", marshaller)
     			.addSingleton("unmarshaller", unmarshaller)
-    			.scan("com.tvd12.ezyfoxserver.chat")
-    			.scan("com.tvd12.ezyfoxserver.repo.impl");
+    			.scan("com.tvd12.ezyfoxserver.plugin.auth")
+    			.scan("com.tvd12.ezyfoxserver.chat");
     	
     	MongoClient mongoClient = loadMongoClient();
     	Datastore datastore = newDataStore(mongoClient);
@@ -122,7 +122,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     private EzyBindingContext createBindingContext() {
     	EzyBindingContext bindingContext = EzyBindingContext.builder()
     			.scan("com.tvd12.ezyfoxserver.chat")
-    			.build();
+    			.build(); 
     	return bindingContext;
     }
     

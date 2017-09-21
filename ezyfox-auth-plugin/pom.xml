@@ -7,9 +7,9 @@
 		<artifactId>ezyfox-server</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	
+
 	<artifactId>ezyfox-auth-plugin</artifactId>
-	
+
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -34,9 +34,23 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-mongodb</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-binding</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-database</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
-	
-		<profiles>
+	<profiles>
 		<profile>
 			<id>deploy</id>
 			<build>
@@ -71,9 +85,10 @@
 								<phase>install</phase>
 								<configuration>
 									<tasks>
-										<mkdir dir="${deploy.path}/${directory.plugins}/${project.name}"/>
+										<mkdir dir="${deploy.path}/${directory.plugins}/${project.name}" />
 										<copy todir="${deploy.path}/${directory.plugins}/${project.name}">
-											<fileset file="target/${project.name}-${project.version}-bin/lib/${project.name}-${project.version}.jar"/>
+											<fileset
+												file="target/${project.name}-${project.version}-bin/lib/${project.name}-${project.version}.jar" />
 										</copy>
 										<!--<delete dir="${deploy.path}/${directory.lib}/classes"/> -->
 									</tasks>
