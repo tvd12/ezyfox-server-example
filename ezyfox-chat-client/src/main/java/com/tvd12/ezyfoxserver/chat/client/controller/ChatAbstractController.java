@@ -7,6 +7,7 @@ import com.tvd12.ezyfoxserver.chat.client.model.ChatModelFactory;
 import com.tvd12.ezyfoxserver.chat.client.view.ChatViewFactory;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.scene.Node;
 
 /**
@@ -15,21 +16,21 @@ import javafx.scene.Node;
 public abstract class ChatAbstractController<M extends ChatModel> implements ChatController {
 
 	@Override
-    public void control(ActionEvent event) {
+    public void control(Event event) {
         M model = getModel(event);
         String result = model.execute();
         controlModelResult(event, model, result);
     }
 	
-	protected M getModel(ActionEvent event) {
+	protected M getModel(Event event) {
 		return getModelFactory().newModel(getEventType(event));
 	}
 	
-	protected void controlModelResult(ActionEvent event, M model, String result) {}
+	protected void controlModelResult(Event event, M model, String result) {}
 	
-	protected abstract ChatEventType getEventType(ActionEvent event);
+	protected abstract ChatEventType getEventType(Event event);
 	
-    protected void hideCurrentView(ActionEvent event) {
+    protected void hideCurrentView(Event event) {
         if(event != null) {
             Node source = (Node) event.getSource();
             source.getParent().getScene().getWindow().hide();

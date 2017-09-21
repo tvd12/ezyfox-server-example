@@ -121,8 +121,8 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     
     private EzyBindingContext createBindingContext() {
     	EzyBindingContext bindingContext = EzyBindingContext.builder()
-    			.scan("com.tvd12.ezyfoxserver.mapping.chat")
-    			.build();
+    			.scan("com.tvd12.ezyfoxserver.chat")
+    			.build(); 
     	return bindingContext;
     }
     

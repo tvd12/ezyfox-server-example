@@ -18,6 +18,7 @@ public class ChatMessage {
 
     private String sender;
     private String message;
+    private String receiver;
     private Date receiveDate = new Date();
 
     @Override
