@@ -8,9 +8,6 @@ import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
 import com.tvd12.ezyfoxserver.chat.component.EzyResponseFactory;
 import com.tvd12.ezyfoxserver.chat.data.EzyChatMessage;
 import com.tvd12.ezyfoxserver.chat.repo.EzyChatMessageRepo;
-import com.tvd12.ezyfoxserver.context.EzyAppContext;
-import com.tvd12.ezyfoxserver.entity.EzySession;
-import com.tvd12.ezyfoxserver.entity.EzyUser;
 
 import lombok.Setter;
 
@@ -50,28 +47,11 @@ public class EzyChatUserRequestHandler extends EzyClientRequestHandler implement
 
 	private void response(EzyChatMessage cmessage) {
 		responseFactory.newArrayResponse()
-		.command("2")
-		.data(cmessage)
-		.user(user)
-		.execute();
-	}
-
-	@Override
-	public void setAppContext(EzyAppContext context) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setSession(EzySession session) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setUser(EzyUser user) {
-		// TODO Auto-generated method stub
-		
+			.command("2")
+			.data(cmessage)
+			.user(user)
+			.username(receiver)
+			.execute();
 	}
 
 }

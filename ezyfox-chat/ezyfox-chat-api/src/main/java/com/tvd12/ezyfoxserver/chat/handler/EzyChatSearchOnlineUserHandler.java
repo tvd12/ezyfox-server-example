@@ -53,15 +53,17 @@ public class EzyChatSearchOnlineUserHandler extends EzyClientRequestHandler impl
 			.user(user)
 			.execute();
 	}
+	
 	private EzyChatUser newChatUser() {
 		EzyChatUser userSearch = new EzyChatUser();
-		EzyUser user =userManager.getUser(userName);
+		EzyUser user = userManager.getUser(userName);
 		userSearch.setUserName(user.getName());
 		return userSearch;
 	}
+	
 	private void responseNotFound() {
 		responseFactory
-			.newArrayResponse()
+			.newObjectResponse()
 			.command("error")
 			.data(notFoundError())
 			.user(user)
