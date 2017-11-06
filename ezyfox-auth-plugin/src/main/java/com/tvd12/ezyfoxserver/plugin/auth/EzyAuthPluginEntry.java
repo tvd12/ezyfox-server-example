@@ -20,10 +20,10 @@ import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractPluginEntry;
-import com.tvd12.ezyfoxserver.mongodb.EzyDataStoreBuilder;
-import com.tvd12.ezyfoxserver.mongodb.bean.EzyRepositoriesImplementor;
 import com.tvd12.ezyfoxserver.mongodb.loader.EzyMongoClientLoader;
 import com.tvd12.ezyfoxserver.mongodb.loader.EzyPropertiesMongoClientLoader;
+import com.tvd12.ezyfoxserver.morphia.EzyDataStoreBuilder;
+import com.tvd12.ezyfoxserver.morphia.bean.EzyMorphiaRepositories;
 import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSetting;
 import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
@@ -42,7 +42,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
 		EzySingletonFactory singletonFactory = beanContext.getSingletonFactory();
 		
 		List<Object> eventHandlers = beanContext.getSingletons(
-				EzyMapBuilder.newInstance()
+				EzyMapBuilder.mapBuilder()
 					.put("type", "EVENT_HANDLER")
 					.build()
 		);
@@ -91,13 +91,13 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     }
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
-    	return EzyRepositoriesImplementor.newInstance()
+    	return EzyMorphiaRepositories.newRepositoriesImplementor()
     			.scan("com.tvd12.ezyfoxserver.plugin.auth.repo")
     			.implement(datastore);
     }
     
     private Datastore newDataStore(MongoClient mongoClient) {
-    	return EzyDataStoreBuilder.newInstance()
+    	return EzyDataStoreBuilder.dataStoreBuilder()
     			.mongoClient(mongoClient)
     			.databaseName("test")
     			.scan("com.tvd12.ezyfoxserver.plugin.auth.data")

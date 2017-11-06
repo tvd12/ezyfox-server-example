@@ -21,10 +21,10 @@ import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractAppEntry;
-import com.tvd12.ezyfoxserver.mongodb.EzyDataStoreBuilder;
-import com.tvd12.ezyfoxserver.mongodb.bean.EzyRepositoriesImplementor;
 import com.tvd12.ezyfoxserver.mongodb.loader.EzyMongoClientLoader;
 import com.tvd12.ezyfoxserver.mongodb.loader.EzyPropertiesMongoClientLoader;
+import com.tvd12.ezyfoxserver.morphia.EzyDataStoreBuilder;
+import com.tvd12.ezyfoxserver.morphia.bean.EzyMorphiaRepositories;
 import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
 import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
@@ -43,7 +43,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
 		EzySingletonFactory singletonFactory = beanContext.getSingletonFactory();
 		EzyAddEventController eventControllerAdder = ctx.get(EzyAddEventController.class);
 		List<Object> eventControllers = beanContext.getSingletons(
-				EzyMapBuilder.newInstance()
+				EzyMapBuilder.mapBuilder()
 					.put("type", "EVENT_HANDLER")
 					.build()
 		);
@@ -95,13 +95,13 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     }
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
-    	return EzyRepositoriesImplementor.newInstance()
+    	return EzyMorphiaRepositories.newRepositoriesImplementor()
     			.scan("com.tvd12.ezyfoxserver.chat.repo")
     			.implement(datastore);
     }
     
     private Datastore newDataStore(MongoClient mongoClient) {
-    	return EzyDataStoreBuilder.newInstance()
+    	return EzyDataStoreBuilder.dataStoreBuilder()
     			.mongoClient(mongoClient)
     			.databaseName("test")
     			.scan("com.tvd12.ezyfoxserver.chat.data")

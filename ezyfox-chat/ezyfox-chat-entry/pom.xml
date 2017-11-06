@@ -11,7 +11,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-mongodb</artifactId>
+			<artifactId>ezyfox-server-morphia</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
