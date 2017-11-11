@@ -4,7 +4,6 @@ import com.tvd12.ezyfoxserver.chat.client.ChatApplication;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatLoginModel;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

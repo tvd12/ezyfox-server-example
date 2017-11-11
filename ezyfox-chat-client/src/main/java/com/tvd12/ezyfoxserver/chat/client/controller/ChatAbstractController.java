@@ -6,7 +6,6 @@ import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModelFactory;
 import com.tvd12.ezyfoxserver.chat.client.view.ChatViewFactory;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.Node;
 

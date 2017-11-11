@@ -8,7 +8,6 @@ import com.tvd12.ezyfoxserver.chat.client.view.ChatAllView;
 import com.tvd12.ezyfoxserver.client.context.EzyClientAppContext;
 import com.tvd12.ezyfoxserver.client.listener.EzyClientAppResponseListener;
 import com.tvd12.ezyfoxserver.entity.EzyArray;
-import com.tvd12.ezyfoxserver.entity.EzyObject;
 
 import javafx.application.Platform;
 

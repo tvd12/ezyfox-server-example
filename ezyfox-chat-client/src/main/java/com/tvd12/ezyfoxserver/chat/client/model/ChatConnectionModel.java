@@ -1,7 +1,5 @@
 package com.tvd12.ezyfoxserver.chat.client.model;
 
-import org.hibernate.validator.internal.util.privilegedactions.GetClassLoader;
-
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.client.EzyClientStarter;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;

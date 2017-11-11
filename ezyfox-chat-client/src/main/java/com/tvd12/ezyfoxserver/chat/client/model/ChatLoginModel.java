@@ -6,7 +6,6 @@ import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
 import com.tvd12.ezyfoxserver.client.request.EzyLoginRequest;
 import com.tvd12.ezyfoxserver.entity.EzyArray;
 import com.tvd12.ezyfoxserver.entity.EzyData;
-import com.tvd12.ezyfoxserver.util.EzyEntityBuilders;
 
 import lombok.Getter;
 import lombok.Setter;

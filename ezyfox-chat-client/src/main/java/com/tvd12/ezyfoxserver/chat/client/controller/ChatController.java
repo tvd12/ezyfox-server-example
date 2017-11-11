@@ -1,6 +1,5 @@
 package com.tvd12.ezyfoxserver.chat.client.controller;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 
 /**

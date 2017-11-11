@@ -8,7 +8,6 @@ import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.data.ChatUser;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatAllModel;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
