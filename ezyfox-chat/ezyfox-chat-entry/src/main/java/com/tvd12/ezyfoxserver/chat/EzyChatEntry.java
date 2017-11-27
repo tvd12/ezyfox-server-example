@@ -95,7 +95,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     }
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
-    	return EzyMorphiaRepositories.newRepositoriesImplementor()
+    	return EzyMorphiaRepositories.newRepositoriesImplementer()
     			.scan("com.tvd12.ezyfoxserver.chat.repo")
     			.implement(datastore);
     }

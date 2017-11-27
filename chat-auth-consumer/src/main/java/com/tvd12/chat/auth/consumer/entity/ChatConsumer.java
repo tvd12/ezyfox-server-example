@@ -13,7 +13,7 @@ public class ChatConsumer implements EzyLongIdEntity {
 	private static final long serialVersionUID = -713168031006166761L;
 	
 	@Id
-	private long id;
+	private Long id;
 	private String email;
 	private String phoneNumber;
 	private String consumerKey;

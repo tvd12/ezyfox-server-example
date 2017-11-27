@@ -91,7 +91,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     }
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
-    	return EzyMorphiaRepositories.newRepositoriesImplementor()
+    	return EzyMorphiaRepositories.newRepositoriesImplementer()
     			.scan("com.tvd12.ezyfoxserver.plugin.auth.repo")
     			.implement(datastore);
     }
