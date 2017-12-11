@@ -1,5 +1,8 @@
 package com.tvd12.ezyfoxserver.chat.handler;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
 import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfoxserver.bean.annotation.EzyPrototype;
@@ -29,17 +32,25 @@ public class EzyChatUserRequestHandler extends EzyClientRequestHandler implement
 	@Override
 	public void handle() {
 		getLogger().info("user {} chat with message {}", user.getName(), message);
-		EzyChatMessage message = newChatMessage();
+		EzyChatMessage message = newChatMessage(0);
 		response(message);
 		if (!message.getMessage().equals("")) {
 			getLogger().debug("Message? {}", message.getMessage());
 			ezyChatMessageRepo.save(message);
-		} 
+		}
+		List<EzyChatMessage> messages = new ArrayList<>();
+		for(int i = 0 ; i < 300 ; i++)
+			messages.add(newChatMessage(i));
+		List<Thread> threads = new ArrayList<>();
+		for(EzyChatMessage m : messages)
+			threads.add(new Thread(() -> response(m)));
+		for(Thread thread : threads)
+			thread.start();
 	}
 
-	private EzyChatMessage newChatMessage() {
+	private EzyChatMessage newChatMessage(int index) {
 		EzyChatMessage object = new EzyChatMessage();
-		object.setMessage(message);
+		object.setMessage(message + "#" + index);
 		object.setReceiver(receiver);
 		object.setSender(user.getName());
 		return object;
