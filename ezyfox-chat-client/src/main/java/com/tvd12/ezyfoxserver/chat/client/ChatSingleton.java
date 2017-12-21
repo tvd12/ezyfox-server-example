@@ -34,8 +34,10 @@ public class ChatSingleton {
 	}
 	
 	private EzyClientContext newClientContext() {
-		return EzyClientContextBuilder.newInstance()
-				.setupClient(this::setupClient)
+		EzyClient client = new EzyClient();
+		setupClient(client);
+		return EzyClientContextBuilder.clientContextBuilder()
+				.client(client)
 				.build();
 	}
 	

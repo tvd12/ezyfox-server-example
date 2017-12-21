@@ -1,9 +1,11 @@
 package com.tvd12.ezyfoxserver.chat.client.model;
 
+import static com.tvd12.ezyfoxserver.client.setting.EzySocketSettingBuilder.socketSettingBuilder;
+
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
-import com.tvd12.ezyfoxserver.client.EzyClientStarter;
+import com.tvd12.ezyfoxserver.client.cmd.EzyEnableSocket;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
-import com.tvd12.ezyfoxserver.netty.codec.MsgPackCodecCreator;
+import com.tvd12.ezyfoxserver.client.setting.EzySocketSettingBuilder;
 import com.tvd12.ezyfoxserver.util.EzyProcessor;
 
 import lombok.Getter;
@@ -21,22 +23,21 @@ public class ChatConnectionModel implements ChatModel {
 	
     @Override
     public String execute() {
-    	EzyProcessor.processWithLogException(this::connectToServer);
-    	return SUCCESS;
+    		EzyProcessor.processWithLogException(this::connectToServer);
+    		return SUCCESS;
     }
     
     private void connectToServer() throws Exception {
-    	EzyClientStarter.builder()
-			.host(host)
-			.port(port)
-			.fromMainThread(false)
-			.clientContext(getClientContext())
-			.codecCreator(new MsgPackCodecCreator())
-			.build()
-			.start();
+    		EzySocketSettingBuilder socketSettingBuilder = socketSettingBuilder()
+    				.serverHost(host)
+    				.serverPort(port);
+    		EzyClientContext context = getClientContext();
+    		context.get(EzyEnableSocket.class)
+    			.socketSetting(socketSettingBuilder)
+    			.execute();
     }
     
     protected EzyClientContext getClientContext() {
-    	return ChatSingleton.getInstance().getClientContext();
+    		return ChatSingleton.getInstance().getClientContext();
     }
 }
