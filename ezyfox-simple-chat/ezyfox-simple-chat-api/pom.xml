@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tvd12</groupId>
+		<artifactId>ezyfox-simple-chat</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>ezyfox-simple-chat-api</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.8</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<configuration>
+							<tasks>
+								<mkdir dir="${deploy.path}/${directory.apps}/${directory.common}" />
+								<copy todir="${deploy.path}/${directory.apps}/${directory.common}">
+									<fileset file="target/${project.name}-${project.version}-bin/lib/${project.name}-${project.version}.jar" />
+								</copy>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
