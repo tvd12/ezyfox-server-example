@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
+import com.tvd12.ezyfox.entity.EzyData;
+import com.tvd12.ezyfox.util.EzyEntityBuilders;
 import com.tvd12.ezyfoxserver.chat.command.EzyChatResponse;
 import com.tvd12.ezyfoxserver.command.EzyAppResponse;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
-import com.tvd12.ezyfoxserver.entity.EzyData;
 import com.tvd12.ezyfoxserver.entity.EzySession;
 import com.tvd12.ezyfoxserver.entity.EzyUser;
-import com.tvd12.ezyfoxserver.util.EzyEntityBuilders;
 import com.tvd12.ezyfoxserver.wrapper.EzyUserManager;
 
 @SuppressWarnings("unchecked")

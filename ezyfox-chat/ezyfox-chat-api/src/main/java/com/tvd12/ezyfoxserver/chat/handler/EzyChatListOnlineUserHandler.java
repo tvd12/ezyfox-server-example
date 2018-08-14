@@ -3,9 +3,9 @@ package com.tvd12.ezyfoxserver.chat.handler;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyPrototype;
+import com.tvd12.ezyfox.annotation.EzyKeyValue;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzyPrototype;
 import com.tvd12.ezyfoxserver.command.EzyAppResponse;
 import com.tvd12.ezyfoxserver.entity.EzyUser;
 import com.tvd12.ezyfoxserver.wrapper.EzyUserManager;

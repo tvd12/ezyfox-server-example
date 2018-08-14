@@ -1,8 +1,8 @@
 package com.tvd12.ezyfoxserver.plugin.auth.component.impl;
 
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzySingleton;
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzySingleton;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.plugin.auth.command.EzyArrayResponse;
 import com.tvd12.ezyfoxserver.plugin.auth.command.EzyObjectResponse;

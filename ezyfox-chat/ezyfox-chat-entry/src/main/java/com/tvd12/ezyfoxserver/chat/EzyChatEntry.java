@@ -10,24 +10,24 @@ import java.util.Map;
 import org.mongodb.morphia.Datastore;
 
 import com.mongodb.MongoClient;
-import com.tvd12.ezyfoxserver.bean.EzyBeanContext;
-import com.tvd12.ezyfoxserver.bean.EzyBeanContextBuilder;
-import com.tvd12.ezyfoxserver.bean.EzySingletonFactory;
-import com.tvd12.ezyfoxserver.binding.EzyBindingContext;
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
-import com.tvd12.ezyfoxserver.binding.EzyUnmarshaller;
+import com.tvd12.ezyfox.bean.EzyBeanContext;
+import com.tvd12.ezyfox.bean.EzyBeanContextBuilder;
+import com.tvd12.ezyfox.bean.EzySingletonFactory;
+import com.tvd12.ezyfox.binding.EzyBindingContext;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
+import com.tvd12.ezyfox.binding.EzyUnmarshaller;
+import com.tvd12.ezyfox.mongodb.loader.EzyMongoClientLoader;
+import com.tvd12.ezyfox.mongodb.loader.EzyPropertiesMongoClientLoader;
+import com.tvd12.ezyfox.morphia.EzyDataStoreBuilder;
+import com.tvd12.ezyfox.morphia.bean.EzyMorphiaRepositories;
+import com.tvd12.ezyfox.reflect.EzyClasses;
+import com.tvd12.ezyfox.util.EzyMapBuilder;
 import com.tvd12.ezyfoxserver.command.EzyAddEventController;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractAppEntry;
-import com.tvd12.ezyfoxserver.mongodb.loader.EzyMongoClientLoader;
-import com.tvd12.ezyfoxserver.mongodb.loader.EzyPropertiesMongoClientLoader;
-import com.tvd12.ezyfoxserver.morphia.EzyDataStoreBuilder;
-import com.tvd12.ezyfoxserver.morphia.bean.EzyMorphiaRepositories;
-import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
-import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
 
 /**
  * @author tavandung12
@@ -77,7 +77,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     			.addSingleton("userManager", context.getApp().getUserManager())
     			.addSingleton("marshaller", marshaller)
     			.addSingleton("unmarshaller", unmarshaller)
-    			.scan("com.tvd12.ezyfoxserver.chat");
+    			.scan("com.tvd12.ezyfox.chat");
     	
     	MongoClient mongoClient = loadMongoClient();
     	Datastore datastore = newDataStore(mongoClient);
@@ -96,7 +96,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
     	return EzyMorphiaRepositories.newRepositoriesImplementer()
-    			.scan("com.tvd12.ezyfoxserver.chat.repo")
+    			.scan("com.tvd12.ezyfox.chat.repo")
     			.implement(datastore);
     }
     
@@ -104,7 +104,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     	return EzyDataStoreBuilder.dataStoreBuilder()
     			.mongoClient(mongoClient)
     			.databaseName("test")
-    			.scan("com.tvd12.ezyfoxserver.chat.data")
+    			.scan("com.tvd12.ezyfox.chat.data")
     			.build();
     }
     
@@ -120,7 +120,7 @@ public class EzyChatEntry extends EzyAbstractAppEntry {
     
     private EzyBindingContext createBindingContext() {
     	EzyBindingContext bindingContext = EzyBindingContext.builder()
-    			.scan("com.tvd12.ezyfoxserver.chat")
+    			.scan("com.tvd12.ezyfox.chat")
     			.build(); 
     	return bindingContext;
     }

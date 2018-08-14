@@ -3,7 +3,7 @@ package com.tvd12.chat.auth.consumer.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.tvd12.ezyfoxserver.database.entity.EzyEntity;
+import com.tvd12.ezyfox.database.entity.EzyEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

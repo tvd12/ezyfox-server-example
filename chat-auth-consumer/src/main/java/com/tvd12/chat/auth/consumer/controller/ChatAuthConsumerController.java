@@ -18,7 +18,7 @@ import com.tvd12.chat.auth.consumer.service.ChatConsumerKeyService;
 import com.tvd12.chat.auth.consumer.service.ChatConsumerSecretKeyService;
 import com.tvd12.chat.auth.consumer.service.ChatConsumerService;
 import com.tvd12.chat.auth.consumer.service.ChatIdService;
-import com.tvd12.ezyfoxserver.util.EzyLoggable;
+import com.tvd12.ezyfox.util.EzyLoggable;
 
 @RestController
 @RequestMapping("chat/consumer")

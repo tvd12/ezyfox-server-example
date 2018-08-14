@@ -10,7 +10,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-morphia</artifactId>
+			<artifactId>ezyfox-morphia</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>

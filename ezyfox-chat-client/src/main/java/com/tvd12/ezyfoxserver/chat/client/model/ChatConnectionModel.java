@@ -2,11 +2,11 @@ package com.tvd12.ezyfoxserver.chat.client.model;
 
 import static com.tvd12.ezyfoxserver.client.setting.EzySocketSettingBuilder.socketSettingBuilder;
 
+import com.tvd12.ezyfox.util.EzyProcessor;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.client.cmd.EzyEnableSocket;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
 import com.tvd12.ezyfoxserver.client.setting.EzySocketSettingBuilder;
-import com.tvd12.ezyfoxserver.util.EzyProcessor;
 
 import lombok.Getter;
 import lombok.Setter;

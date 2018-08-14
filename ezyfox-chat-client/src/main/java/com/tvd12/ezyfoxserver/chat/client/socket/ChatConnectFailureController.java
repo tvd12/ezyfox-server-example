@@ -1,12 +1,13 @@
 package com.tvd12.ezyfoxserver.chat.client.socket;
 
+import com.tvd12.ezyfox.constant.EzyConstant;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 import com.tvd12.ezyfoxserver.chat.client.view.ChatConnectionView;
 import com.tvd12.ezyfoxserver.client.constants.EzyClientCommand;
 import com.tvd12.ezyfoxserver.client.controller.EzyConnectFailureController;
-import com.tvd12.ezyfoxserver.constant.EzyConstant;
+
 import javafx.application.Platform;
 
 /**

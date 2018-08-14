@@ -3,11 +3,11 @@ package com.tvd12.ezyfoxserver.chat.command.impl;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
+import com.tvd12.ezyfox.entity.EzyData;
+import com.tvd12.ezyfox.entity.EzyObject;
 import com.tvd12.ezyfoxserver.chat.command.EzyObjectResponse;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
-import com.tvd12.ezyfoxserver.entity.EzyData;
-import com.tvd12.ezyfoxserver.entity.EzyObject;
 
 public class EzyObjectResponseImpl 
 		extends EzyAbstractResponse<EzyObjectResponse>

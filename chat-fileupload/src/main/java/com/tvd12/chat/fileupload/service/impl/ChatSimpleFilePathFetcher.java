@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Calendar;
 
 import com.tvd12.chat.fileupload.service.ChatFilePathService;
-import com.tvd12.ezyfoxserver.exception.EzyFileNotFoundException;
+import com.tvd12.ezyfox.exception.EzyFileNotFoundException;
 
 public class ChatSimpleFilePathFetcher implements ChatFilePathService {
 

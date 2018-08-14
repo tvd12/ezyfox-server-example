@@ -9,24 +9,24 @@ import java.util.Map;
 import org.mongodb.morphia.Datastore;
 
 import com.mongodb.MongoClient;
-import com.tvd12.ezyfoxserver.bean.EzyBeanContext;
-import com.tvd12.ezyfoxserver.bean.EzyBeanContextBuilder;
-import com.tvd12.ezyfoxserver.bean.EzySingletonFactory;
-import com.tvd12.ezyfoxserver.binding.EzyBindingContext;
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
-import com.tvd12.ezyfoxserver.binding.EzyUnmarshaller;
+import com.tvd12.ezyfox.bean.EzyBeanContext;
+import com.tvd12.ezyfox.bean.EzyBeanContextBuilder;
+import com.tvd12.ezyfox.bean.EzySingletonFactory;
+import com.tvd12.ezyfox.binding.EzyBindingContext;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
+import com.tvd12.ezyfox.binding.EzyUnmarshaller;
+import com.tvd12.ezyfox.mongodb.loader.EzyMongoClientLoader;
+import com.tvd12.ezyfox.mongodb.loader.EzyPropertiesMongoClientLoader;
+import com.tvd12.ezyfox.morphia.EzyDataStoreBuilder;
+import com.tvd12.ezyfox.morphia.bean.EzyMorphiaRepositories;
+import com.tvd12.ezyfox.reflect.EzyClasses;
+import com.tvd12.ezyfox.util.EzyMapBuilder;
 import com.tvd12.ezyfoxserver.command.EzyAddEventController;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.controller.EzyEventController;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractPluginEntry;
-import com.tvd12.ezyfoxserver.mongodb.loader.EzyMongoClientLoader;
-import com.tvd12.ezyfoxserver.mongodb.loader.EzyPropertiesMongoClientLoader;
-import com.tvd12.ezyfoxserver.morphia.EzyDataStoreBuilder;
-import com.tvd12.ezyfoxserver.morphia.bean.EzyMorphiaRepositories;
-import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSetting;
-import com.tvd12.ezyfoxserver.util.EzyMapBuilder;
 
 /**
  * @author tavandung12
@@ -73,7 +73,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     			.addSingleton("pluginContext", context)
     			.addSingleton("marshaller", marshaller)
     			.addSingleton("unmarshaller", unmarshaller)
-    			.scan("com.tvd12.ezyfoxserver.plugin.auth");
+    			.scan("com.tvd12.ezyfox.plugin.auth");
     	
     	MongoClient mongoClient = loadMongoClient();
     	Datastore datastore = newDataStore(mongoClient);
@@ -92,7 +92,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     
     private Map<Class<?>, Object> implementMongoRepo(Datastore datastore) {
     	return EzyMorphiaRepositories.newRepositoriesImplementer()
-    			.scan("com.tvd12.ezyfoxserver.plugin.auth.repo")
+    			.scan("com.tvd12.ezyfox.plugin.auth.repo")
     			.implement(datastore);
     }
     
@@ -100,7 +100,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     	return EzyDataStoreBuilder.dataStoreBuilder()
     			.mongoClient(mongoClient)
     			.databaseName("test")
-    			.scan("com.tvd12.ezyfoxserver.plugin.auth.data")
+    			.scan("com.tvd12.ezyfox.plugin.auth.data")
     			.build();
     }
     
@@ -116,7 +116,7 @@ public class EzyAuthPluginEntry extends EzyAbstractPluginEntry {
     
     private EzyBindingContext createBindingContext() {
     	EzyBindingContext bindingContext = EzyBindingContext.builder()
-    			.scan("com.tvd12.ezyfoxserver.plugin.auth")
+    			.scan("com.tvd12.ezyfox.plugin.auth")
     			.build(); 
     	return bindingContext;
     }

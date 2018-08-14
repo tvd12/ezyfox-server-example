@@ -4,23 +4,23 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.tvd12.ezyfoxserver.bean.EzyBeanContext;
-import com.tvd12.ezyfoxserver.bean.EzyPrototypeFactory;
-import com.tvd12.ezyfoxserver.bean.EzyPrototypeSupplier;
-import com.tvd12.ezyfoxserver.binding.EzyDataBinding;
-import com.tvd12.ezyfoxserver.binding.EzyUnmarshaller;
-import com.tvd12.ezyfoxserver.builder.EzyBuilder;
+import com.tvd12.ezyfox.bean.EzyBeanContext;
+import com.tvd12.ezyfox.bean.EzyPrototypeFactory;
+import com.tvd12.ezyfox.bean.EzyPrototypeSupplier;
+import com.tvd12.ezyfox.binding.EzyDataBinding;
+import com.tvd12.ezyfox.binding.EzyUnmarshaller;
+import com.tvd12.ezyfox.builder.EzyBuilder;
+import com.tvd12.ezyfox.entity.EzyArray;
+import com.tvd12.ezyfox.entity.EzyData;
+import com.tvd12.ezyfox.function.EzyHandler;
+import com.tvd12.ezyfox.io.EzyMaps;
+import com.tvd12.ezyfox.util.EzyLoggable;
 import com.tvd12.ezyfoxserver.chat.util.EzyChatAppContextAware;
 import com.tvd12.ezyfoxserver.chat.util.EzyChatSessionAware;
 import com.tvd12.ezyfoxserver.chat.util.EzyChatUserAware;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.controller.EzyAbstractAppEventController;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
-import com.tvd12.ezyfoxserver.entity.EzyData;
 import com.tvd12.ezyfoxserver.event.EzyUserRequestAppEvent;
-import com.tvd12.ezyfoxserver.function.EzyHandler;
-import com.tvd12.ezyfoxserver.io.EzyMaps;
-import com.tvd12.ezyfoxserver.util.EzyLoggable;
 
 public class EzyChatUserRequestController 
 		extends EzyAbstractAppEventController<EzyUserRequestAppEvent> {

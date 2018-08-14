@@ -1,8 +1,8 @@
 package com.tvd12.ezyfoxserver.simplechat;
 
+import com.tvd12.ezyfox.reflect.EzyClasses;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractAppEntryLoader;
 import com.tvd12.ezyfoxserver.ext.EzyAppEntry;
-import com.tvd12.ezyfoxserver.reflect.EzyClasses;
 
 public class EzyChatEntryLoader extends EzyAbstractAppEntryLoader {
 

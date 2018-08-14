@@ -1,7 +1,7 @@
 package com.tvd12.ezyfoxserver.chat.client.model;
 
+import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatActionType;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
 
 import lombok.Getter;
 import lombok.Setter;

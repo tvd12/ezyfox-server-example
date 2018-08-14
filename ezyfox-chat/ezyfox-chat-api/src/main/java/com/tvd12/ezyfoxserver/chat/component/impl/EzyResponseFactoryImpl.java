@@ -1,8 +1,8 @@
 package com.tvd12.ezyfoxserver.chat.component.impl;
 
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzySingleton;
-import com.tvd12.ezyfoxserver.binding.EzyMarshaller;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzySingleton;
+import com.tvd12.ezyfox.binding.EzyMarshaller;
 import com.tvd12.ezyfoxserver.chat.command.EzyArrayResponse;
 import com.tvd12.ezyfoxserver.chat.command.EzyObjectResponse;
 import com.tvd12.ezyfoxserver.chat.command.impl.EzyArrayResponseImpl;

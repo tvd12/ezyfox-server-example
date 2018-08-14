@@ -7,10 +7,10 @@ package com.tvd12.ezyfoxserver.chat.client.view;
 
 import java.util.Map;
 
+import com.tvd12.ezyfox.function.EzyApply;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatViewPath;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
 import com.tvd12.ezyfoxserver.client.constants.EzyClientCommand;
-import com.tvd12.ezyfoxserver.function.EzyApply;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatConnectionController;
 import javafx.scene.control.Label;
 

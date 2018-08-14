@@ -1,5 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.client.socket;
 
+import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
@@ -8,7 +9,6 @@ import com.tvd12.ezyfoxserver.client.constants.EzyClientCommand;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
 import com.tvd12.ezyfoxserver.client.controller.EzyLoginErrorController;
 import com.tvd12.ezyfoxserver.client.entity.EzyClientSession;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
 
 import javafx.application.Platform;
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tvd12</groupId>
+		<artifactId>ezyfox-server</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<artifactId>ezyfox-videopoker-example</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>ezyfox-videopoker-example</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<directory.apps>apps</directory.apps>
+		<directory.entries>entries</directory.entries>
+		<directory.common>common</directory.common>
+		<ezy.support.version>1.0.0</ezy.support.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-support</artifactId>
+			<version>${ezy.support.version}</version>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>deploy</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-assembly-plugin</artifactId>
+							<version>2.2.1</version>
+							<configuration>
+								<descriptors>
+									<descriptor>assembly.xml</descriptor>
+								</descriptors>
+							</configuration>
+							<executions>
+								<execution>
+									<id>make-assembly</id>
+									<phase>package</phase>
+									<goals>
+										<goal>single</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+	<modules>
+		<module>ezyfox-videopoker-example-api</module>
+		<module>ezyfox-videopoker-example-entry</module>
+    <module>ezyfox-videopoker-example-common</module>
+  </modules>
+</project>

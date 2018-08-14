@@ -10,13 +10,9 @@ import com.tvd12.chat.auth.consumer.repo.ChatAccessServiceRepository;
 import com.tvd12.chat.auth.consumer.repo.ChatCustomerRepository;
 import com.tvd12.chat.auth.consumer.repo.ChatUserAccessRepository;
 import com.tvd12.chat.auth.consumer.service.ChatConsumerService;
-import com.tvd12.chat.auth.consumer.service.ChatIdService;
 
 @Service
 public class ChatMongoConsumerService implements ChatConsumerService {
-	
-	@Autowired
-	private ChatIdService idService;
 	
 	@Autowired
 	private ChatCustomerRepository customerRepo;
@@ -47,8 +43,6 @@ public class ChatMongoConsumerService implements ChatConsumerService {
 			String secretKey, 
 			String userId) {
 		ChatConsumer customer = getConsumer(consumerKey);
-		ChatAccessService.Id accessServiceId = new ChatAccessService.Id(accessToken, "customer-user");
-		ChatAccessService accessService = getAccessService(accessServiceId);
 		ChatUserAccess.Id userAccesssId = new ChatUserAccess.Id(customer.getId(), userId);
 		ChatUserAccess userAccess = getUserAccess(userAccesssId);
 		return userAccess.getAccessToken();

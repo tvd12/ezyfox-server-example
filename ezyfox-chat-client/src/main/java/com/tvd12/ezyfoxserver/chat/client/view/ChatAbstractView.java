@@ -3,11 +3,11 @@ package com.tvd12.ezyfoxserver.chat.client.view;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.tvd12.ezyfox.function.EzyApply;
 import com.tvd12.ezyfoxserver.chat.client.ChatApplication;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.controller.ChatController;
-import com.tvd12.ezyfoxserver.function.EzyApply;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -17,7 +17,7 @@ import com.tvd12.chat.fileupload.service.ChatFileIdService;
 import com.tvd12.chat.fileupload.service.ChatFileNameService;
 import com.tvd12.chat.fileupload.service.ChatFilePathService;
 import com.tvd12.chat.fileupload.service.ChatFileUploadService;
-import com.tvd12.ezyfoxserver.exception.EzyFileNotFoundException;
+import com.tvd12.ezyfox.exception.EzyFileNotFoundException;
 
 public class ChatFileSystemUploadService implements ChatFileUploadService {
 	

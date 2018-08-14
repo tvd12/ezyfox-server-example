@@ -20,7 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tvd12.ezyfoxserver.mapping.jackson.EzyObjectMapperBuilder;
+import com.tvd12.ezyfox.mapping.jackson.EzyObjectMapperBuilder;
 
 @Configuration
 public class ChatWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {

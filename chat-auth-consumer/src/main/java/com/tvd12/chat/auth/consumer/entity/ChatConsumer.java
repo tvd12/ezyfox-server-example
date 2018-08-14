@@ -2,7 +2,7 @@ package com.tvd12.chat.auth.consumer.entity;
 
 import org.springframework.data.annotation.Id;
 
-import com.tvd12.ezyfoxserver.database.entity.EzyLongIdEntity;
+import com.tvd12.ezyfox.database.entity.EzyLongIdEntity;
 
 import lombok.Getter;
 import lombok.Setter;

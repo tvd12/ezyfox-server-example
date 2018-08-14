@@ -1,11 +1,11 @@
 package com.tvd12.ezyfoxserver.chat.handler;
 
-import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyPrototype;
-import com.tvd12.ezyfoxserver.binding.EzyDataBinding;
-import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
+import com.tvd12.ezyfox.annotation.EzyKeyValue;
+import com.tvd12.ezyfox.bean.annotation.EzyPrototype;
+import com.tvd12.ezyfox.binding.EzyDataBinding;
+import com.tvd12.ezyfox.binding.annotation.EzyArrayBinding;
+import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfoxserver.command.EzyAppResponse;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
 
 import lombok.Setter;
 

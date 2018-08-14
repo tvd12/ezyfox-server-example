@@ -5,7 +5,7 @@ import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
-import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
+import com.tvd12.ezyfox.binding.annotation.EzyArrayBinding;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 package com.tvd12.ezyfoxserver.chat.data;
 
-import com.tvd12.ezyfoxserver.binding.annotation.EzyObjectBinding;
+import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

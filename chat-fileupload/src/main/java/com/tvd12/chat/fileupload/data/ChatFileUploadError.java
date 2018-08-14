@@ -1,6 +1,6 @@
 package com.tvd12.chat.fileupload.data;
 
-import com.tvd12.ezyfoxserver.constant.EzyError;
+import com.tvd12.ezyfox.constant.EzyError;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

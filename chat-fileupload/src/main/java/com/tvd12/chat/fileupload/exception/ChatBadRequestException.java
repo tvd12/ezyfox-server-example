@@ -2,7 +2,7 @@ package com.tvd12.chat.fileupload.exception;
 
 import org.springframework.http.HttpStatus;
 
-import com.tvd12.ezyfoxserver.constant.EzyError;
+import com.tvd12.ezyfox.constant.EzyError;
 
 import lombok.Getter;
 

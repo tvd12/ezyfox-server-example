@@ -2,11 +2,11 @@ package com.tvd12.ezyfoxserver.chat.handler;
 
 import static com.tvd12.ezyfoxserver.chat.constant.EzyChatCommands.SEARCH_ONLINE_USER;
 
-import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyPrototype;
-import com.tvd12.ezyfoxserver.binding.EzyDataBinding;
-import com.tvd12.ezyfoxserver.binding.annotation.EzyArrayBinding;
+import com.tvd12.ezyfox.annotation.EzyKeyValue;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzyPrototype;
+import com.tvd12.ezyfox.binding.EzyDataBinding;
+import com.tvd12.ezyfox.binding.annotation.EzyArrayBinding;
 import com.tvd12.ezyfoxserver.chat.component.EzyResponseFactory;
 import com.tvd12.ezyfoxserver.chat.constant.EzyChatErrors;
 import com.tvd12.ezyfoxserver.chat.data.EzyChatError;

@@ -2,13 +2,13 @@ package com.tvd12.ezyfoxserver.chat.client.socket;
 
 import javafx.application.Platform;
 
+import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfoxserver.chat.client.ChatSingleton;
 import com.tvd12.ezyfoxserver.chat.client.constant.ChatEventType;
 import com.tvd12.ezyfoxserver.chat.client.model.ChatModel;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
 import com.tvd12.ezyfoxserver.client.controller.EzyHandShakeController;
 import com.tvd12.ezyfoxserver.client.entity.EzyClientSession;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
 
 import lombok.AllArgsConstructor;
 

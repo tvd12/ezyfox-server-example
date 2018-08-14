@@ -1,8 +1,8 @@
 package com.tvd12.ezyfoxserver.plugin.auth.controller;
 
-import com.tvd12.ezyfoxserver.annotation.EzyKeyValue;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzySingleton;
+import com.tvd12.ezyfox.annotation.EzyKeyValue;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzySingleton;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.controller.EzyAbstractPluginEventController;
 import com.tvd12.ezyfoxserver.event.EzyUserLoginEvent;

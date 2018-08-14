@@ -7,8 +7,15 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.tvd12.ezyfoxserver.builder.EzyBuilder;
-import com.tvd12.ezyfoxserver.builder.EzyObjectBuilder;
+import com.tvd12.ezyfox.builder.EzyBuilder;
+import com.tvd12.ezyfox.builder.EzyObjectBuilder;
+import com.tvd12.ezyfox.concurrent.EzyExecutors;
+import com.tvd12.ezyfox.entity.EzyArray;
+import com.tvd12.ezyfox.entity.EzyData;
+import com.tvd12.ezyfox.entity.EzyObject;
+import com.tvd12.ezyfox.factory.EzyEntityFactory;
+import com.tvd12.ezyfox.util.EzyLoggable;
+import com.tvd12.ezyfox.util.EzyStartable;
 import com.tvd12.ezyfoxserver.client.EzyClient;
 import com.tvd12.ezyfoxserver.client.cmd.EzyEnableSocket;
 import com.tvd12.ezyfoxserver.client.cmd.EzyEnableWebSocket;
@@ -29,14 +36,7 @@ import com.tvd12.ezyfoxserver.client.serialize.EzyRequestSerializer;
 import com.tvd12.ezyfoxserver.client.serialize.impl.EzyRequestSerializerImpl;
 import com.tvd12.ezyfoxserver.client.setting.EzySocketSettingBuilder;
 import com.tvd12.ezyfoxserver.client.setting.EzyWebSocketSettingBuilder;
-import com.tvd12.ezyfoxserver.concurrent.EzyExecutors;
 import com.tvd12.ezyfoxserver.context.EzyContext;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
-import com.tvd12.ezyfoxserver.entity.EzyData;
-import com.tvd12.ezyfoxserver.entity.EzyObject;
-import com.tvd12.ezyfoxserver.factory.EzyEntityFactory;
-import com.tvd12.ezyfoxserver.util.EzyLoggable;
-import com.tvd12.ezyfoxserver.util.EzyStartable;
 
 public class EzyNioSocketUnit extends EzyLoggable implements EzyStartable {
 
@@ -120,7 +120,11 @@ public class EzyNioSocketUnit extends EzyLoggable implements EzyStartable {
 			}
 
 			protected EzyLoginRequest newLoginRequest() {
-				return EzyLoginRequest.builder().username(getUsername()).password(getPassword()).data(newLoginInData())
+				return EzyLoginRequest.builder()
+						.zoneName("example")
+						.username(getUsername())
+						.password(getPassword())
+						.data(newLoginInData())
 						.build();
 			}
 
@@ -140,11 +144,11 @@ public class EzyNioSocketUnit extends EzyLoggable implements EzyStartable {
 			protected void sendAccessAppsRequest(EzyClientContext ctx) {
 				ctx.get(EzySendRequest.class)
 					.sender(ctx.getMe())
-					.request(newAccessAppRequest())
+					.request(newAccessAppRequest(ctx.getMe().getZoneId()))
 					.execute();
 			}
 
-			protected EzyAccessAppRequest newAccessAppRequest() {
+			protected EzyAccessAppRequest newAccessAppRequest(int zoneId) {
 				return EzyAccessAppRequest.builder()
 						.appName("ezyfox-simple-chat")
 						.data(newAccessAppData())

@@ -1,12 +1,12 @@
 package com.tvd12.ezyfoxserver.chat.client.socket;
 
+import com.tvd12.ezyfox.entity.EzyArray;
+import com.tvd12.ezyfox.entity.EzyObject;
 import com.tvd12.ezyfoxserver.client.cmd.EzySendRequest;
 import com.tvd12.ezyfoxserver.client.context.EzyClientContext;
 import com.tvd12.ezyfoxserver.client.controller.EzyLoginController;
 import com.tvd12.ezyfoxserver.client.entity.EzyClientSession;
 import com.tvd12.ezyfoxserver.client.request.EzyAccessAppRequest;
-import com.tvd12.ezyfoxserver.entity.EzyArray;
-import com.tvd12.ezyfoxserver.entity.EzyObject;
 
 public class ChatLoginController extends EzyLoginController {
 

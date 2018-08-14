@@ -32,12 +32,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-mapping</artifactId>
+			<artifactId>ezyfox-mapping</artifactId>
 			<version>${mapping.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-mongodb</artifactId>
+			<artifactId>ezyfox-mongodb</artifactId>
 			<version>${mongodb.version}</version>
 		</dependency>
 		<dependency>

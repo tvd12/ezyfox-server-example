@@ -1,14 +1,14 @@
 package com.tvd12.ezyfoxserver.chat.config;
 
-import com.tvd12.ezyfoxserver.bean.EzyBeanConfig;
-import com.tvd12.ezyfoxserver.bean.EzyBeanContext;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyAutoBind;
-import com.tvd12.ezyfoxserver.bean.annotation.EzyConfiguration;
+import com.tvd12.ezyfox.bean.EzyBeanConfig;
+import com.tvd12.ezyfox.bean.EzyBeanContext;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzyConfiguration;
 import com.tvd12.ezyfoxserver.chat.controller.EzyChatUserRequestController;
 import com.tvd12.ezyfoxserver.command.EzyAddEventController;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
-import com.tvd12.ezyfoxserver.util.EzyLoggable;
+import com.tvd12.ezyfox.util.EzyLoggable;
 
 @EzyConfiguration
 public class EzyChatFirstConfiguration extends EzyLoggable implements EzyBeanConfig {

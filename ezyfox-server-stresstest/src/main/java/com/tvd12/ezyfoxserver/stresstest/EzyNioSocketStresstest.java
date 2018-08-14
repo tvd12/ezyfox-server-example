@@ -36,7 +36,7 @@ public class EzyNioSocketStresstest {
 				.host(host)
 				.port(port)
 				.websocket(websocket)
-				.username(userPrefix + "#" + i)
+				.username(userPrefix + "" + i)
 				.sendMessage(sendMessage)
 				.build()
 				.start();
