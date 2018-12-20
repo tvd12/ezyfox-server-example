@@ -16,15 +16,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-chat-auth-consumer/
-chat-fileupload/
-ezyfox-auth-plugin/
-ezyfox-chat/
-ezyfox-chat-client/
-ezyfox-server-stresstest/
-ezyfox-simple-chat/
-ezyfox-videopoker-example/
-
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar

@@ -1,0 +1,97 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Hello Word - Ezyfox Javascript Client</title>
+<style type="text/css">
+.page-title {
+    text-align: center;
+}
+
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.container textarea {
+    width: 450px;
+    height: 150px;
+}
+</style>
+</head>
+
+<body>
+<h1 class="page-title">Hello World Javascript Client</h1>
+<div class="container">
+        <div class="connect">
+            <input type="text" id="url" value="ws://localhost:2208/ws"/>
+            <input type="username" id="username" placeholder="your's name"/>
+            <input type="submit" id="connect" value="Connect"/>
+        </div>
+        <div class="messages">
+            <textarea id="messages" disabled></textarea>
+        </div>
+<!--
+        <div>
+            <input type="text" id="msg" placeholder="message"/>
+            <input type="submit" value="Send" id="send"/>
+        </div>
+-->
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="./lib/ezyclient-1.0.0.min.js"></script>
+<script type="text/javascript">
+    
+var zoneName = "example";
+var appName = "hello-world";
+    
+var log = function(msg) {
+    var log = $('#log')
+    log.append(msg + " \n").scrollTop(log[0].scrollHeight - log.height());
+}
+
+var handshakeHandler = new EzyHandshakeHandler();
+handshakeHandler.getLoginRequest = function(context) {
+    return [zoneName, $('#username').val(), "123456", []];
+}
+
+var userLoginHandler = new EzyLoginSuccessHandler();
+userLoginHandler.handleLoginSuccess = function() {
+    var accessAppRequest = [appName, []];
+    this.client.sendRequest(EzyCommand.APP_ACCESS, accessAppRequest);
+}
+
+var accessAppHandler = new EzyAppAccessHandler();
+accessAppHandler.postHandle = function(app, data) {
+    app.sendRequest('greet', {who: app.client.me.name});
+}
+
+var disconnectionHandler = new EzyDisconnectionHandler();
+disconnectionHandler.preHandle = function(event) {
+    console.log("custom disconnect handler")
+}
+
+var config = new EzyClientConfig;
+config.zoneName = zoneName;
+var clients = EzyClients.getInstance();
+var client = clients.newDefaultClient(config);
+var setup = client.setup;
+setup.addEventHandler(EzyEventType.DISCONNECTION, disconnectionHandler);
+setup.addDataHandler(EzyCommand.HANDSHAKE, handshakeHandler);
+setup.addDataHandler(EzyCommand.LOGIN, userLoginHandler);
+setup.addDataHandler(EzyCommand.APP_ACCESS, accessAppHandler);
+var setupApp = setup.setupApp(appName);
+setupApp.addDataHandler("greet", function(app, data) {
+    var message = data.message;
+    $('#messages').val(message);
+});
+
+$(function () {
+    $('#connect').click(function () {
+        client.connect($('#url').val());
+    });
+})
+</script>
+</body>
+
+</html>
