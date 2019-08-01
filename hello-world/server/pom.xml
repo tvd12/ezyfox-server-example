@@ -13,7 +13,7 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	
-	<name>freechat</name>
+	<name>hello-world</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

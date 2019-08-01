@@ -3,7 +3,7 @@
 <suite name="AllTests">
 	<test name="All">
 		<packages>
-			<package name="com.example.hello_world.plugin.testing"></package>
+			<package name="com.example.hello_world.plugin.test"></package>
 		</packages>
 	</test>
 </suite>

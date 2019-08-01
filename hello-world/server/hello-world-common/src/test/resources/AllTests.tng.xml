@@ -4,7 +4,7 @@
 
     <test name="All">
     	<packages>
-    		<package name="vn.team.freechat.common.testing"/>
+    		<package name="com.example.hello_world.common.test"/>
     	</packages>
     </test>
 </suite>

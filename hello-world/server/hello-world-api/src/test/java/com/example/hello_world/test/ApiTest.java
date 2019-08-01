@@ -1,8 +1,8 @@
-package com.example.hello_world.plugin.testing;
+package com.example.hello_world.test;
 
 import org.testng.annotations.Test;
 
-public class PluginTest {
+public class ApiTest {
 
 	@Test
 	public void test() {
