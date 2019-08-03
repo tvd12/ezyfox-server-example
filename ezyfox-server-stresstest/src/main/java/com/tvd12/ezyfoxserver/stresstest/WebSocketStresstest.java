@@ -5,6 +5,7 @@ package com.tvd12.ezyfoxserver.stresstest;
 
 import com.tvd12.ezyfoxserver.client.EzyClients;
 import com.tvd12.ezyfoxserver.client.EzyWsClient;
+import com.tvd12.ezyfoxserver.client.socket.EzyMainEventsLoop;
 
 import lombok.AllArgsConstructor;
 
@@ -37,10 +38,8 @@ public class WebSocketStresstest {
 			}
 		})
 		.start();
-		while(true) {
-			clients.processAllClientEvents();
-			Thread.sleep(5);
-		}
+		EzyMainEventsLoop mainEventsLoop = new EzyMainEventsLoop();
+		mainEventsLoop.start(5);
 	}
 
 }
