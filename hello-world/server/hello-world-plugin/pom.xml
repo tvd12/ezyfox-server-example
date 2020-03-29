@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>com.example</groupId>
+		<groupId>com.tvd12.ezyfoxserver</groupId>
 		<artifactId>hello-world</artifactId>
 		<version>1.0.0</version>
 	</parent>
@@ -18,35 +18,13 @@
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<directory.plugins>plugins</directory.plugins>
-		<core.version>1.0.0</core.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-core</artifactId>
-			<version>${core.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.example</groupId>
+			<groupId>com.tvd12.ezyfoxserver</groupId>
 			<artifactId>hello-world-common</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-bean</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-binding</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	<profiles>

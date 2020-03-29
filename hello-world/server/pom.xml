@@ -4,11 +4,11 @@
 	
 	<parent>
 		<groupId>com.tvd12</groupId>
-		<artifactId>ezyfox-server</artifactId>
+		<artifactId>ezyfox</artifactId>
 		<version>0.0.2</version>
 	</parent>
 	
-	<groupId>com.example</groupId>
+	<groupId>com.tvd12.ezyfoxserver</groupId>
 	<artifactId>hello-world</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
@@ -21,28 +21,8 @@
 		<directory.apps>apps</directory.apps>
 		<directory.entries>entries</directory.entries>
 		<directory.common>common</directory.common>
-		<core.version>1.0.0</core.version>
-		<bean.version>1.0.0</bean.version>
-		<binding.version>1.0.0</binding.version>
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-core</artifactId>
-			<version>${core.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-bean</artifactId>
-			<version>${bean.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-binding</artifactId>
-			<version>${binding.version}</version>
-		</dependency>
-	</dependencies>
 	<profiles>
 		<profile>
 			<id>export</id>

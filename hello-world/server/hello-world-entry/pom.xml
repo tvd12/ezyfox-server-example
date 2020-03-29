@@ -3,10 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.example</groupId>
+		<groupId>com.tvd12.ezyfoxserver</groupId>
 		<artifactId>hello-world</artifactId>
 		<version>1.0.0</version>
 	</parent>
 	<artifactId>hello-world-entry</artifactId>
 	<name>hello-world-entry</name>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12.ezyfoxserver</groupId>
+			<artifactId>hello-world-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	
 </project>
