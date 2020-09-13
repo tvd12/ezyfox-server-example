@@ -30,9 +30,13 @@ public class PluginEntry extends EzySimplePluginEntry {
 	@Override
 	protected void setupBeanContext(EzyPluginContext context, EzyBeanContextBuilder builder) {
 		EzyPluginSetting setting = context.getPlugin().getSetting();
-		String pluginConfigFile = setting.getConfigFile();
+		String pluginConfigFile = getConfigFile(setting);
 		PluginConfig pluginConfig = readPluginConfig(pluginConfigFile);
 		logger.info("hello-world plugin config: {}", pluginConfig);
+	}
+	
+	protected String getConfigFile(EzyPluginSetting setting) {
+		return setting.getConfigFile();
 	}
 
 	@Override

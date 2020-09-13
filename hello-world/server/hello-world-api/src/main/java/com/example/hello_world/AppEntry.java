@@ -23,11 +23,16 @@ public class AppEntry extends EzySimpleAppEntry {
 	@Override
 	protected void setupBeanContext(EzyAppContext context, EzyBeanContextBuilder builder) {
 		EzyAppSetting setting = context.getApp().getSetting();
-		String appConfigFile = setting.getConfigFile();
+		String appConfigFile = getConfigFile(setting);
 		AppConfig appConfig = readAppConfig(appConfigFile);
 		logger.info("hello-word app config: {}", appConfig);
 	}
 	
+	protected String getConfigFile(EzyAppSetting setting) {
+		return setting.getConfigFile();
+	}
+	
+	@Override
 	public void start() throws Exception {
 		getLogger().info("start hello-world app");
 	}
