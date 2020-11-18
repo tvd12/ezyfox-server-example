@@ -10,20 +10,15 @@
 	
 	<artifactId>ezyfox-server-stresstest</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
 
 	<name>ezyfox-server-stresstest</name>
 	<url>http://maven.apache.org</url>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
 			<artifactId>ezyfox-server-netty-client</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 	</dependencies>
 </project>

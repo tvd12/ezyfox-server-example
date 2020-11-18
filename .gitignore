@@ -4,6 +4,8 @@
 *.settings/
 */target/
 target/
+logs/
+*/logs/
 
 ezyfox-chat-client/.idea/
 ezyfox-chat-client/output/
@@ -23,7 +25,8 @@ ezyfox-chat/
 ezyfox-chat-client/
 ezyfox-simple-chat/
 ezyfox-videopoker-example/
-
+logs/
+*/logs/
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
