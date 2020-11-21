@@ -41,7 +41,7 @@ public class PluginEntry extends EzySimplePluginEntry {
 
 	@Override
 	public void start() throws Exception {
-		getLogger().info("chat plugin: start");
+		getLogger().info("hello-world plugin: start");
 	}
 	
 	@Override

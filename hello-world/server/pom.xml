@@ -51,5 +51,6 @@
 		<module>hello-world-entry</module>
 		<module>hello-world-common</module>
     	<module>hello-world-startup</module>
+    <module>hello-world-client-java</module>
   </modules>
 </project>
