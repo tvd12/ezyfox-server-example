@@ -4,6 +4,7 @@ import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfox.entity.EzyData;
 import com.tvd12.ezyfox.entity.EzyObject;
 import com.tvd12.ezyfox.factory.EzyEntityFactory;
+import com.tvd12.ezyfox.util.EzyEntityObjects;
 import com.tvd12.ezyfoxserver.client.EzyClient;
 import com.tvd12.ezyfoxserver.client.EzyClients;
 import com.tvd12.ezyfoxserver.client.EzyUTClient;
@@ -63,6 +64,7 @@ public class SimpleChatClient {
 
 		EzyAppSetup appSetup = setup.setupApp(APP_NAME);
 		appSetup.addDataHandler("chat/sendMessage", new ChatSendMessageResponseHandler());
+		appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
 		return client;
 	}
 	
@@ -87,6 +89,7 @@ public class SimpleChatClient {
 	class ExAccessAppHandler extends EzyAppAccessHandler {
 		protected void postHandle(EzyApp app, EzyArray data) {
 			sendChatMessageToOneRequest(app);
+			sendGreetRequest(app);
 		}
 
 		private void sendChatMessageToOneRequest(EzyApp app) {
@@ -96,12 +99,23 @@ public class SimpleChatClient {
 						.append("message", "Hello, I'm Dzung")
 						.build());
 		}
+		
+		private void sendGreetRequest(EzyApp app) {
+			app.send("greet", 
+					EzyEntityObjects.newObject("who", "Dzung"));
+		}
 
 	}
 
 	class ChatSendMessageResponseHandler implements EzyAppDataHandler<EzyObject> {
 		public void handle(EzyApp app, EzyObject data) {
 			System.out.println("Received chat data: " + data);
+		}
+	}
+	
+	class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
+		public void handle(EzyApp app, EzyObject data) {
+			System.out.println("Received greet data: " + data);
 		}
 	}
 
