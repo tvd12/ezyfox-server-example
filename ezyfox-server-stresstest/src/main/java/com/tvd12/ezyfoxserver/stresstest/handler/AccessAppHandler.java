@@ -15,17 +15,22 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class AccessAppHandler extends EzyAppAccessHandler {
 
+	private final boolean useUdp;
 	private final AtomicLong messageCount;
 	private final ScheduledExecutorService executorService;
 	
 	@Override
 	protected void postHandle(EzyApp app, EzyArray data) {
 		executorService.scheduleAtFixedRate(() -> sendMessage(app), 3, 5, TimeUnit.SECONDS);
-//		this.client.send(new EzyAppExitRequest(app.getId()));
 	}
 	
 	private void sendMessage(EzyApp app) {
-		app.send("broadcastMessage", newMessageData());
+		if(useUdp) {
+			app.send("udpBroadcastMessage", newMessageData());
+		}
+		else {
+			app.send("broadcastMessage", newMessageData());
+		}
 	}
 	
 	private EzyObject newMessageData() {

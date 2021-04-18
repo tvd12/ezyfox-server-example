@@ -30,11 +30,9 @@ public class WebSocketStresstest {
 				catch(Exception e) {
 					e.printStackTrace();
 				}
-				setup.setup(client);
+				setup.setup(client, false);
 				clients.addClient(client);
-				client.connect("wss://ws.tvd12.com/ws");
-//				client.connect("ws://127.0.0.1:2208/ws");
-//				client.connect("ws://ws.tvd12.com:2208/ws");
+				client.connect("ws://127.0.0.1:2208/ws");
 			}
 		})
 		.start();

@@ -13,6 +13,7 @@ import com.tvd12.ezyfoxserver.client.manager.EzyHandlerManager;
 import com.tvd12.ezyfoxserver.stresstest.handler.AccessAppHandler;
 import com.tvd12.ezyfoxserver.stresstest.handler.HandshakeHandler;
 import com.tvd12.ezyfoxserver.stresstest.handler.LoginSuccessHandler;
+import com.tvd12.ezyfoxserver.stresstest.handler.UdpHandshakeHandler;
 
 public class SocketClientSetup {
 
@@ -25,17 +26,22 @@ public class SocketClientSetup {
 		Runtime.getRuntime().addShutdownHook(new Thread(executorService::shutdown));
 	}
 	
-	public void setup(EzyClient client) {
+	public void setup(EzyClient client, boolean useUdp) {
 		int count = counter.incrementAndGet();
 		EzyHandlerManager handlerManager = client.getHandlerManager();
 		handlerManager.addDataHandler(EzyCommand.HANDSHAKE, new HandshakeHandler(count));
-		handlerManager.addDataHandler(EzyCommand.LOGIN, new LoginSuccessHandler());
-		handlerManager.addDataHandler(EzyCommand.APP_ACCESS, new AccessAppHandler(messageCount, executorService));
+		handlerManager.addDataHandler(EzyCommand.LOGIN, new LoginSuccessHandler(useUdp));
+		handlerManager.addDataHandler(EzyCommand.UDP_HANDSHAKE, new UdpHandshakeHandler());
+		handlerManager.addDataHandler(EzyCommand.APP_ACCESS, new AccessAppHandler(useUdp, messageCount, executorService));
 		
 		EzyAppDataHandlers appDataHandlers = handlerManager.getAppDataHandlers("hello-world");
 		appDataHandlers.addHandler("broadcastMessage", (app, data) -> {
 			String message = ((EzyObject)data).get("message", String.class);
-			System.out.println("server response: " + message);
+			System.out.println("tcp > server response: " + message);
+		});
+		appDataHandlers.addHandler("udpBroadcastMessage", (app, data) -> {
+			String message = ((EzyObject)data).get("message", String.class);
+			System.out.println("udp > server response: " + message);
 		});
 	}
 	

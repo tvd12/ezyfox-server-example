@@ -5,6 +5,7 @@ package com.tvd12.ezyfoxserver.stresstest;
 
 import com.tvd12.ezyfoxserver.client.EzyClients;
 import com.tvd12.ezyfoxserver.client.EzyTcpClient;
+import com.tvd12.ezyfoxserver.client.EzyUTClient;
 import com.tvd12.ezyfoxserver.client.socket.EzyMainEventsLoop;
 
 import lombok.AllArgsConstructor;
@@ -14,7 +15,7 @@ import lombok.AllArgsConstructor;
  *
  */
 @AllArgsConstructor
-public class TcpSocketStresstest {
+public class UdpSocketStresstest {
 
 	public static void main(String[] args) throws Exception {
 		DefaultClientConfig clientConfig = new DefaultClientConfig();
@@ -23,14 +24,14 @@ public class TcpSocketStresstest {
 		new Thread(() -> {
 			int clientCount = 300;
 			for(int i = 0 ; i < clientCount ; i++) {
-				EzyTcpClient client = new EzyTcpClient(clientConfig.get(i));
+				EzyTcpClient client = new EzyUTClient(clientConfig.get(i));
 				try {
 					Thread.sleep(50);
 				}
 				catch(Exception e) {
 					e.printStackTrace();
 				}
-				setup.setup(client, false);
+				setup.setup(client, true);
 				clients.addClient(client);
 				client.connect("127.0.0.1", 3005);
 			}

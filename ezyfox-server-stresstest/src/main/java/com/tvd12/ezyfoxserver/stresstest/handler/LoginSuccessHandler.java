@@ -4,20 +4,20 @@ import com.tvd12.ezyfox.entity.EzyData;
 import com.tvd12.ezyfoxserver.client.handler.EzyLoginSuccessHandler;
 import com.tvd12.ezyfoxserver.client.request.EzyAppAccessRequest;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class LoginSuccessHandler extends EzyLoginSuccessHandler {
 
+	protected final boolean connectUdp;
+	
 	@Override
 	protected void handleLoginSuccess(EzyData responseData) {
-		client.send(new EzyAppAccessRequest("hello-world"));
-		
-//		EzyApp app = new EzySimpleApp(client.getZone(), 1, "hello-world");
-//		app.send("broadcastMessage", newMessageData());
+		if(connectUdp) {
+			client.udpConnect(2611);
+		}
+		else {
+			client.send(new EzyAppAccessRequest("hello-world"));
+		}
 	}
-	
-	
-//	private EzyObject newMessageData() {
-//		return EzyEntityFactory.newObjectBuilder()
-//			.append("message", "Message#" + 1)
-//			.build();
-//	}
 }
