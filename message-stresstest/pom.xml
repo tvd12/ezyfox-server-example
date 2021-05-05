@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tvd12</groupId>
+		<artifactId>ezyfox-server</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>message-stresstest</artifactId>
+	<version>1.0.0</version>
+	
+	<name>ezyfox-server-stresstest</name>
+	<url>https://youngmonkeys.org/</url>
+	
+	<properties>
+		<ezy.netty.client.version>1.0.5</ezy.netty.client.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-netty-client</artifactId>
+			<version>${ezy.netty.client.version}</version>
+		</dependency>
+	</dependencies>
+</project>
