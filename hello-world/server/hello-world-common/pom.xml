@@ -8,6 +8,7 @@
 	</parent>
 	<artifactId>hello-world-common</artifactId>
 	<name>hello-world-common</name>
+	<url>https://youngmonkeys.org/</url>
 	
 	<dependencies>
 		<dependency>

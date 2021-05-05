@@ -7,8 +7,10 @@
 		<artifactId>hello-world</artifactId>
 		<version>1.0.0</version>
 	</parent>
+	
 	<artifactId>hello-world-entry</artifactId>
 	<name>hello-world-entry</name>
+	<url>https://youngmonkeys.org/</url>
 	
 	<dependencies>
 		<dependency>

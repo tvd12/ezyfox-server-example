@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>com.tvd12</groupId>
 		<artifactId>ezyfox</artifactId>
-		<version>0.0.2</version>
+		<version>1.0.0</version>
 	</parent>
-	
+
 	<groupId>com.tvd12.ezyfoxserver</groupId>
 	<artifactId>hello-world</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-	
+
 	<name>hello-world</name>
-	<url>http://maven.apache.org</url>
+	<url>https://youngmonkeys.org/</url>
 
 	<properties>
-		<ezy.server.version>1.1.3</ezy.server.version>
+		<ezy.server.version>1.1.6</ezy.server.version>
 	</properties>
 
 	<profiles>
@@ -32,7 +34,7 @@
 								<phase>install</phase>
 								<configuration>
 									<tasks>
-										<ant antfile="${project.basedir}/build.xml"/>
+										<ant antfile="${project.basedir}/build.xml" />
 									</tasks>
 								</configuration>
 								<goals>
@@ -45,12 +47,12 @@
 			</build>
 		</profile>
 	</profiles>
-	 <modules>
-	 	<module>hello-world-plugin</module>
-	 	<module>hello-world-api</module>
+	<modules>
+		<module>hello-world-plugin</module>
+		<module>hello-world-api</module>
 		<module>hello-world-entry</module>
 		<module>hello-world-common</module>
-    	<module>hello-world-startup</module>
-    <module>hello-world-client-java</module>
-  </modules>
+		<module>hello-world-startup</module>
+		<module>hello-world-client-java</module>
+	</modules>
 </project>

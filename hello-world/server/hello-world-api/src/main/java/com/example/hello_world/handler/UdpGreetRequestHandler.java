@@ -7,7 +7,7 @@ import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.bean.annotation.EzyPrototype;
 import com.tvd12.ezyfox.binding.EzyDataBinding;
 import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
-import com.tvd12.ezyfox.core.annotation.EzyClientRequestListener;
+import com.tvd12.ezyfox.core.annotation.EzyRequestListener;
 import com.tvd12.ezyfox.core.exception.EzyBadRequestException;
 
 import lombok.Setter;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter
 @EzyPrototype
 @EzyObjectBinding(write = false)
-@EzyClientRequestListener(UDP_GREET)
+@EzyRequestListener(UDP_GREET)
 public class UdpGreetRequestHandler 
 		extends ClientRequestHandler 
 		implements EzyDataBinding {

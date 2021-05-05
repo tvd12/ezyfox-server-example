@@ -9,10 +9,8 @@
 	</parent>
 
 	<artifactId>hello-world-api</artifactId>
-	<packaging>jar</packaging>
-
 	<name>hello-world-api</name>
-	<url>http://maven.apache.org</url>
+	<url>https://youngmonkeys.org/</url>
 
 	<dependencies>
 		<dependency>

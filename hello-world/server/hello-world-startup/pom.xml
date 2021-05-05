@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>hello-world-startup</artifactId>
 	<name>hello-world-startup</name>
-	<url>http://maven.apache.org</url>
+	<url>https://youngmonkeys.org/</url>
 	
 	<dependencies>
 		<dependency>
