@@ -2,6 +2,8 @@ package com.example.hello_world.controller;
 
 import static com.tvd12.ezyfoxserver.constant.EzyEventNames.SERVER_READY;
 
+import com.example.hello_world.config.AppConfig;
+import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.bean.annotation.EzySingleton;
 import com.tvd12.ezyfox.core.annotation.EzyEventHandler;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
@@ -13,9 +15,12 @@ import com.tvd12.ezyfoxserver.event.EzyServerReadyEvent;
 public class ServerReadyController 
 		extends EzyAbstractAppEventController<EzyServerReadyEvent> {
 
+	@EzyAutoBind
+	private AppConfig appConfig;
+	
 	@Override
 	public void handle(EzyAppContext ctx, EzyServerReadyEvent event) {
-		getLogger().info("hello-world app: fire custom app ready");
+		logger.info("hello-world app: fire custom app ready, node name: {}", appConfig.getNodeName());
 	}
 	
 }

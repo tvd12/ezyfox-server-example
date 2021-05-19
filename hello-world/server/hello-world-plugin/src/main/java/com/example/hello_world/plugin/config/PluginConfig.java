@@ -1,17 +1,21 @@
 package com.example.hello_world.plugin.config;
 
-import com.tvd12.properties.file.annotation.Property;
+import com.tvd12.ezyfox.bean.annotation.EzyPropertiesBean;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Setter
-@Getter
-@ToString
+@Data
+@EzyPropertiesBean
 public class PluginConfig {
 
-	@Property("node.name")
-	private String nodeName;
+	private String environment;
+	private DatabaseConfig database;
+	
+	@Data
+	public static class DatabaseConfig {
+		private String name;
+		private String host;
+		private int port;
+	}
 	
 }
