@@ -1,0 +1,5 @@
+resources:
+  enable: true
+  locations:
+    - templates
+    - client

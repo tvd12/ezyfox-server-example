@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tvd12</groupId>
+		<artifactId>ezyfox</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.tvd12.ezyfoxserver</groupId>
+	<artifactId>lucky-wheel</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>lucky-wheel</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<ezy.http.version>0.1.2</ezy.http.version>
+		<ezy.server.version>1.1.6</ezy.server.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyfox-server-embedded</artifactId>
+			<version>${ezy.server.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tvd12</groupId>
+			<artifactId>ezyhttp-server-boot</artifactId>
+			<version>${ezy.http.version}</version>
+		</dependency>
+	</dependencies>
+</project>
