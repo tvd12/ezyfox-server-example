@@ -1,0 +1,57 @@
+{
+  "id": 1,
+  "fragments": [
+    {
+      "index": 0,
+      "prizeType": "KEY",
+      "quantity": 1000,
+      "ratio": 10
+    },
+    {
+      "index": 1,
+      "prizeType": "STAR",
+      "prizeValue": 50,
+      "quantity": 1000,
+      "ratio": 10
+    },
+    {
+      "index": 2,
+      "prizeType": "STAR",
+      "prizeValue": 500,
+      "quantity": 1000,
+      "ratio": 10
+    },
+    {
+      "index": 3,
+      "prizeType": "EMPTY",
+      "quantity": 0,
+      "ratio": 20
+    },
+    {
+      "index": 4,
+      "prizeType": "STAR",
+      "prizeValue": 200,
+      "quantity": 0,
+      "ratio": 10
+    },
+    {
+      "index": 5,
+      "prizeType": "STAR",
+      "prizeValue": 100,
+      "quantity": 0,
+      "ratio": 10
+    },
+    {
+      "index": 6,
+      "prizeType": "STAR",
+      "prizeValue": 150,
+      "quantity": 0,
+      "ratio": 10
+    },
+    {
+      "index": 7,
+      "prizeType": "EMPTY",
+      "ratio": 20
+    }
+  ]
+}
