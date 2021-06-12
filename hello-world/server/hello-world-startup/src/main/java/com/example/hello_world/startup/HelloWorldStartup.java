@@ -18,6 +18,8 @@ import com.tvd12.ezyfoxserver.setting.EzyPluginSetting;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSettingBuilder;
 import com.tvd12.ezyfoxserver.setting.EzySettingsBuilder;
 import com.tvd12.ezyfoxserver.setting.EzySimpleSettings;
+import com.tvd12.ezyfoxserver.setting.EzySocketSettingBuilder;
+import com.tvd12.ezyfoxserver.setting.EzyUdpSettingBuilder;
 import com.tvd12.ezyfoxserver.setting.EzyZoneSettingBuilder;
 
 public class HelloWorldStartup {
@@ -38,7 +40,15 @@ public class HelloWorldStartup {
 				.application(appSettingBuilder.build())
 				.plugin(pluginSettingBuilder.build());
 		
+		EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
+				.sslActive(true);
+		
+		EzyUdpSettingBuilder udpSettingBuilder = new EzyUdpSettingBuilder()
+				.active(true);
+		
 		EzySimpleSettings settings = new EzySettingsBuilder()
+				.socket(socketSettingBuilder.build())
+				.udp(udpSettingBuilder.build())
 				.zone(zoneSettingBuilder.build())
 				.build();
 		

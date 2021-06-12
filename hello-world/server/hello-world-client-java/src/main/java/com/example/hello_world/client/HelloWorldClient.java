@@ -50,6 +50,8 @@ public class HelloWorldClient {
 	protected EzyClient setup() {
 		EzyClientConfig clientConfig = EzyClientConfig.builder()
 				.zoneName(ZONE_NAME)
+				.enableSSL()
+//				.enableDebug()
 				.build();
 		EzyClients clients = EzyClients.getInstance();
 		EzyClient client = new EzyUTClient(clientConfig);
@@ -63,6 +65,7 @@ public class HelloWorldClient {
 
 		EzyAppSetup appSetup = setup.setupApp(APP_NAME);
 		appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
+		appSetup.addDataHandler("secureChat", new SecureChatResponseHandler());
 		return client;
 	}
 	
@@ -87,11 +90,20 @@ public class HelloWorldClient {
 	class ExAccessAppHandler extends EzyAppAccessHandler {
 		protected void postHandle(EzyApp app, EzyArray data) {
 			sendGreetRequest(app);
+			sendSecureChatRequest(app);
 		}
 
 		private void sendGreetRequest(EzyApp app) {
 			app.send("greet", 
-					EzyEntityObjects.newObject("who", "Dzung"));
+					EzyEntityObjects.newObject("who", "Dzung")
+			);
+		}
+		
+		private void sendSecureChatRequest(EzyApp app) {
+			app.send("secureChat", 
+					EzyEntityObjects.newObject("who", "Dzung"),
+					true
+			);
 		}
 
 	}
@@ -99,6 +111,12 @@ public class HelloWorldClient {
 	class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
 		public void handle(EzyApp app, EzyObject data) {
 			System.out.println("Received greet data: " + data);
+		}
+	}
+	
+	class SecureChatResponseHandler implements EzyAppDataHandler<EzyObject> {
+		public void handle(EzyApp app, EzyObject data) {
+			System.out.println("Received secure data: " + data);
 		}
 	}
 

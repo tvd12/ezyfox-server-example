@@ -12,6 +12,7 @@ public class PluginConfig {
 	private DatabaseConfig database;
 	
 	@Data
+	@EzyPropertiesBean(prefix = "database")
 	public static class DatabaseConfig {
 		private String name;
 		private String host;

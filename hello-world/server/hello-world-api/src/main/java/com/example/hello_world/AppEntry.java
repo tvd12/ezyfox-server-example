@@ -31,23 +31,17 @@ public class AppEntry extends EzySimpleAppEntry {
 	
 	@Override
 	public void start() throws Exception {
-		getLogger().info("start hello-world app");
+		logger.info("start hello-world app");
 	}
 
 	@Override
-	protected String[] getScanableBeanPackages() {
+	protected String[] getScanablePackages() {
 		return new String[] {
 				"com.example.hello_world.common",
 				"com.example.hello_world.config",
 				"com.example.hello_world.controller",
-				"com.example.hello_world.handler"
-		};
-	}
-	
-	@Override
-	protected String[] getScanableBindingPackages() {
-		return new String[] {
-			"com.example.hello_world.handler"
+				"com.example.hello_world.handler",
+				"com.example.hello_world.request"
 		};
 	}
 
