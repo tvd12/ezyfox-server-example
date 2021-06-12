@@ -12,7 +12,7 @@ public class UserLoginController extends EzyAbstractPluginEventController<EzyUse
 
 	@Override
 	public void handle(EzyPluginContext ctx, EzyUserLoginEvent event) {
-		getLogger().info("handle user {} login in", event.getUsername());
+		logger.info("handle user {} login in", event.getUsername());
 	}
 	
 }
