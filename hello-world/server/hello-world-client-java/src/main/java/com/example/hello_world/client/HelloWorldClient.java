@@ -50,8 +50,8 @@ public class HelloWorldClient {
 	protected EzyClient setup() {
 		EzyClientConfig clientConfig = EzyClientConfig.builder()
 				.zoneName(ZONE_NAME)
-				.enableSSL()
-//				.enableDebug()
+//				.enableSSL()
+				.enableDebug()
 				.build();
 		EzyClients clients = EzyClients.getInstance();
 		EzyClient client = new EzyUTClient(clientConfig);
