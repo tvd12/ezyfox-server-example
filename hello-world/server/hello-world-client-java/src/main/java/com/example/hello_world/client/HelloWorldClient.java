@@ -31,7 +31,7 @@ public class HelloWorldClient {
 	private static final String APP_NAME = "hello-world";
 
 	public static void main(String[] args) throws Exception {
-		String host = "tvd12.com";
+		String host = "127.0.0.1";
 		int port = 3005;
 		if(args.length > 0)
 			host = args[0];
@@ -51,7 +51,7 @@ public class HelloWorldClient {
 		EzyClientConfig clientConfig = EzyClientConfig.builder()
 				.zoneName(ZONE_NAME)
 				.enableSSL()
-//				.enableDebug()
+				.enableDebug()
 				.build();
 		EzyClients clients = EzyClients.getInstance();
 		EzyClient client = new EzyUTClient(clientConfig);
