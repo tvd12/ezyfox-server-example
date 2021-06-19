@@ -91,6 +91,7 @@ public class HelloWorldClient {
 		protected void postHandle(EzyApp app, EzyArray data) {
 			sendGreetRequest(app);
 			sendSecureChatRequest(app);
+			sendOtherRequests(app);
 		}
 
 		private void sendGreetRequest(EzyApp app) {
@@ -101,6 +102,21 @@ public class HelloWorldClient {
 		
 		private void sendSecureChatRequest(EzyApp app) {
 			app.send("secureChat", 
+					EzyEntityObjects.newObject("who", "Dzung"),
+					true
+			);
+		}
+		
+		private void sendOtherRequests(EzyApp app) {
+			app.send("chatAll", 
+					EzyEntityObjects.newObject("who", "Dzung"),
+					true
+			);
+			app.send("chat1", 
+					EzyEntityObjects.newObject("who", "Dzung"),
+					true
+			);
+			app.send("chat2", 
 					EzyEntityObjects.newObject("who", "Dzung"),
 					true
 			);
