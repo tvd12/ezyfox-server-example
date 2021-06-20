@@ -52,5 +52,4 @@ public class GreetRequestHandler
 	public static class GreetResponse {
 		private String message;
 	}
-	
 }
