@@ -5,6 +5,7 @@ import static com.example.simple_chat.constant.Commands.GREET;
 import com.example.simple_chat.common.Greeting;
 import com.example.simple_chat.handler.GreetRequestHandler.GreetRequest;
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
+import com.tvd12.ezyfox.bean.annotation.EzySingleton;
 import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
 import com.tvd12.ezyfox.core.annotation.EzyRequestListener;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
@@ -17,12 +18,11 @@ import lombok.Data;
 import lombok.Setter;
 
 @Setter
+@EzySingleton
 @EzyRequestListener(GREET)
 public class GreetRequestHandler 
 		implements EzyUserRequestHandler<EzyAppContext, GreetRequest> {
 
-	private String who;
-	
 	@EzyAutoBind
 	private Greeting greeting;
 	
@@ -36,7 +36,6 @@ public class GreetRequestHandler
 		appResponseFactory.newObjectResponse()
 			.command(GREET)
 			.data(new GreetResponse(greeting.greet(data.getWho())))
-			.param("message", greeting.greet(who))
 			.session(event.getSession())
 			.execute();
 	}

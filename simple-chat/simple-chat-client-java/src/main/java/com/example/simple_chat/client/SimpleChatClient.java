@@ -65,6 +65,7 @@ public class SimpleChatClient {
 		EzyAppSetup appSetup = setup.setupApp(APP_NAME);
 		appSetup.addDataHandler("chat/sendMessage", new ChatSendMessageResponseHandler());
 		appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
+		appSetup.addDataHandler("hello", new ChatHelloResponseHandler());
 		return client;
 	}
 	
@@ -90,6 +91,7 @@ public class SimpleChatClient {
 		protected void postHandle(EzyApp app, EzyArray data) {
 			sendChatMessageToOneRequest(app);
 			sendGreetRequest(app);
+			sendHelloRequest(app);
 		}
 
 		private void sendChatMessageToOneRequest(EzyApp app) {
@@ -104,6 +106,11 @@ public class SimpleChatClient {
 			app.send("greet", 
 					EzyEntityObjects.newObject("who", "Dzung"));
 		}
+		
+		private void sendHelloRequest(EzyApp app) {
+			app.send("hello", 
+					EzyEntityObjects.newObject("who", "Dzung"));
+		}
 
 	}
 
@@ -116,6 +123,12 @@ public class SimpleChatClient {
 	class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
 		public void handle(EzyApp app, EzyObject data) {
 			System.out.println("Received greet data: " + data);
+		}
+	}
+	
+	class ChatHelloResponseHandler implements EzyAppDataHandler<EzyObject> {
+		public void handle(EzyApp app, EzyObject data) {
+			System.out.println("Received hello data: " + data);
 		}
 	}
 
