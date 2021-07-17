@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class RotateSelf : MonoBehaviour
 {
 	private const float MIN_SPEED = 10.0f;
 	private const float MAX_SPEED = 800.0f;
@@ -10,31 +10,52 @@ public class Rotate : MonoBehaviour
 	private float totalAngle;
 
 	private int prize = 6;
-
 	private float slices = 8;
 	private float rounds = 5;
 	private float speed;
 
+	private bool enable = false;
+
     // Start is called before the first frame update
     void Start()
     {
-    	float degrees = - (prize - slices) * 360 / slices - (360/slices)/2;
-    	totalAngle = 360 * rounds + degrees;
-    	Debug.Log(totalAngle);
+    	Reset();
     }
 
     // Update is called once per frame
     void Update()
     {
-		float gap = totalAngle - currentAngle;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+        	Enable();
+        }
 
+    	if (enable) {
+    		Rotate();
+    	}
+    }
+
+    public void Enable() {
+    	enable = true;
+    }
+
+    void Reset() {
+    	enable = false;
+    	float degrees = - (prize - slices) * 360 / slices - (360/slices);
+    	totalAngle = 360 * rounds + degrees;
+    	Debug.Log(totalAngle);
+    	currentAngle = 0.0f;
+    }
+
+    void Rotate() {
+    	float gap = totalAngle - currentAngle;
 		if (gap > 0) 
 		{
-			RotateWheel(gap);
+			RotateByGap(gap);
 		}
     }
 
-    void RotateWheel(float gap) {
+    void RotateByGap(float gap) {
 		speed = Mathf.Max(gap, MIN_SPEED);
 		speed = Mathf.Min(speed, MAX_SPEED);
 
@@ -49,6 +70,11 @@ public class Rotate : MonoBehaviour
 
 		// Accumulate angles
 		currentAngle += step;
+
+		if (currentAngle >= totalAngle)
+		{
+			Reset();
+		}
     }
 
 	void RotateTransform(float step) 
