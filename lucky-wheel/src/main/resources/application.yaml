@@ -2,4 +2,4 @@ resources:
   enable: true
   locations:
     - templates
-    - client
+    - client-phaser
