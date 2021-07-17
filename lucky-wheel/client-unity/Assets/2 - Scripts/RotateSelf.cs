@@ -43,7 +43,6 @@ public class RotateSelf : MonoBehaviour
     	enable = false;
     	float degrees = - (prize - slices) * 360 / slices - (360/slices);
     	totalAngle = 360 * rounds + degrees;
-    	Debug.Log(totalAngle);
     	currentAngle = 0.0f;
     }
 
@@ -63,7 +62,9 @@ public class RotateSelf : MonoBehaviour
 		float step = speed * Time.deltaTime;
 
 		if (currentAngle + step >= totalAngle) 
+		{
 			step = totalAngle - currentAngle;
+		}
 
 		// Rotate the transform
 		RotateTransform(step);
