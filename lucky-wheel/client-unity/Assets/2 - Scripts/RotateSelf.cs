@@ -35,18 +35,21 @@ public class RotateSelf : MonoBehaviour
     	}
     }
 
-    public void Enable() {
+    public void Enable() 
+    {
     	enable = true;
     }
 
-    void Reset() {
+    void Reset() 
+    {
     	enable = false;
     	float degrees = - (prize - slices) * 360 / slices - (360/slices);
     	totalAngle = 360 * rounds + degrees;
     	currentAngle = 0.0f;
     }
 
-    void Rotate() {
+    void Rotate()
+    {
     	float gap = totalAngle - currentAngle;
 		if (gap > 0) 
 		{
@@ -54,7 +57,8 @@ public class RotateSelf : MonoBehaviour
 		}
     }
 
-    void RotateByGap(float gap) {
+    void RotateByGap(float gap)
+    {
 		speed = Mathf.Max(gap, MIN_SPEED);
 		speed = Mathf.Min(speed, MAX_SPEED);
 
