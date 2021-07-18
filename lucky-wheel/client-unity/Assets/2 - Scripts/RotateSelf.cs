@@ -13,7 +13,6 @@ public class RotateSelf : MonoBehaviour
 	private float currentAngle = 0.0f;
 	private float totalAngle;
 
-	private int prize = 6;
 	private float slices = 8;
 	private float speed;
 
@@ -32,7 +31,7 @@ public class RotateSelf : MonoBehaviour
         enable = false;
 	}
 
-	private void ComputeAngles()
+	private void ComputeAngles(int prize)
     {
 		var rounds = Random.Range(3, 6);
 
@@ -102,10 +101,8 @@ public class RotateSelf : MonoBehaviour
 
 	public void Activate(int prize)
 	{
-		//Debug.Log("Prize: " + prize);
-		this.prize = prize;
-		Debug.Log(slicePrizes[this.prize]);
-		ComputeAngles();
+		Debug.Log("Prize: " + slicePrizes[prize]);
+		ComputeAngles(prize);
 		enable = true;
 	}
 }
