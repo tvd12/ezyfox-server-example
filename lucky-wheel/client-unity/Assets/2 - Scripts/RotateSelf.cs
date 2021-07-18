@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
 {
+    private string[] slicePrizes = new string[] {
+		"A KEY!!!", "50 STARS", "500 STARS", "BAD LUCK!!!",
+		"200 STARS", "100 STARS", "150 STARS", "BAD LUCK!!!" };
+
 	private const float MIN_SPEED = 10.0f;
 	private const float MAX_SPEED = 800.0f;
 	private float currentAngle = 0.0f;
@@ -11,32 +15,42 @@ public class RotateSelf : MonoBehaviour
 
 	private int prize = 6;
 	private float slices = 8;
-	private float rounds = 5;
 	private float speed;
 
 	private bool enable = false;
 
-    public GameObject button;
+    public bool Enable { get => enable; }
 
     // Start is called before the first frame update
     void Start()
     {
-        // Subcribe to click event of button
-        button.GetComponent<Button>().clickEvent += Enable;
-    	Reset();
+    	Deactivate();
     }
 
-    void Enable() 
-    {
-        enable = true;
-    }
-
-    void Reset() 
+    void Deactivate() 
     {
         enable = false;
-        float degrees = - (prize - slices) * 360 / slices - (360/slices);
-        totalAngle = 360 * rounds + degrees;
-        currentAngle = 0.0f;
+	}
+
+	private void ComputeAngles()
+    {
+		var rounds = Random.Range(3, 6);
+
+		float degrees = prize * 360 / slices;
+		totalAngle = 360 * rounds + (360 - degrees);
+
+		currentAngle = 360 - GetAbsoluteAngle(this.transform.localRotation.eulerAngles.z);
+	}
+
+	private float GetAbsoluteAngle(float angle)
+    {
+		float ans = angle;
+		if (ans < 0)
+        {
+			ans += 360;
+        }
+
+		return ans;
     }
 
     // Update is called once per frame
@@ -47,7 +61,7 @@ public class RotateSelf : MonoBehaviour
     	}
     }
 
-    void Rotate()
+	void Rotate()
     {
     	float gap = totalAngle - currentAngle;
 		if (gap > 0) 
@@ -77,12 +91,21 @@ public class RotateSelf : MonoBehaviour
 
 		if (currentAngle >= totalAngle)
 		{
-			Reset();
+			Deactivate();
 		}
     }
 
 	void RotateTransform(float step) 
 	{
 		transform.Rotate(-Vector3.forward * step);
+	}
+
+	public void Activate(int prize)
+	{
+		//Debug.Log("Prize: " + prize);
+		this.prize = prize;
+		Debug.Log(slicePrizes[this.prize]);
+		ComputeAngles();
+		enable = true;
 	}
 }

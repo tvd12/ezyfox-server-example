@@ -1,30 +1,15 @@
-﻿using System;
-using com.tvd12.ezyfoxserver.client;
-using com.tvd12.ezyfoxserver.client.config;
-using com.tvd12.ezyfoxserver.client.constant;
-using com.tvd12.ezyfoxserver.client.entity;
-using com.tvd12.ezyfoxserver.client.evt;
+﻿using com.tvd12.ezyfoxserver.client.constant;
 using com.tvd12.ezyfoxserver.client.factory;
-using com.tvd12.ezyfoxserver.client.handler;
-using com.tvd12.ezyfoxserver.client.logger;
-using com.tvd12.ezyfoxserver.client.request;
 using com.tvd12.ezyfoxserver.client.util;
-using UnityEngine;
 
 public class SocketRequest : EzyLoggable
 {
-    private static SocketRequest _instance;
+    private static readonly SocketRequest INSTANCE = new SocketRequest();
 
     public static SocketRequest getInstance()
     {
-        if (_instance == null)
-        {
-            _instance = new SocketRequest();
-        }
-
-        return _instance;
+        return INSTANCE;
     }
-
 
     public void SendSpinRequest()
     {
@@ -33,7 +18,7 @@ public class SocketRequest : EzyLoggable
         plugin?.send("spin");
     }
 
-    public void sendPluginInfoRequest(string pluginName)
+    public void SendPluginInfoRequest(string pluginName)
     {
         var client = SocketProxy.getInstance().Client;
 
