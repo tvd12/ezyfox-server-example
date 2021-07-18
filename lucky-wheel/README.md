@@ -27,13 +27,15 @@ A simple lucky-wheel game use [ezyfox-server](https://github.com/youngmonkeys/ez
 3. Run `build.sh` file on your terminal
 4. Copy `lucky-wheel-zone-settings.xml` to `EZYFOX_SERVER_HOME/settings/zones` folder
 5. Open file `EZYFOX_SERVER_HOME/settings/ezy-settings.xml` and add to `<zones>` tag:
+
 ```xml
     <zone>
-		<name>lucky-wheel</name>
-		<config-file>lucky-wheel-zone-settings.xml</config-file>
-		<active>true</active>
-	</zone>
+        <name>lucky-wheel</name>
+        <config-file>lucky-wheel-zone-settings.xml</config-file>
+        <active>true</active>
+    </zone>
 ```
+
 6. Run `console.sh` in `EZYFOX_SERVER_HOME` on your termial, if you want to run `ezyfox-server` in backgroud you will need run `start-server.sh` on your terminal
 
 # Need a support?
