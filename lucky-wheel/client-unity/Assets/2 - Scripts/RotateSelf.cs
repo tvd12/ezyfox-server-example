@@ -16,36 +16,35 @@ public class RotateSelf : MonoBehaviour
 
 	private bool enable = false;
 
+    public GameObject button;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Subcribe to click event of button
+        button.GetComponent<Button>().clickEvent += Enable;
     	Reset();
+    }
+
+    void Enable() 
+    {
+        enable = true;
+    }
+
+    void Reset() 
+    {
+        enable = false;
+        float degrees = - (prize - slices) * 360 / slices - (360/slices);
+        totalAngle = 360 * rounds + degrees;
+        currentAngle = 0.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-        	Enable();
-        }
-
     	if (enable) {
     		Rotate();
     	}
-    }
-
-    public void Enable() 
-    {
-    	enable = true;
-    }
-
-    void Reset() 
-    {
-    	enable = false;
-    	float degrees = - (prize - slices) * 360 / slices - (360/slices);
-    	totalAngle = 360 * rounds + degrees;
-    	currentAngle = 0.0f;
     }
 
     void Rotate()
