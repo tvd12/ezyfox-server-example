@@ -10,6 +10,5 @@ public class Button : MonoBehaviour
 	public void Click()
 	{
 		clickEvent?.Invoke();
-		SocketRequest.getInstance().SendSpinRequest();
 	}
 }

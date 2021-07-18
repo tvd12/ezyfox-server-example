@@ -1,17 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
-using com.tvd12.ezyfoxserver.client;
+﻿using com.tvd12.ezyfoxserver.client;
 using com.tvd12.ezyfoxserver.client.logger;
+using UnityEngine;
 
 public class SocketInitializer : MonoBehaviour
 {
     private EzyClient client;
+    private EzyLogger logger;
 
     // Use this for initialization
     void Start()
     {
         // Enable EzyLogger
         EzyLoggerFactory.setLoggerSupply(type => new UnityLogger(type));
+        logger = EzyLoggerFactory.getLogger<SocketInitializer>();
 
         // Set up socket client
         var socketProxy = SocketProxy.getInstance();

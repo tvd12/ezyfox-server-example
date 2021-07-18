@@ -32,7 +32,7 @@ class LoginSuccessHandler : EzyLoginSuccessHandler
     protected override void handleLoginSuccess(EzyData responseData)
     {
         logger.debug("Log in successfully");
-        SocketRequest.getInstance().sendPluginInfoRequest(SocketProxy.PLUGIN_NAME);
+        SocketRequest.getInstance().SendPluginInfoRequest(SocketProxy.PLUGIN_NAME);
     }
 }
 
@@ -48,9 +48,13 @@ class PluginInfoHandler : EzyPluginInfoHandler
 
 class SpinResponseHandler : EzyAbstractPluginDataHandler<EzyObject>
 {
+    public delegate void SpinResponseDelegate(int result);
+    public static event SpinResponseDelegate spinResponseEvent;
+
     protected override void process(EzyPlugin plugin, EzyObject data)
     {
-        logger.debug(data.ToString());
+        var result = data.get<int>("result");
+        spinResponseEvent.Invoke(result);
     }
 }
 
@@ -58,10 +62,9 @@ class SpinResponseHandler : EzyAbstractPluginDataHandler<EzyObject>
 
 public class SocketProxy : EzyLoggable
 {
+    private static readonly SocketProxy INSTANCE = new SocketProxy();
 
-    private static SocketProxy _instance;
-
-    public const string ZONE_NAME = "example";
+    public const string ZONE_NAME = "lucky-wheel";
     public const string PLUGIN_NAME = "lucky-wheel";
 
     private EzyClient client;
@@ -70,12 +73,7 @@ public class SocketProxy : EzyLoggable
 
     public static SocketProxy getInstance()
     {
-        if (_instance == null)
-        {
-            _instance = new SocketProxy();
-        }
-
-        return _instance;
+        return INSTANCE;
     }
 
     public EzyClient setup()
