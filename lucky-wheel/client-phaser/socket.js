@@ -1,6 +1,6 @@
 EzyLogger.debug = true;
 
-const ZONE_NAME = "example";
+const ZONE_NAME = "lucky-wheel";
 const PLUGIN_NAME = "lucky-wheel";
 
 var handshakeHandler = new EzyHandshakeHandler();
