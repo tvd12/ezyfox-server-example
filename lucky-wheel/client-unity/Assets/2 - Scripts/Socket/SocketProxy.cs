@@ -32,15 +32,41 @@ class LoginSuccessHandler : EzyLoginSuccessHandler
     protected override void handleLoginSuccess(EzyData responseData)
     {
         logger.debug("Log in successfully");
+        SocketRequest.getInstance().sendPluginInfoRequest(SocketProxy.PLUGIN_NAME);
     }
 }
 
-public class SocketProxy : EzyLoggable {
+class PluginInfoHandler : EzyPluginInfoHandler
+{
+    protected override void postHandle(EzyPlugin plugin, EzyArray data)
+    {
+        logger.debug("Completed setting up socket client!");
+    }
+}
+
+#region Plugin Data Handler
+
+class SpinResponseHandler : EzyAbstractPluginDataHandler<EzyObject>
+{
+    protected override void process(EzyPlugin plugin, EzyObject data)
+    {
+        logger.debug(data.ToString());
+    }
+}
+
+#endregion
+
+public class SocketProxy : EzyLoggable
+{
 
     private static SocketProxy _instance;
 
     public const string ZONE_NAME = "example";
     public const string PLUGIN_NAME = "lucky-wheel";
+
+    private EzyClient client;
+
+    public EzyClient Client { get => client; }
 
     public static SocketProxy getInstance()
     {
@@ -60,12 +86,15 @@ public class SocketProxy : EzyLoggable {
             .build();
 
         var clients = EzyClients.getInstance();
-        var client = clients.newDefaultClient(config);
+        client = clients.newDefaultClient(config);
         var setup = client.setup();
 
         setup.addDataHandler(EzyCommand.HANDSHAKE, new HandshakeHandler());
         setup.addDataHandler(EzyCommand.LOGIN, new LoginSuccessHandler());
+        setup.addDataHandler(EzyCommand.PLUGIN_INFO, new PluginInfoHandler());
+        var setupPlugin = setup.setupPlugin(PLUGIN_NAME);
 
+        setupPlugin.addDataHandler("spin", new SpinResponseHandler());
         return client;
     }
 }
