@@ -22,7 +22,7 @@ A simple lucky-wheel game use [ezyfox-server](https://github.com/youngmonkeys/ez
 
 # How to deploy to ezyfox-server?
 
-1. Download [ezyfox-sever](https://resources.tvd12.com/)
+1. Download [ezyfox-sever full version](https://resources.tvd12.com/)
 2. Setup `EZYFOX_SERVER_HOME` environment variable: let's say you place `ezyfox-server` at `/Programs/ezyfox-server` so `EZYFOX_SERVER_HOME = /Programs/ezyfox-server`
 3. Run `build.sh` file on your terminal
 4. Copy `lucky-wheel-zone-settings.xml` to `EZYFOX_SERVER_HOME/settings/zones` folder
