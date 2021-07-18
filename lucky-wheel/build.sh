@@ -1,2 +1,2 @@
-export EZYFOX_SERVER_HOME=/Users/tvd12/Documents/tvd12/java/deploy/ezyfox-server
+export EZYFOX_SERVER_HOME=/Users/AnhVu/Work/Ezyfox/ezychat/ezyfox-server
 mvn -Pexport clean install

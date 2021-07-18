@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
 {
-    private string[] slicePrizes = new string[] {
-		"A KEY!!!", "50 STARS", "500 STARS", "BAD LUCK!!!",
-		"200 STARS", "100 STARS", "150 STARS", "BAD LUCK!!!" };
-
 	private const float MIN_SPEED = 10.0f;
 	private const float MAX_SPEED = 800.0f;
 	private float currentAngle = 0.0f;
@@ -20,8 +16,11 @@ public class RotateSelf : MonoBehaviour
 
     public bool Enable { get => enable; }
 
-    // Start is called before the first frame update
-    void Start()
+	public delegate void FinishDelegate();
+	public event FinishDelegate finishEvent;
+
+	// Start is called before the first frame update
+	void Start()
     {
     	Deactivate();
     }
@@ -91,6 +90,7 @@ public class RotateSelf : MonoBehaviour
 		if (currentAngle >= totalAngle)
 		{
 			Deactivate();
+			finishEvent.Invoke();
 		}
     }
 
@@ -101,7 +101,6 @@ public class RotateSelf : MonoBehaviour
 
 	public void Activate(int prize)
 	{
-		Debug.Log("Prize: " + slicePrizes[prize]);
 		ComputeAngles(prize);
 		enable = true;
 	}
