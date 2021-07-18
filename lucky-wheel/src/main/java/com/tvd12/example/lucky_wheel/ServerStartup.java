@@ -12,14 +12,14 @@ import com.tvd12.ezyfoxserver.support.entry.EzyDefaultPluginEntry;
 
 public class ServerStartup {
 
-    private static final String ZONE_NAME = "example";
+    private static final String ZONE_NAME = "lucky-wheel";
     private static final String PLUGIN_NAME = "lucky-wheel";
 
     public static void main(String[] args) throws Exception {
         EzyPluginSettingBuilder pluginSettingBuilder = new EzyPluginSettingBuilder()
             .name(PLUGIN_NAME)
             .addListenEvent(EzyEventType.USER_LOGIN)
-            .entryLoader(HelloPluginEntryLoader.class);
+            .entryLoader(PluginEntryLoader.class);
 
         EzyZoneSettingBuilder zoneSettingBuilder = new EzyZoneSettingBuilder()
             .name(ZONE_NAME)
@@ -35,14 +35,14 @@ public class ServerStartup {
         server.start();
     }
 
-    public static class HelloPluginEntryLoader extends EzyAbstractPluginEntryLoader {
+    public static class PluginEntryLoader extends EzyAbstractPluginEntryLoader {
         @Override
         public EzyPluginEntry load() throws Exception {
-            return new HelloPluginEntry();
+            return new PluginEntry();
         }
     }
 
-    public static class HelloPluginEntry extends EzyDefaultPluginEntry {
+    public static class PluginEntry extends EzyDefaultPluginEntry {
 
         @Override
         protected String[] getScanableBeanPackages() {
