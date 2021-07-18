@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SocketInitializer : MonoBehaviour
 {
+    public string host = "127.0.0.1";
+    public int port = 3005;
     private EzyClient client;
     private EzyLogger logger;
 
@@ -19,7 +21,7 @@ public class SocketInitializer : MonoBehaviour
         client = socketProxy.setup();
 
         // Connect to socket server
-        client.connect("127.0.0.1", 3005);
+        client.connect(host, port);
     }
 
     // Update is called once per frame
