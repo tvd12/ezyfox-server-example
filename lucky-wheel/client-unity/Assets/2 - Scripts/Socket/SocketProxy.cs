@@ -64,7 +64,7 @@ public class SocketProxy : EzyLoggable
 {
     private static readonly SocketProxy INSTANCE = new SocketProxy();
 
-    public const string ZONE_NAME = "example";
+    public const string ZONE_NAME = "lucky-wheel";
     public const string PLUGIN_NAME = "lucky-wheel";
 
     private EzyClient client;
