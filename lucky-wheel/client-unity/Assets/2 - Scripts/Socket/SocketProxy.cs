@@ -3,12 +3,9 @@ using com.tvd12.ezyfoxserver.client;
 using com.tvd12.ezyfoxserver.client.config;
 using com.tvd12.ezyfoxserver.client.constant;
 using com.tvd12.ezyfoxserver.client.entity;
-using com.tvd12.ezyfoxserver.client.evt;
 using com.tvd12.ezyfoxserver.client.handler;
-using com.tvd12.ezyfoxserver.client.logger;
 using com.tvd12.ezyfoxserver.client.request;
 using com.tvd12.ezyfoxserver.client.util;
-using UnityEngine;
 
 class HandshakeHandler : EzyHandshakeHandler
 {
@@ -48,8 +45,7 @@ class PluginInfoHandler : EzyPluginInfoHandler
 
 class SpinResponseHandler : EzyAbstractPluginDataHandler<EzyObject>
 {
-    public delegate void SpinResponseDelegate(int result);
-    public static event SpinResponseDelegate spinResponseEvent;
+    public static event Action<int> spinResponseEvent;
 
     protected override void process(EzyPlugin plugin, EzyObject data)
     {
