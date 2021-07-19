@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class RotateSelf : MonoBehaviour
@@ -16,8 +15,7 @@ public class RotateSelf : MonoBehaviour
 
     public bool Enable { get => enable; }
 
-	public delegate void FinishDelegate();
-	public event FinishDelegate finishEvent;
+	public event Action finishEvent;
 
 	// Start is called before the first frame update
 	void Start()
@@ -32,7 +30,7 @@ public class RotateSelf : MonoBehaviour
 
 	private void ComputeAngles(int prize)
     {
-		var rounds = Random.Range(3, 6);
+		var rounds = UnityEngine.Random.Range(3, 6);
 
 		float degrees = prize * 360 / slices;
 		totalAngle = 360 * rounds + (360 - degrees);

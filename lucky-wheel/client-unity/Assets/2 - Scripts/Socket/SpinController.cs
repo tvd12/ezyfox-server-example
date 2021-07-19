@@ -1,6 +1,4 @@
-﻿using com.tvd12.ezyfoxserver.client;
-using com.tvd12.ezyfoxserver.client.logger;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SpinController : MonoBehaviour
@@ -17,14 +15,14 @@ public class SpinController : MonoBehaviour
 
     private void Awake()
     {
-        spinButton.GetComponent<Button>().clickEvent += SpinButtonClick;
+        spinButton.GetComponent<Button>().clickEvent += OnSpinButtonClick;
 
-        SpinResponseHandler.spinResponseEvent += SpinResponse;
+        SpinResponseHandler.spinResponseEvent += OnSpinSocketResponse;
 
-        wheel.GetComponent<RotateSelf>().finishEvent += FinishSpin;
+        wheel.GetComponent<RotateSelf>().finishEvent += OnWheelFinishSpin;
     }
 
-    void SpinButtonClick()
+    void OnSpinButtonClick()
     {
         if (!wheel.GetComponent<RotateSelf>().Enable)
         {
@@ -33,13 +31,13 @@ public class SpinController : MonoBehaviour
         }
     }
 
-    void SpinResponse(int result)
+    void OnSpinSocketResponse(int result)
     {
         displayText = slicePrizes[result];
         wheel.GetComponent<RotateSelf>().Activate(result);
     }
 
-    void FinishSpin()
+    void OnWheelFinishSpin()
     {
         prizeText.text = displayText;
     }

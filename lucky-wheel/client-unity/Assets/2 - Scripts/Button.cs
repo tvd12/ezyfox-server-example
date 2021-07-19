@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-	public delegate void ClickDelegate();
-	public event ClickDelegate clickEvent;
+	public event Action clickEvent;
 
 	public void Click()
 	{
