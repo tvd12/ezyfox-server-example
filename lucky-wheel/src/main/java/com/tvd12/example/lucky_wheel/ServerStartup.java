@@ -1,7 +1,8 @@
 package com.tvd12.example.lucky_wheel;
 
-import com.tvd12.ezyfox.annotation.EzyPackagesToScan;
+import com.tvd12.ezyfox.bean.EzyBeanContextBuilder;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
+import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
 import com.tvd12.ezyfoxserver.ext.EzyAbstractPluginEntryLoader;
 import com.tvd12.ezyfoxserver.ext.EzyPluginEntry;
@@ -11,10 +12,6 @@ import com.tvd12.ezyfoxserver.setting.EzySimpleSettings;
 import com.tvd12.ezyfoxserver.setting.EzyZoneSettingBuilder;
 import com.tvd12.ezyfoxserver.support.entry.EzyDefaultPluginEntry;
 
-
-@EzyPackagesToScan({
-        "com.tvd12.example.lucky_wheel"
-})
 public class ServerStartup {
 
     private static final String ZONE_NAME = "lucky-wheel";
@@ -54,6 +51,12 @@ public class ServerStartup {
             return new String[] {
                 "com.tvd12.example.lucky_wheel"
             };
+        }
+
+        // this function will be removed when lucky-wheel update ezyfox-server to 1.2.0
+        @Override
+        protected void setupBeanContext(EzyPluginContext context, EzyBeanContextBuilder builder) {
+            builder.scan(getScanableBeanPackages());
         }
 
     }
