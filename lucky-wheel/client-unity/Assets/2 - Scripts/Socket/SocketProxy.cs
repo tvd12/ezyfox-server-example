@@ -13,8 +13,8 @@ class HandshakeHandler : EzyHandshakeHandler
     {
         return new EzyLoginRequest(
             SocketProxy.ZONE_NAME,
-            "Guest",
-            "123456"
+            "test",
+            "test1234"
         );
     }
 
