@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class SpinController : MonoBehaviour
 {
-    public GameObject spinButton;
+    public ClickEventButton spinButton;
     public GameObject wheel;
     public Text prizeText;
 
@@ -15,7 +15,7 @@ public class SpinController : MonoBehaviour
 
     private void Awake()
     {
-        spinButton.GetComponent<Button>().clickEvent += OnSpinButtonClick;
+        spinButton.clickEvent += OnSpinButtonClick;
 
         SpinResponseHandler.spinResponseEvent += OnSpinSocketResponse;
 

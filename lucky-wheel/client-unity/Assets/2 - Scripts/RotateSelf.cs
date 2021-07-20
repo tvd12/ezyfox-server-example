@@ -88,7 +88,7 @@ public class RotateSelf : MonoBehaviour
 		if (currentAngle >= totalAngle)
 		{
 			Deactivate();
-			finishEvent.Invoke();
+			finishEvent?.Invoke();
 		}
     }
 

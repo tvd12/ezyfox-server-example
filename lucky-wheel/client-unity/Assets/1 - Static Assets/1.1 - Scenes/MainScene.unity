@@ -654,7 +654,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 704653552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5bc2dca777341a5bfa7c719f829a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 61d7d63c28e8a444bbab31ed6dfb0cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1207313580
@@ -723,7 +723,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1520572705
+--- !u!1 &1330097738
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -731,37 +731,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1520572707}
-  - component: {fileID: 1520572706}
-  - component: {fileID: 1520572708}
+  - component: {fileID: 1330097740}
+  - component: {fileID: 1330097739}
   m_Layer: 0
-  m_Name: Socket
+  m_Name: SocketControllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1520572706
+--- !u!114 &1330097739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520572705}
+  m_GameObject: {fileID: 1330097738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856483ab0e6d54a3e8102038ec363739, type: 3}
+  m_Script: {fileID: 11500000, guid: dfbf4ccf6ab7f4056b1acc43ba946182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: 127.0.0.1
-  port: 3005
---- !u!4 &1520572707
+  spinButton: {fileID: 704653557}
+  wheel: {fileID: 553523275}
+  prizeText: {fileID: 504320315}
+--- !u!4 &1330097740
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520572705}
+  m_GameObject: {fileID: 1330097738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.061173692, y: -0.00878398, z: -75.06071}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -769,21 +769,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1520572708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520572705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfbf4ccf6ab7f4056b1acc43ba946182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinButton: {fileID: 704653552}
-  wheel: {fileID: 553523275}
-  prizeText: {fileID: 504320315}
 --- !u!1 &1717433448
 GameObject:
   m_ObjectHideFlags: 0
