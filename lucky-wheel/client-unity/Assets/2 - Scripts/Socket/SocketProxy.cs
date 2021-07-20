@@ -13,14 +13,9 @@ class HandshakeHandler : EzyHandshakeHandler
     {
         return new EzyLoginRequest(
             SocketProxy.ZONE_NAME,
-            "test",
-            "test1234"
+            SocketProxy.getInstance().UserAuthenInfo.Username,
+            SocketProxy.getInstance().UserAuthenInfo.Password
         );
-    }
-
-    protected override void postHandle(EzyArray data)
-    {
-        logger.debug("postHandle Handsake");
     }
 }
 
@@ -35,9 +30,11 @@ class LoginSuccessHandler : EzyLoginSuccessHandler
 
 class PluginInfoHandler : EzyPluginInfoHandler
 {
+    public static event Action socketSetupCompletedEvent;
     protected override void postHandle(EzyPlugin plugin, EzyArray data)
     {
         logger.debug("Completed setting up socket client!");
+        socketSetupCompletedEvent?.Invoke();
     }
 }
 
@@ -50,7 +47,7 @@ class SpinResponseHandler : EzyAbstractPluginDataHandler<EzyObject>
     protected override void process(EzyPlugin plugin, EzyObject data)
     {
         var result = data.get<int>("result");
-        spinResponseEvent.Invoke(result);
+        spinResponseEvent?.Invoke(result);
     }
 }
 
@@ -64,16 +61,25 @@ public class SocketProxy : EzyLoggable
     public const string PLUGIN_NAME = "lucky-wheel";
 
     private EzyClient client;
+    private User userAuthenInfo = new User("test", "test1234");
+    private string host;
+    private int port;
 
     public EzyClient Client { get => client; }
+    public User UserAuthenInfo { get => userAuthenInfo; set => userAuthenInfo = value; }
+    public string Host { get => host; }
+    public int Port { get => port; }
 
     public static SocketProxy getInstance()
     {
         return INSTANCE;
     }
 
-    public EzyClient setup()
+    public EzyClient setup(string host, int port)
     {
+        this.host = host;
+        this.port = port;
+
         logger.debug("Set up socket client");
         var config = EzyClientConfig.builder()
             .clientName(ZONE_NAME)
@@ -91,4 +97,12 @@ public class SocketProxy : EzyLoggable
         setupPlugin.addDataHandler("spin", new SpinResponseHandler());
         return client;
     }
+
+    public void login(string username, string password)
+    {
+        userAuthenInfo.Username = username;
+        userAuthenInfo.Password = password;
+        client.connect(host, port);
+    }
+
 }
