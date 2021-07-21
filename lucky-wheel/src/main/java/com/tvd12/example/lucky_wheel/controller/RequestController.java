@@ -1,6 +1,5 @@
 package com.tvd12.example.lucky_wheel.controller;
 
-import com.tvd12.example.lucky_wheel.entity.Prize;
 import com.tvd12.example.lucky_wheel.service.PrizeService;
 import com.tvd12.example.lucky_wheel.service.WheelService;
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
