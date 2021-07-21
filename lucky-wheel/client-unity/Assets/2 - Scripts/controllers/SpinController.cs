@@ -1,44 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SpinController : MonoBehaviour
 {
-    public ClickEventButton spinButton;
-    public GameObject wheel;
-    public Text prizeText;
+    public BoolVariable isWheelEnable;
+    public StringVariable prizeString;
+    public UnityEvent<int> spinSocketResponseEvent;
 
-    private string[] slicePrizes = new string[] {
-        "A KEY!!!", "50 STARS", "500 STARS", "BAD LUCK!!!",
-        "200 STARS", "100 STARS", "150 STARS", "BAD LUCK!!!" };
+    //public Text prizeText;
 
     private string displayText = "";
 
     private void Awake()
     {
-        spinButton.clickEvent += OnSpinButtonClick;
-
         SpinResponseHandler.spinResponseEvent += OnSpinSocketResponse;
-
-        wheel.GetComponent<RotateSelf>().finishEvent += OnWheelFinishSpin;
     }
 
-    void OnSpinButtonClick()
+    //[SerializeField]
+    public void SendSpinRequest()
     {
-        if (!wheel.GetComponent<RotateSelf>().Enable)
+        if (!isWheelEnable.Value)
         {
-            prizeText.text = "";
+            prizeString.SetValue("");
             SocketRequest.getInstance().SendSpinRequest();
         }
     }
 
     void OnSpinSocketResponse(int result)
     {
-        displayText = slicePrizes[result];
-        wheel.GetComponent<RotateSelf>().Activate(result);
-    }
-
-    void OnWheelFinishSpin()
-    {
-        prizeText.text = displayText;
+        spinSocketResponseEvent.Invoke(result);
     }
 }
