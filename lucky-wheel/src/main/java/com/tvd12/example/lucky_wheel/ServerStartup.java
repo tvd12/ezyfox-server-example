@@ -1,6 +1,7 @@
 package com.tvd12.example.lucky_wheel;
 
 import com.tvd12.ezyfox.bean.EzyBeanContextBuilder;
+import com.tvd12.ezyfox.bean.annotation.EzyPropertiesSources;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
@@ -12,6 +13,7 @@ import com.tvd12.ezyfoxserver.setting.EzySimpleSettings;
 import com.tvd12.ezyfoxserver.setting.EzyZoneSettingBuilder;
 import com.tvd12.ezyfoxserver.support.entry.EzyDefaultPluginEntry;
 
+@EzyPropertiesSources({"lucky-wheel.properties"})
 public class ServerStartup {
 
     private static final String ZONE_NAME = "lucky-wheel";
@@ -58,6 +60,5 @@ public class ServerStartup {
         protected void setupBeanContext(EzyPluginContext context, EzyBeanContextBuilder builder) {
             builder.scan(getScanableBeanPackages());
         }
-
     }
 }
