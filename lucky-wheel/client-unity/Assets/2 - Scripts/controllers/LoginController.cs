@@ -4,20 +4,18 @@ using UnityEngine.UI;
 
 public class LoginController : MonoBehaviour
 {
-    public InputField username;
-    public InputField password;
-    public ClickEventButton loginButton;
+    public StringVariable username;
+    public StringVariable password;
 
     private void Awake()
     {
-        loginButton.clickEvent += OnLoginButtonClick;
         PluginInfoHandler.socketSetupCompletedEvent += OnSocketSetupCompleted;
     }
 
-    void OnLoginButtonClick()
+    public void OnLogin()
     {
         // Login to socket server
-        SocketProxy.getInstance().login(username.text, password.text);
+        SocketProxy.getInstance().login(username.Value, password.Value);
     }
 
     void OnSocketSetupCompleted()

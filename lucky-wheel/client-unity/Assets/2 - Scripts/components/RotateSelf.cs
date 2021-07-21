@@ -1,8 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RotateSelf : MonoBehaviour
 {
+	private string[] slicePrizes = new string[] {
+		"A KEY!!!", "50 STARS", "500 STARS", "BAD LUCK!!!",
+		"200 STARS", "100 STARS", "150 STARS", "BAD LUCK!!!" };
+
 	private const float MIN_SPEED = 10.0f;
 	private const float MAX_SPEED = 800.0f;
 	private float currentAngle = 0.0f;
@@ -10,12 +15,11 @@ public class RotateSelf : MonoBehaviour
 
 	private float slices = 8;
 	private float speed;
+	private int prize;
 
-	private bool enable = false;
+	public BoolVariable enable;
 
-    public bool Enable { get => enable; }
-
-	public event Action finishEvent;
+	public UnityEvent<string> finishEvent;
 
 	// Start is called before the first frame update
 	void Start()
@@ -25,10 +29,10 @@ public class RotateSelf : MonoBehaviour
 
     void Deactivate() 
     {
-        enable = false;
+        enable.SetValue(false);
 	}
 
-	private void ComputeAngles(int prize)
+	private void ComputeAngles()
     {
 		var rounds = UnityEngine.Random.Range(3, 6);
 
@@ -52,7 +56,7 @@ public class RotateSelf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if (enable) {
+    	if (enable.Value) {
     		Rotate();
     	}
     }
@@ -88,7 +92,7 @@ public class RotateSelf : MonoBehaviour
 		if (currentAngle >= totalAngle)
 		{
 			Deactivate();
-			finishEvent?.Invoke();
+			finishEvent?.Invoke(slicePrizes[this.prize]);
 		}
     }
 
@@ -99,7 +103,8 @@ public class RotateSelf : MonoBehaviour
 
 	public void Activate(int prize)
 	{
-		ComputeAngles(prize);
-		enable = true;
+		this.prize = prize;
+		ComputeAngles();
+		enable.SetValue(true);
 	}
 }
