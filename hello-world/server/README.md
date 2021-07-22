@@ -1,8 +1,8 @@
-# hello-world <img src="https://github.com/youngmonkeys/ezyfox-server/blob/master/logo.png" width="48" height="48" />
+# hello-world <img src="https://github.com/youngmonkeys/ezyfox-server/blob/master/logo.png" width="64" />
 
 # Documentation
 
-[https://tvd12.com/](https://tvd12.com/)
+[https://youngmonkeys.org/get-started/](https://youngmonkeys.org/get-started/)
 
 # License
 

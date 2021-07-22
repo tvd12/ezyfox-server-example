@@ -18,7 +18,7 @@ public class MessageController {
     public boolean pushMessage(@RequestBody Message message) {
         messageProducer.send(
             "push",
-            new KafkaMessage(message.getUsername(), message.getDataObject())
+            new KafkaMessage(message.getUsername(), message.getData())
         );
         return Boolean.TRUE;
     }

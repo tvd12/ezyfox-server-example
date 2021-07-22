@@ -1,0 +1,1 @@
+mvn -Denv.EZYFOX_SERVER_HOME=deploy -Pezyfox-deploy clean install

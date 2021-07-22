@@ -1,0 +1,27 @@
+{
+  "name": "push-message-api-gateway",
+  "version": "1.0.0",
+  "description": "ezyfox server push message api gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tvd12/ezyfox-server-example.git"
+  },
+  "keywords": [
+    "ezyfserver"
+  ],
+  "author": "youngmonkeys.org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tvd12/ezyfox-server-example/issues"
+  },
+  "homepage": "https://github.com/tvd12/ezyfox-server-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "kafkajs": "^1.15.0",
+    "msgpack": "^1.0.3"
+  }
+}
