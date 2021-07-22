@@ -32,8 +32,8 @@ class MessageView extends React.Component {
 
     componentDidMount() {
         this.messageController.addDefaultView("add", (message) => {
-            console.log("message view add message: " + message);
-            this.messages.push(message);
+            let newMessages = ["An usage of ezyfox-server", JSON.stringify(message)].concat(this.messages.slice(1));
+            this.messages = newMessages.length > 30 ? newMessages.slice(0, 30) : newMessages;
             this.setState({messages: this.messages});
         });
     }

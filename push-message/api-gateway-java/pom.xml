@@ -11,28 +11,28 @@
     </parent>
 
     <groupId>org.youngmonkeys.example</groupId>
-    <artifactId>push-message</artifactId>
+    <artifactId>push-message-api-gateway</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>push-message</name>
+    <name>push-message-api-gateway</name>
     <url>http://maven.apache.org</url>
 
     <properties>
-        <ezy.server.version>1.1.9</ezy.server.version>
         <ezymq.kafka.version>1.1.3</ezymq.kafka.version>
+        <ezyhttp.version>0.1.4</ezyhttp.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.tvd12</groupId>
-            <artifactId>ezyfox-server-embedded</artifactId>
-            <version>${ezy.server.version}</version>
+            <artifactId>ezymq-kafka</artifactId>
+            <version>${ezymq.kafka.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
-            <artifactId>ezymq-kafka</artifactId>
-            <version>${ezymq.kafka.version}</version>
+            <artifactId>ezyhttp-server-boot</artifactId>
+            <version>${ezyhttp.version}</version>
         </dependency>
     </dependencies>
 </project>

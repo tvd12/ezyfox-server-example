@@ -1,0 +1,7 @@
+kafka:
+  producers:
+    message:
+      topic: message
+  consumers:
+    message:
+      topic: message

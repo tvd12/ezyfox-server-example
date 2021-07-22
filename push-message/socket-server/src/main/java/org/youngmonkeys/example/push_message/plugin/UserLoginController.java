@@ -1,4 +1,4 @@
-package org.youngmonkeys.example.push_message.controller;
+package org.youngmonkeys.example.push_message.plugin;
 
 import com.tvd12.ezyfox.core.annotation.EzyEventHandler;
 import com.tvd12.ezyfoxserver.constant.EzyEventNames;

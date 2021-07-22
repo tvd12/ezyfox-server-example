@@ -71,7 +71,7 @@ class SocketProxy {
 
         setupApp.addDataHandler(Command.MESSAGE, function (app, data) {
             console.log("received message: " + JSON.stringify(data))
-            messageController.updateViews("add", data.message);
+            messageController.updateViews("add", data);
         });
 
         return client;

@@ -68,7 +68,7 @@ public class PushMessageServerStartup {
         @Override
         protected String[] getScanablePackages() {
             return new String[] {
-                "org.youngmonkeys.example.push_message"
+                "org.youngmonkeys.example.push_message.plugin"
             };
         }
     }
