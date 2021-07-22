@@ -1,6 +1,6 @@
 # ezyfox-server-example
 
-Provides demonstrative system, application, game 
+Provides demonstrative systems, applications, games
 
 # Base on [ezyfox-server](https://github.com/youngmonkeys/ezyfox-server)
 
