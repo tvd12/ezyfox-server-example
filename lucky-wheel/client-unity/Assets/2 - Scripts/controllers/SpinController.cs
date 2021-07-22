@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class SpinController : MonoBehaviour
 {
@@ -8,16 +7,11 @@ public class SpinController : MonoBehaviour
     public StringVariable prizeString;
     public UnityEvent<int> spinSocketResponseEvent;
 
-    //public Text prizeText;
-
-    private string displayText = "";
-
     private void Awake()
     {
         SpinResponseHandler.spinResponseEvent += OnSpinSocketResponse;
     }
 
-    //[SerializeField]
     public void SendSpinRequest()
     {
         if (!isWheelEnable.Value)
