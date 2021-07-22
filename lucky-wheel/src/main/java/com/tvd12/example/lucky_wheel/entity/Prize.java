@@ -4,12 +4,15 @@ import com.tvd12.ezyfox.annotation.EzyId;
 import com.tvd12.ezyfox.database.annotation.EzyCollection;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @EzyCollection
-public class User {
+public class Prize {
 	@EzyId
 	Long id;
 	
-	String username;
-	String password;
+	private Date date = new Date();
+	private String username;
+	private int prize;
 }

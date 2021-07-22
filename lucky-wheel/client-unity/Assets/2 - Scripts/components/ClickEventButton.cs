@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ClickEventButton : MonoBehaviour
 {
 	public event Action clickEvent;
 
