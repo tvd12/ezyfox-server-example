@@ -10,6 +10,8 @@ A small push message system
 
 <img src="https://raw.githubusercontent.com/tvd12/ezyfox-server-example/master/push-message/images/push-message.png" />
 
+** Notice: `api-gateway` is your business server, it contains your business, and you will decide what kind of message here
+
 # Documentation
 
 [https://youngmonkeys.org/get-started/](https://youngmonkeys.org/get-started/)
