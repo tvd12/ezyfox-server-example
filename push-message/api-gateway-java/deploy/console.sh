@@ -8,4 +8,4 @@ do
   CLASSPATH="$CLASSPATH:plugins/${dir##*/}/*"
 done
 echo 'classpath: ' $CLASSPATH
-java $1 -cp $CLASSPATH com.tvd12.ezyfoxserver.nio.EzyNioRunner $EZYFOX_SERVER_HOME/settings/config.properties
+java $1 -cp $CLASSPATH org.youngmonkeys.example.push_message.gateway.api.PushMessageApiGatewayStartup

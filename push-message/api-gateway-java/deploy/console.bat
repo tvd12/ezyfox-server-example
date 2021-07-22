@@ -5,4 +5,4 @@ for /D %%d in (plugins\*) do (
 )
 echo classpath = %ezyclasspath%
 
-java %1 -cp %ezyclasspath% com.tvd12.ezyfoxserver.nio.EzyNioRunner settings/config.properties
+java %1 -cp %ezyclasspath% org.youngmonkeys.example.push_message.gateway.api.PushMessageApiGatewayStartup

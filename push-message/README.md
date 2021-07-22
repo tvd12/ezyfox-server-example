@@ -18,7 +18,7 @@
 2. [Maven 3](https://maven.apache.org/download.cgi)
 3. [Kafka](https://kafka.apache.org/downloads)
 
-# How to test?
+# How to run?
 
 ## Start kafka
 
@@ -60,10 +60,77 @@ console.bat
 
 You just need start only one api gateway related to your prefer langugage
 
+### start java
+
+### Build
+
+1. Move to `api-gateway-java` folder
+2. Run command `bash build.sh` or
+
+```bash
+mvn -Denv.EZYFOX_SERVER_HOME=deploy -Pezyfox-deploy clean install
+```
+
+### Run
+
+1. Move to `api-gateway-java/deploy` folder
+2. Run command
+
+```bash
+# On linux
+bash ./console.sh
+
+# On windows
+console.bat
+```
+
 ### Start nodejs
 
 1. Move to folder `api-gateway-nodejs`
-2. Run `node index.js`
+2. Run `npm i`
+3. Run `node index.js`
+
+## Start UI client
+
+### Start ReactJS web client
+
+1. Move to folder `client-reactjs`
+2. Run `npm i`
+3. Run `npm start`
+
+# How to test?
+
+### With java api gateway
+
+run:
+
+```bash
+curl --location --request POST 'http://localhost:8080/api/v1/message/push' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "dungtv",
+    "data" : {
+        "title": "Welcome1",
+        "content": "Hi Young Monkey!"
+    }
+}'
+```
+
+### With nodejs api gateway
+
+run:
+
+```bash
+curl --location --request POST 'http://localhost:8081/api/v1/message/push' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "dungtv",
+    "data" : {
+        "title": "Welcome1",
+        "content": "Hi Young Monkey!"
+    }
+}'
+```
 
 # License
 
