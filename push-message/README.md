@@ -60,7 +60,7 @@ bash ./console.sh
 console.bat
 ```
 
-## Start a api gateway server
+## Start an api gateway server
 
 You just need start only one api gateway related to your prefer langugage
 
@@ -93,6 +93,15 @@ console.bat
 1. Move to folder `api-gateway-nodejs`
 2. Run `npm i`
 3. Run `node index.js`
+
+### Start go
+
+1. MOve to folder `api-gateway-go`
+2. Run ` go mod init org.younmonkeys.example/push-message-api-gateway`
+3. Run `go mod tidy`
+4. Run `go get github.com/segmentio/kafka-go`
+5. Run `go install`
+6. Run `go .`
 
 ## Start UI client
 
@@ -135,6 +144,26 @@ curl --location --request POST 'http://localhost:8081/api/v1/message/push' \
     }
 }'
 ```
+
+### With go api gateway
+
+run:
+
+```bash
+curl --location --request POST 'http://localhost:8082/api/v1/message/push' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "dungtv",
+    "data" : {
+        "title": "Welcome1",
+        "content": "Hi Young Monkey!"
+    }
+}'
+```
+
+### How to implement for your project?
+
+You just need replace `api-gateway` and `UI client` by your application server and your UI client
 
 # License
 
