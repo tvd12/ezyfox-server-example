@@ -109,12 +109,13 @@ console.bat
 
 1. Move to folder `client-reactjs`
 2. Run `npm i`
-3. Run `npm start`
+3. Run `npm start` and open [http://localhost:3000/](http://localhost:3000/)
 
 ### Start VueJS web client
 
 1. Move to folder `client-vuejs`
 2. Run `npm i`, you get an error with vuex you can run `npm install vuex@next --save`
+3. Run `npm start` and open [http://localhost:3001/](http://localhost:3001/)
 
 # How to test?
 
