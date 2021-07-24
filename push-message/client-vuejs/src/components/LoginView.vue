@@ -22,14 +22,15 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import router from './../router'
+import Mvc from 'mvc-es6';
+import SocketProxy from '../socket/SocketProxy'
 
 export default {
   name: 'LoginView',
   data () {
       return {
-          username: '',
-          password: '',
+          username: 'dungtv',
+          password: '123456abc',
           submitted: false
       }
     },
@@ -39,8 +40,13 @@ export default {
     methods: {
         ...mapActions('account', ['login']),
         login(username, password) {
-          console.log("login with username: " + username + ", password: " + password);
-          router.push('/message');
+          let mvc = Mvc.getInstance();
+          let models = mvc.models;
+          this.connection = models.connection;
+          this.connection.username = username;
+          this.connection.password = password;
+          let socketProxy = SocketProxy.getInstance();
+          socketProxy.connect();
         },
         handleSubmit () {
             this.submitted = true;

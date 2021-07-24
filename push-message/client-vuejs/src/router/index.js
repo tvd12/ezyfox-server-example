@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Ezy from 'ezyfox-es6-client';
 import LoginView from '../components/LoginView'
 import MessageView from '../components/MessageView'
 
@@ -21,14 +22,15 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  // // redirect to login page if not logged in and trying to access a restricted page
-  // const publicPages = ['/login', '/register'];
-  // const authRequired = !publicPages.includes(to.path);
-  // const loggedIn = localStorage.getItem('user');
+  const clients = Ezy.Clients.getInstance();
+  const client = clients.getDefaultClient();
+  const authenticated = client && client.isConnected();
+  const publicPages = ['/'];
+  const authRequired = !publicPages.includes(to.path);
 
-  // if (authRequired && !loggedIn) {
-  //   return next('/login');
-  // }
+  if (authRequired && !authenticated) {
+    next('/');
+  }
 
   next();
 })
