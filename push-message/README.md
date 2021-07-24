@@ -111,6 +111,11 @@ console.bat
 2. Run `npm i`
 3. Run `npm start`
 
+### Start VueJS web client
+
+1. Move to folder `client-vuejs`
+2. Run `npm i`, you get an error with vuex you can run `npm install vuex@next --save`
+
 # How to test?
 
 ### With java api gateway
