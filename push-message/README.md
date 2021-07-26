@@ -96,12 +96,18 @@ console.bat
 
 ### Start go
 
-1. MOve to folder `api-gateway-go`
+1. Move to folder `api-gateway-go`
 2. Run ` go mod init org.younmonkeys.example/push-message-api-gateway`
 3. Run `go mod tidy`
 4. Run `go get github.com/segmentio/kafka-go`
 5. Run `go install`
 6. Run `go .`
+
+### Start python
+
+1. Move to folder `api-gateway-python`
+2. Run `sudo python3 -m pip install kafka-python` to install kafka python
+3. Run `python3 index.py`
 
 ## Start UI client
 
@@ -166,6 +172,23 @@ curl --location --request POST 'http://localhost:8082/api/v1/message/push' \
     }
 }'
 ```
+
+### With python api gateway
+
+run:
+
+```bash
+curl --location --request POST 'http://localhost:8083/api/v1/message/push' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "dungtv",
+    "data" : {
+        "title": "Welcome1",
+        "content": "Hi Young Monkey!"
+    }
+}'
+```
+
 
 ### How to implement for your project?
 
