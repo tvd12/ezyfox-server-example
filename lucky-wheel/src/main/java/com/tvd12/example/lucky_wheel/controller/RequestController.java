@@ -26,6 +26,8 @@ public class RequestController extends EzyLoggable {
 		
 		prizeService.createPrize(user.getName(), result);
 		
+		wheelService.decreaseQuantity(result);
+		
 		responseFactory.newObjectResponse()
 				.command("spin")
 				.param("result", result)
