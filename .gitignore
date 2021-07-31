@@ -1,3 +1,12 @@
+bin/
+*/bin/
+**/bin/
+.vs/
+*/.vs/
+**/.vs/
+obj/
+*/obj/
+**/obj/
 deploy/lib/
 **/deploy/lib/
 */deploy/lib/
