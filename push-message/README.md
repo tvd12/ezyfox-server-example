@@ -109,6 +109,12 @@ console.bat
 2. Run `sudo python3 -m pip install kafka-python` to install kafka python
 3. Run `python3 index.py`
 
+### Start csharp
+
+1. Move to folder `api-gateway-csharp`
+2. Open `push_message_api.sln` on [visual studio](https://visualstudio.microsoft.com/)
+3. Run
+
 ## Start UI client
 
 ### Start ReactJS web client
@@ -189,6 +195,21 @@ curl --location --request POST 'http://localhost:8083/api/v1/message/push' \
 }'
 ```
 
+### With csharp api gateway
+
+run:
+
+```bash
+curl --location --request POST 'http://localhost:8084/api/v1/message/push' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username" : "dungtv",
+    "data" : {
+        "title": "Welcome1",
+        "content": "Hi Young Monkey!"
+    }
+}'
+```
 
 ### How to implement for your project?
 
