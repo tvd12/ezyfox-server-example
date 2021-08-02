@@ -8,5 +8,7 @@ Provides demonstrative systems, applications, games
 
 ### Clone me
 
+```bash
 git clone --recurse-submodules https://github.com/tvd12/ezyfox-server-example.git
+```
 
