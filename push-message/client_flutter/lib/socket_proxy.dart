@@ -30,7 +30,7 @@ class SocketProxy {
     config.clientName = ZONE_NAME;
     EzyClients clients = EzyClients.getInstance();
     _client = clients.newDefaultClient(config);
-    _client.setup.addEventHandler(EzyEventType.DISCONNECTION, _DisconnectionHandler(_disconnectedCallback!));
+    _client.setup.addEventHandler(EzyEventType.CONNECTION_FAILURE, _ConnectionFailureHandler(_disconnectedCallback!));
     _client.setup.addDataHandler(EzyCommand.HANDSHAKE, _HandshakeHandler());
     _client.setup.addDataHandler(EzyCommand.LOGIN, _LoginSuccessHandler());
     _client.setup.addDataHandler(EzyCommand.APP_ACCESS, _AppAccessHandler(_loggedInCallback!));
@@ -64,15 +64,15 @@ class SocketProxy {
   }
 }
 
-class _DisconnectionHandler extends EzyDisconnectionHandler {
+class _ConnectionFailureHandler extends EzyConnectionFailureHandler {
   late Function _callback;
 
-  _DisconnectionHandler(Function callback) {
+  _ConnectionFailureHandler(Function callback) {
     _callback = callback;
   }
+
   @override
-  void postHandle(Map event) {
-    EzyLogger.warn("socket disconnected");
+  void onConnectionFailed(Map event) {
     _callback();
   }
 }

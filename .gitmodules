@@ -1,3 +1,6 @@
 [submodule "lucky-wheel/client-unity/Assets/3 - Extensions/ezyfox-server-csharp-client"]
 	path = lucky-wheel/client-unity/Assets/3 - Extensions/ezyfox-server-csharp-client
 	url = https://github.com/youngmonkeys/ezyfox-server-csharp-client.git
+[submodule "push-message/client_flutter/ezyfox_server_flutter_client"]
+	path = push-message/client_flutter/ezyfox_server_flutter_client
+	url = https://github.com/youngmonkeys/ezyfox-server-flutter-client.git
