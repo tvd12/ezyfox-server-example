@@ -129,6 +129,11 @@ console.bat
 2. Run `npm i`, you get an error with vuex you can run `npm install vuex@next --save`
 3. Run `npm start` and open [http://localhost:3001/](http://localhost:3001/)
 
+### Start Flutter client
+
+1. Move to folder `flutter_client`
+2. Just need import source code to your IDE and run
+
 # How to test?
 
 ### With java api gateway
