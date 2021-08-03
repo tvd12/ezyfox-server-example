@@ -4,7 +4,6 @@ import 'package:ezyfox_server_flutter_client/ezy_config.dart';
 import 'package:ezyfox_server_flutter_client/ezy_constants.dart';
 import 'package:ezyfox_server_flutter_client/ezy_entities.dart';
 import 'package:ezyfox_server_flutter_client/ezy_handlers.dart';
-import 'package:ezyfox_server_flutter_client/ezy_logger.dart';
 
 const ZONE_NAME = "push-message";
 const APP_NAME = "push-message";
