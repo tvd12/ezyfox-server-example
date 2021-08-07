@@ -1,3 +1,12 @@
+gradlew
+gradlew.bat
+*/gradlew
+*/gradlew.bat
+**/gradlew
+**/gradlew.bat
+gradle/wrapper/
+*/gradle/wrapper/
+**/gradle/wrapper/
 bin/
 */bin/
 **/bin/
