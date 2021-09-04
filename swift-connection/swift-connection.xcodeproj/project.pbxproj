@@ -1,0 +1,3147 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3647E84AEC7E33CF2A0CB711 /* Pods_swift_connection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E951D42ACF9EA7A837173FCB /* Pods_swift_connection.framework */; };
+		F10DAFAB266500AD007BFED7 /* ezyfox_sslApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */; };
+		F10DAFAD266500AD007BFED7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFAC266500AD007BFED7 /* ContentView.swift */; };
+		F10DAFAF266500AE007BFED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10DAFAE266500AE007BFED7 /* Assets.xcassets */; };
+		F10DB1F826650107007BFED7 /* EzyNativeDataSerializer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFD726650103007BFED7 /* EzyNativeDataSerializer.mm */; };
+		F10DB1F926650107007BFED7 /* EzyClientConfigSerializer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFD826650103007BFED7 /* EzyClientConfigSerializer.mm */; };
+		F10DB1FA26650107007BFED7 /* EzyNativeDataDeserializer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFDB26650103007BFED7 /* EzyNativeDataDeserializer.mm */; };
+		F10DB1FB26650107007BFED7 /* EzyEventSerializer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFDF26650103007BFED7 /* EzyEventSerializer.mm */; };
+		F10DB1FC26650107007BFED7 /* EzyNativeSerializers.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE026650103007BFED7 /* EzyNativeSerializers.mm */; };
+		F10DB1FD26650107007BFED7 /* EzyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE226650103007BFED7 /* EzyLogger.swift */; };
+		F10DB1FE26650107007BFED7 /* EzyMethodProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE426650103007BFED7 /* EzyMethodProxy.mm */; };
+		F10DB1FF26650107007BFED7 /* EzyEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE626650103007BFED7 /* EzyEntities.swift */; };
+		F10DB20026650107007BFED7 /* EzyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE726650103007BFED7 /* EzyConstants.swift */; };
+		F10DB20126650107007BFED7 /* EzyClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFE826650103007BFED7 /* EzyClients.swift */; };
+		F10DB20226650107007BFED7 /* EzyNativeStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFEA26650103007BFED7 /* EzyNativeStrings.mm */; };
+		F10DB20326650107007BFED7 /* EzyEventEmitter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFEC26650103007BFED7 /* EzyEventEmitter.mm */; };
+		F10DB20426650107007BFED7 /* EzyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFEE26650103007BFED7 /* EzyClient.swift */; };
+		F10DB20626650107007BFED7 /* EzyNSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFF126650103007BFED7 /* EzyNSNumber.m */; };
+		F10DB20826650107007BFED7 /* EzyManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFF426650103007BFED7 /* EzyManagers.swift */; };
+		F10DB20926650107007BFED7 /* EzyHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFF526650103007BFED7 /* EzyHandlers.swift */; };
+		F10DB20B26650107007BFED7 /* EzySetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFF726650103007BFED7 /* EzySetup.swift */; };
+		F10DB20C26650107007BFED7 /* EzyClientProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFF826650103007BFED7 /* EzyClientProxy.mm */; };
+		F10DB20D26650107007BFED7 /* EzyMethodNames.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFFA26650103007BFED7 /* EzyMethodNames.mm */; };
+		F10DB20E26650107007BFED7 /* EzyMethodCallException.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFFD26650103007BFED7 /* EzyMethodCallException.mm */; };
+		F10DB2DA26650921007BFED7 /* SocketProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DB2D926650921007BFED7 /* SocketProxy.swift */; };
+		F10DB2E026654319007BFED7 /* EzyEncryptionProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DB2DF26654319007BFED7 /* EzyEncryptionProxy.mm */; };
+		F10DB2E62665F554007BFED7 /* NSByArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F10DB2E52665F554007BFED7 /* NSByArray.m */; };
+		F10DB2E926660901007BFED7 /* EzyClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DB2E826660901007BFED7 /* EzyClientConfig.swift */; };
+		F14DC1C326E37C6500F70721 /* EzyPingConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DC1BF26E37C6500F70721 /* EzyPingConfig.swift */; };
+		F14DC1C426E37C6500F70721 /* EzyReconnectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14DC1C226E37C6500F70721 /* EzyReconnectConfig.swift */; };
+		F18F9513266B539B004790E8 /* libezyfox-client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F10DB2D526650116007BFED7 /* libezyfox-client.a */; };
+		F1C8B42E26745AC600180869 /* EzyEncryption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F10DB1A626650106007BFED7 /* EzyEncryption.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F10DB1F626650107007BFED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F10DB00526650103007BFED7 /* ezyfox-client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1955055260608FD00402511;
+			remoteInfo = "ezyfox-client";
+		};
+		F10DB2D426650116007BFED7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F10DB2D026650116007BFED7 /* ezyfox-client.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1955055260608FD00402511;
+			remoteInfo = "ezyfox-client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A83D942D2F9132956078BA5 /* Pods_ezyfox_ssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ezyfox_ssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADD210735CFC7BFE3505135 /* Pods-swift-connection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-connection.release.xcconfig"; path = "Target Support Files/Pods-swift-connection/Pods-swift-connection.release.xcconfig"; sourceTree = "<group>"; };
+		E951D42ACF9EA7A837173FCB /* Pods_swift_connection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_connection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FD0B61DF31F8A90F364E12 /* Pods-swift-connection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-connection.debug.xcconfig"; path = "Target Support Files/Pods-swift-connection/Pods-swift-connection.debug.xcconfig"; sourceTree = "<group>"; };
+		F10DAFA7266500AD007BFED7 /* swift-connection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-connection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ezyfox_sslApp.swift; sourceTree = "<group>"; };
+		F10DAFAC266500AD007BFED7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F10DAFAE266500AE007BFED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10DAFB1266500AE007BFED7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F10DAFB3266500AE007BFED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10DAFD726650103007BFED7 /* EzyNativeDataSerializer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyNativeDataSerializer.mm; sourceTree = "<group>"; };
+		F10DAFD826650103007BFED7 /* EzyClientConfigSerializer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyClientConfigSerializer.mm; sourceTree = "<group>"; };
+		F10DAFD926650103007BFED7 /* EzyNativeDataDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyNativeDataDeserializer.h; sourceTree = "<group>"; };
+		F10DAFDA26650103007BFED7 /* EzyNativeDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyNativeDataSerializer.h; sourceTree = "<group>"; };
+		F10DAFDB26650103007BFED7 /* EzyNativeDataDeserializer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyNativeDataDeserializer.mm; sourceTree = "<group>"; };
+		F10DAFDC26650103007BFED7 /* EzyEventSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEventSerializer.h; sourceTree = "<group>"; };
+		F10DAFDD26650103007BFED7 /* EzyNativeSerializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyNativeSerializers.h; sourceTree = "<group>"; };
+		F10DAFDE26650103007BFED7 /* EzyClientConfigSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyClientConfigSerializer.h; sourceTree = "<group>"; };
+		F10DAFDF26650103007BFED7 /* EzyEventSerializer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyEventSerializer.mm; sourceTree = "<group>"; };
+		F10DAFE026650103007BFED7 /* EzyNativeSerializers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyNativeSerializers.mm; sourceTree = "<group>"; };
+		F10DAFE226650103007BFED7 /* EzyLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyLogger.swift; sourceTree = "<group>"; };
+		F10DAFE426650103007BFED7 /* EzyMethodProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyMethodProxy.mm; sourceTree = "<group>"; };
+		F10DAFE526650103007BFED7 /* EzyMethodProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMethodProxy.h; sourceTree = "<group>"; };
+		F10DAFE626650103007BFED7 /* EzyEntities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyEntities.swift; sourceTree = "<group>"; };
+		F10DAFE726650103007BFED7 /* EzyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyConstants.swift; sourceTree = "<group>"; };
+		F10DAFE826650103007BFED7 /* EzyClients.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyClients.swift; sourceTree = "<group>"; };
+		F10DAFEA26650103007BFED7 /* EzyNativeStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyNativeStrings.mm; sourceTree = "<group>"; };
+		F10DAFEB26650103007BFED7 /* EzyNativeStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyNativeStrings.h; sourceTree = "<group>"; };
+		F10DAFEC26650103007BFED7 /* EzyEventEmitter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyEventEmitter.mm; sourceTree = "<group>"; };
+		F10DAFED26650103007BFED7 /* EzyMethodNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMethodNames.h; sourceTree = "<group>"; };
+		F10DAFEE26650103007BFED7 /* EzyClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyClient.swift; sourceTree = "<group>"; };
+		F10DAFEF26650103007BFED7 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		F10DAFF126650103007BFED7 /* EzyNSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EzyNSNumber.m; sourceTree = "<group>"; };
+		F10DAFF226650103007BFED7 /* EzyNSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyNSNumber.h; sourceTree = "<group>"; };
+		F10DAFF326650103007BFED7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F10DAFF426650103007BFED7 /* EzyManagers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyManagers.swift; sourceTree = "<group>"; };
+		F10DAFF526650103007BFED7 /* EzyHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyHandlers.swift; sourceTree = "<group>"; };
+		F10DAFF626650103007BFED7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F10DAFF726650103007BFED7 /* EzySetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzySetup.swift; sourceTree = "<group>"; };
+		F10DAFF826650103007BFED7 /* EzyClientProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyClientProxy.mm; sourceTree = "<group>"; };
+		F10DAFF926650103007BFED7 /* ezyfox-client-bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ezyfox-client-bridging-header.h"; sourceTree = "<group>"; };
+		F10DAFFA26650103007BFED7 /* EzyMethodNames.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyMethodNames.mm; sourceTree = "<group>"; };
+		F10DAFFB26650103007BFED7 /* EzyEventEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEventEmitter.h; sourceTree = "<group>"; };
+		F10DAFFD26650103007BFED7 /* EzyMethodCallException.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyMethodCallException.mm; sourceTree = "<group>"; };
+		F10DAFFE26650103007BFED7 /* EzyMethodCallException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMethodCallException.h; sourceTree = "<group>"; };
+		F10DAFFF26650103007BFED7 /* EzyClientProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyClientProxy.h; sourceTree = "<group>"; };
+		F10DB00126650103007BFED7 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		F10DB00226650103007BFED7 /* CODING_CONVENSION.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CODING_CONVENSION.md; sourceTree = "<group>"; };
+		F10DB00526650103007BFED7 /* ezyfox-client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "ezyfox-client.xcodeproj"; sourceTree = "<group>"; };
+		F10DB00926650103007BFED7 /* local.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = local.properties; sourceTree = "<group>"; };
+		F10DB00C26650103007BFED7 /* gradle-wrapper.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "gradle-wrapper.jar"; sourceTree = "<group>"; };
+		F10DB00D26650103007BFED7 /* gradle-wrapper.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "gradle-wrapper.properties"; sourceTree = "<group>"; };
+		F10DB00E26650103007BFED7 /* gradlew */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gradlew; sourceTree = "<group>"; };
+		F10DB00F26650103007BFED7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F10DB01026650103007BFED7 /* build.gradle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.gradle; sourceTree = "<group>"; };
+		F10DB01426650103007BFED7 /* executionHistory.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = executionHistory.lock; sourceTree = "<group>"; };
+		F10DB01526650103007BFED7 /* executionHistory.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = executionHistory.bin; sourceTree = "<group>"; };
+		F10DB01726650103007BFED7 /* gc.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gc.properties; sourceTree = "<group>"; };
+		F10DB01926650103007BFED7 /* last-build.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "last-build.bin"; sourceTree = "<group>"; };
+		F10DB01B26650103007BFED7 /* classAnalysis.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = classAnalysis.bin; sourceTree = "<group>"; };
+		F10DB01C26650103007BFED7 /* javaCompile.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = javaCompile.lock; sourceTree = "<group>"; };
+		F10DB01D26650103007BFED7 /* taskHistory.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = taskHistory.bin; sourceTree = "<group>"; };
+		F10DB01E26650103007BFED7 /* jarAnalysis.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = jarAnalysis.bin; sourceTree = "<group>"; };
+		F10DB02026650103007BFED7 /* fileHashes.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = fileHashes.lock; sourceTree = "<group>"; };
+		F10DB02126650103007BFED7 /* fileHashes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = fileHashes.bin; sourceTree = "<group>"; };
+		F10DB02226650103007BFED7 /* resourceHashesCache.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = resourceHashesCache.bin; sourceTree = "<group>"; };
+		F10DB02426650103007BFED7 /* gc.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gc.properties; sourceTree = "<group>"; };
+		F10DB02626650103007BFED7 /* cache.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cache.properties; sourceTree = "<group>"; };
+		F10DB02726650103007BFED7 /* outputFiles.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = outputFiles.bin; sourceTree = "<group>"; };
+		F10DB02826650103007BFED7 /* buildOutputCleanup.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = buildOutputCleanup.lock; sourceTree = "<group>"; };
+		F10DB02A26650103007BFED7 /* gc.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gc.properties; sourceTree = "<group>"; };
+		F10DB02C26650103007BFED7 /* checksums.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = checksums.lock; sourceTree = "<group>"; };
+		F10DB02D26650103007BFED7 /* md5-checksums.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "md5-checksums.bin"; sourceTree = "<group>"; };
+		F10DB02E26650103007BFED7 /* sha1-checksums.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "sha1-checksums.bin"; sourceTree = "<group>"; };
+		F10DB03126650103007BFED7 /* gc.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gc.properties; sourceTree = "<group>"; };
+		F10DB03326650103007BFED7 /* last-build.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "last-build.bin"; sourceTree = "<group>"; };
+		F10DB03526650103007BFED7 /* fileHashes.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = fileHashes.lock; sourceTree = "<group>"; };
+		F10DB03626650103007BFED7 /* gradle.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gradle.properties; sourceTree = "<group>"; };
+		F10DB04726650104007BFED7 /* BuildConfig.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BuildConfig.java; sourceTree = "<group>"; };
+		F10DB04D26650104007BFED7 /* BuildConfig.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BuildConfig.java; sourceTree = "<group>"; };
+		F10DB05626650104007BFED7 /* package-aware-r.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "package-aware-r.txt"; sourceTree = "<group>"; };
+		F10DB05826650104007BFED7 /* package-aware-r.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "package-aware-r.txt"; sourceTree = "<group>"; };
+		F10DB05B26650104007BFED7 /* master-index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "master-index.xml"; sourceTree = "<group>"; };
+		F10DB06026650104007BFED7 /* group-index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "group-index.xml"; sourceTree = "<group>"; };
+		F10DB06126650104007BFED7 /* api-versions-0-31.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "api-versions-0-31.bin"; sourceTree = "<group>"; };
+		F10DB07A26650104007BFED7 /* annotationProcessors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = annotationProcessors.json; sourceTree = "<group>"; };
+		F10DB07C26650104007BFED7 /* annotationProcessors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = annotationProcessors.json; sourceTree = "<group>"; };
+		F10DB07E26650104007BFED7 /* annotationProcessors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = annotationProcessors.json; sourceTree = "<group>"; };
+		F10DB08026650104007BFED7 /* annotationProcessors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = annotationProcessors.json; sourceTree = "<group>"; };
+		F10DB08326650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB08626650104007BFED7 /* merge-state */ = {isa = PBXFileReference; lastKnownFileType = file; path = "merge-state"; sourceTree = "<group>"; };
+		F10DB08826650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB08A26650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB08C26650104007BFED7 /* compile-file-map.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "compile-file-map.properties"; sourceTree = "<group>"; };
+		F10DB08F26650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB09126650104007BFED7 /* compile-file-map.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "compile-file-map.properties"; sourceTree = "<group>"; };
+		F10DB09426650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB09626650104007BFED7 /* compile-file-map.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "compile-file-map.properties"; sourceTree = "<group>"; };
+		F10DB09926650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB09C26650104007BFED7 /* merge-state */ = {isa = PBXFileReference; lastKnownFileType = file; path = "merge-state"; sourceTree = "<group>"; };
+		F10DB09E26650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB0A026650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB0A226650104007BFED7 /* merger.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = merger.xml; sourceTree = "<group>"; };
+		F10DB0A526650104007BFED7 /* R-def.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "R-def.txt"; sourceTree = "<group>"; };
+		F10DB0A726650104007BFED7 /* R-def.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "R-def.txt"; sourceTree = "<group>"; };
+		F10DB0AB26650104007BFED7 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		F10DB0AC26650104007BFED7 /* output-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "output-metadata.json"; sourceTree = "<group>"; };
+		F10DB0AF26650104007BFED7 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		F10DB0B026650104007BFED7 /* output-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "output-metadata.json"; sourceTree = "<group>"; };
+		F10DB0B326650104007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB0B526650104007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB0B826650104007BFED7 /* R.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = R.jar; sourceTree = "<group>"; };
+		F10DB0BA26650104007BFED7 /* R.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = R.jar; sourceTree = "<group>"; };
+		F10DB0BD26650104007BFED7 /* R.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = R.jar; sourceTree = "<group>"; };
+		F10DB0BF26650104007BFED7 /* R.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = R.jar; sourceTree = "<group>"; };
+		F10DB0C226650104007BFED7 /* out.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = out.jar; sourceTree = "<group>"; };
+		F10DB0C426650104007BFED7 /* out.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = out.jar; sourceTree = "<group>"; };
+		F10DB0CC26650105007BFED7 /* R.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = R.txt; sourceTree = "<group>"; };
+		F10DB0CE26650105007BFED7 /* R.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = R.txt; sourceTree = "<group>"; };
+		F10DB0D326650105007BFED7 /* typedefs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = typedefs.txt; sourceTree = "<group>"; };
+		F10DB0D526650105007BFED7 /* typedefs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = typedefs.txt; sourceTree = "<group>"; };
+		F10DB0DD26650105007BFED7 /* BuildConfig.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = BuildConfig.class; sourceTree = "<group>"; };
+		F10DB0E426650105007BFED7 /* BuildConfig.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = BuildConfig.class; sourceTree = "<group>"; };
+		F10DB0E726650105007BFED7 /* manifest-merger-blame-release-report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "manifest-merger-blame-release-report.txt"; sourceTree = "<group>"; };
+		F10DB0E926650105007BFED7 /* manifest-merger-blame-debug-report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "manifest-merger-blame-debug-report.txt"; sourceTree = "<group>"; };
+		F10DB0F926650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt"; sourceTree = "<group>"; };
+		F10DB0FA26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt"; sourceTree = "<group>"; };
+		F10DB0FB26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt"; sourceTree = "<group>"; };
+		F10DB0FD26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.stderr.txt; sourceTree = "<group>"; };
+		F10DB0FE26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.command.txt; sourceTree = "<group>"; };
+		F10DB0FF26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.stdout.txt; sourceTree = "<group>"; };
+		F10DB10126650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt"; sourceTree = "<group>"; };
+		F10DB10226650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt"; sourceTree = "<group>"; };
+		F10DB10326650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.command.txt"; sourceTree = "<group>"; };
+		F10DB10526650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.command.txt; sourceTree = "<group>"; };
+		F10DB10626650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.stdout.txt; sourceTree = "<group>"; };
+		F10DB10726650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.stderr.txt; sourceTree = "<group>"; };
+		F10DB10C26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt"; sourceTree = "<group>"; };
+		F10DB10D26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt"; sourceTree = "<group>"; };
+		F10DB10E26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt"; sourceTree = "<group>"; };
+		F10DB11026650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.stderr.txt; sourceTree = "<group>"; };
+		F10DB11126650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.command.txt; sourceTree = "<group>"; };
+		F10DB11226650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86.stdout.txt; sourceTree = "<group>"; };
+		F10DB11426650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt"; sourceTree = "<group>"; };
+		F10DB11526650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt"; sourceTree = "<group>"; };
+		F10DB11626650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "android_gradle_generate_ndk_build_json_arm64-v8a.command.txt"; sourceTree = "<group>"; };
+		F10DB11826650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.command.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.command.txt; sourceTree = "<group>"; };
+		F10DB11926650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stdout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.stdout.txt; sourceTree = "<group>"; };
+		F10DB11A26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stderr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = android_gradle_generate_ndk_build_json_x86_64.stderr.txt; sourceTree = "<group>"; };
+		F10DB11D26650105007BFED7 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		F10DB11F26650105007BFED7 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		F10DB12226650105007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB12426650105007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB12726650105007BFED7 /* aar-metadata.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "aar-metadata.properties"; sourceTree = "<group>"; };
+		F10DB12926650105007BFED7 /* aar-metadata.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "aar-metadata.properties"; sourceTree = "<group>"; };
+		F10DB13426650105007BFED7 /* output-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "output-metadata.json"; sourceTree = "<group>"; };
+		F10DB13626650105007BFED7 /* output-metadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "output-metadata.json"; sourceTree = "<group>"; };
+		F10DB14126650106007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB14326650106007BFED7 /* classes.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = classes.jar; sourceTree = "<group>"; };
+		F10DB14926650106007BFED7 /* source-classes-mapping.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "source-classes-mapping.txt"; sourceTree = "<group>"; };
+		F10DB14B26650106007BFED7 /* source-classes-mapping.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "source-classes-mapping.txt"; sourceTree = "<group>"; };
+		F10DB14E26650106007BFED7 /* manifest-merger-debug-report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "manifest-merger-debug-report.txt"; sourceTree = "<group>"; };
+		F10DB14F26650106007BFED7 /* manifest-merger-release-report.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "manifest-merger-release-report.txt"; sourceTree = "<group>"; };
+		F10DB15126650106007BFED7 /* ezyfox-client-debug.aar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ezyfox-client-debug.aar"; sourceTree = "<group>"; };
+		F10DB15226650106007BFED7 /* ezyfox-client-release.aar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ezyfox-client-release.aar"; sourceTree = "<group>"; };
+		F10DB15326650106007BFED7 /* android-release.aar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "android-release.aar"; sourceTree = "<group>"; };
+		F10DB15426650106007BFED7 /* android-debug.aar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "android-debug.aar"; sourceTree = "<group>"; };
+		F10DB15626650106007BFED7 /* lint-results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "lint-results.xml"; sourceTree = "<group>"; };
+		F10DB15726650106007BFED7 /* lint-results.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "lint-results.html"; sourceTree = "<group>"; };
+		F10DB15826650106007BFED7 /* gradlew.bat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gradlew.bat; sourceTree = "<group>"; };
+		F10DB15A26650106007BFED7 /* Android.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		F10DB15B26650106007BFED7 /* Application.mk */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Application.mk; sourceTree = "<group>"; };
+		F10DB15D26650106007BFED7 /* jarRepositories.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = jarRepositories.xml; sourceTree = "<group>"; };
+		F10DB15E26650106007BFED7 /* gradle.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gradle.xml; sourceTree = "<group>"; };
+		F10DB15F26650106007BFED7 /* vcs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vcs.xml; sourceTree = "<group>"; };
+		F10DB16026650106007BFED7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F10DB16126650106007BFED7 /* workspace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = workspace.xml; sourceTree = "<group>"; };
+		F10DB16226650106007BFED7 /* modules.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = modules.xml; sourceTree = "<group>"; };
+		F10DB16426650106007BFED7 /* android.iml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = android.iml; sourceTree = "<group>"; };
+		F10DB16526650106007BFED7 /* misc.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = misc.xml; sourceTree = "<group>"; };
+		F10DB16626650106007BFED7 /* compiler.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = compiler.xml; sourceTree = "<group>"; };
+		F10DB16826650106007BFED7 /* build_file_checksums.ser */ = {isa = PBXFileReference; lastKnownFileType = file; path = build_file_checksums.ser; sourceTree = "<group>"; };
+		F10DB16B26650106007BFED7 /* AndroidManifest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		F10DB16C26650106007BFED7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F10DB16D26650106007BFED7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F10DB17026650106007BFED7 /* EzyPluginDataHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPluginDataHandlers.h; sourceTree = "<group>"; };
+		F10DB17126650106007BFED7 /* EzyEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEventHandler.h; sourceTree = "<group>"; };
+		F10DB17226650106007BFED7 /* EzyEventHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyEventHandlers.cpp; sourceTree = "<group>"; };
+		F10DB17326650106007BFED7 /* EzyDataHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyDataHandlers.cpp; sourceTree = "<group>"; };
+		F10DB17426650106007BFED7 /* EzyPluginDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPluginDataHandler.h; sourceTree = "<group>"; };
+		F10DB17526650106007BFED7 /* EzyDataHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyDataHandlers.h; sourceTree = "<group>"; };
+		F10DB17626650106007BFED7 /* EzyEventHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEventHandlers.h; sourceTree = "<group>"; };
+		F10DB17726650106007BFED7 /* EzyAppDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyAppDataHandler.h; sourceTree = "<group>"; };
+		F10DB17826650106007BFED7 /* EzyEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyEventHandler.cpp; sourceTree = "<group>"; };
+		F10DB17926650106007BFED7 /* EzyDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyDataHandler.h; sourceTree = "<group>"; };
+		F10DB17A26650106007BFED7 /* EzyAppDataHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyAppDataHandlers.cpp; sourceTree = "<group>"; };
+		F10DB17B26650106007BFED7 /* EzyAppDataHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyAppDataHandlers.h; sourceTree = "<group>"; };
+		F10DB17C26650106007BFED7 /* EzyPluginDataHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPluginDataHandlers.cpp; sourceTree = "<group>"; };
+		F10DB17D26650106007BFED7 /* EzyPluginDataHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPluginDataHandler.cpp; sourceTree = "<group>"; };
+		F10DB17E26650106007BFED7 /* EzyAppDataHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyAppDataHandler.cpp; sourceTree = "<group>"; };
+		F10DB17F26650106007BFED7 /* EzyDataHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyDataHandler.cpp; sourceTree = "<group>"; };
+		F10DB18026650106007BFED7 /* EzyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyClient.h; sourceTree = "<group>"; };
+		F10DB18126650106007BFED7 /* EzyClients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyClients.h; sourceTree = "<group>"; };
+		F10DB18226650106007BFED7 /* EzyUTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyUTClient.h; sourceTree = "<group>"; };
+		F10DB18326650106007BFED7 /* EzyUTClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyUTClient.cpp; sourceTree = "<group>"; };
+		F10DB18526650106007BFED7 /* EzyLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyLogger.cpp; sourceTree = "<group>"; };
+		F10DB18626650106007BFED7 /* EzyLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyLogger.h; sourceTree = "<group>"; };
+		F10DB18826650106007BFED7 /* EzyStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyStack.h; sourceTree = "<group>"; };
+		F10DB18926650106007BFED7 /* EzyMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMaps.h; sourceTree = "<group>"; };
+		F10DB18B26650106007BFED7 /* EzyClientConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyClientConfig.h; sourceTree = "<group>"; };
+		F10DB18C26650106007BFED7 /* EzyClientConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyClientConfig.cpp; sourceTree = "<group>"; };
+		F10DB18E26650106007BFED7 /* EzyApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyApp.cpp; sourceTree = "<group>"; };
+		F10DB18F26650106007BFED7 /* EzyString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyString.cpp; sourceTree = "<group>"; };
+		F10DB19026650106007BFED7 /* EzyUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyUser.h; sourceTree = "<group>"; };
+		F10DB19126650106007BFED7 /* EzyZone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyZone.cpp; sourceTree = "<group>"; };
+		F10DB19226650106007BFED7 /* EzyPrimitive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPrimitive.cpp; sourceTree = "<group>"; };
+		F10DB19326650106007BFED7 /* EzyPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPlugin.h; sourceTree = "<group>"; };
+		F10DB19426650106007BFED7 /* EzyObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyObject.cpp; sourceTree = "<group>"; };
+		F10DB19526650106007BFED7 /* EzyPrimitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPrimitive.h; sourceTree = "<group>"; };
+		F10DB19626650106007BFED7 /* EzyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyArray.h; sourceTree = "<group>"; };
+		F10DB19726650106007BFED7 /* EzyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyValue.h; sourceTree = "<group>"; };
+		F10DB19826650106007BFED7 /* EzyArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyArray.cpp; sourceTree = "<group>"; };
+		F10DB19926650106007BFED7 /* EzyValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyValue.cpp; sourceTree = "<group>"; };
+		F10DB19A26650106007BFED7 /* EzyZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyZone.h; sourceTree = "<group>"; };
+		F10DB19B26650106007BFED7 /* EzyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyApp.h; sourceTree = "<group>"; };
+		F10DB19C26650106007BFED7 /* EzyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyObject.h; sourceTree = "<group>"; };
+		F10DB19D26650106007BFED7 /* EzyUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyUser.cpp; sourceTree = "<group>"; };
+		F10DB19E26650106007BFED7 /* EzyPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPlugin.cpp; sourceTree = "<group>"; };
+		F10DB19F26650106007BFED7 /* EzyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyString.h; sourceTree = "<group>"; };
+		F10DB1A126650106007BFED7 /* EzyDataEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyDataEncoder.h; sourceTree = "<group>"; };
+		F10DB1A226650106007BFED7 /* EzyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMessage.h; sourceTree = "<group>"; };
+		F10DB1A326650106007BFED7 /* EzyMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyMessage.cpp; sourceTree = "<group>"; };
+		F10DB1A426650106007BFED7 /* EzyDataDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyDataDecoder.cpp; sourceTree = "<group>"; };
+		F10DB1A526650106007BFED7 /* EzyEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEncryption.h; sourceTree = "<group>"; };
+		F10DB1A626650106007BFED7 /* EzyEncryption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyEncryption.cpp; sourceTree = "<group>"; };
+		F10DB1A726650106007BFED7 /* EzyDataDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyDataDecoder.h; sourceTree = "<group>"; };
+		F10DB1A826650106007BFED7 /* EzyDataEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyDataEncoder.cpp; sourceTree = "<group>"; };
+		F10DB1A926650106007BFED7 /* EzyClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyClient.cpp; sourceTree = "<group>"; };
+		F10DB1AB26650106007BFED7 /* EzySetup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySetup.cpp; sourceTree = "<group>"; };
+		F10DB1AC26650106007BFED7 /* EzySetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySetup.h; sourceTree = "<group>"; };
+		F10DB1AD26650106007BFED7 /* EzyClients.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyClients.cpp; sourceTree = "<group>"; };
+		F10DB1AE26650106007BFED7 /* EzyHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyHeaders.h; sourceTree = "<group>"; };
+		F10DB1B026650106007BFED7 /* EzyHandlerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyHandlerManager.h; sourceTree = "<group>"; };
+		F10DB1B126650106007BFED7 /* EzyPluginManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPluginManager.cpp; sourceTree = "<group>"; };
+		F10DB1B226650106007BFED7 /* EzyAppManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyAppManager.cpp; sourceTree = "<group>"; };
+		F10DB1B326650106007BFED7 /* EzyHandlerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyHandlerManager.cpp; sourceTree = "<group>"; };
+		F10DB1B426650106007BFED7 /* EzyPingManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPingManager.cpp; sourceTree = "<group>"; };
+		F10DB1B526650106007BFED7 /* EzyAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyAppManager.h; sourceTree = "<group>"; };
+		F10DB1B626650106007BFED7 /* EzyPingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPingManager.h; sourceTree = "<group>"; };
+		F10DB1B726650106007BFED7 /* EzyPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPluginManager.h; sourceTree = "<group>"; };
+		F10DB1B826650106007BFED7 /* EzyMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMacro.h; sourceTree = "<group>"; };
+		F10DB1BA26650106007BFED7 /* EzyStatusCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyStatusCode.h; sourceTree = "<group>"; };
+		F10DB1BB26650106007BFED7 /* EzyConnectionStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyConnectionStatus.cpp; sourceTree = "<group>"; };
+		F10DB1BC26650106007BFED7 /* EzyConnectionStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyConnectionStatus.h; sourceTree = "<group>"; };
+		F10DB1BD26650106007BFED7 /* EzyCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyCommand.cpp; sourceTree = "<group>"; };
+		F10DB1BE26650107007BFED7 /* EzyTransportType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyTransportType.h; sourceTree = "<group>"; };
+		F10DB1BF26650107007BFED7 /* EzyConnectionFailedReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyConnectionFailedReason.h; sourceTree = "<group>"; };
+		F10DB1C026650107007BFED7 /* EzyDisconnectReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyDisconnectReason.h; sourceTree = "<group>"; };
+		F10DB1C126650107007BFED7 /* EzyCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyCommand.h; sourceTree = "<group>"; };
+		F10DB1C226650107007BFED7 /* EzyDisconnectReason.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyDisconnectReason.cpp; sourceTree = "<group>"; };
+		F10DB1C326650107007BFED7 /* EzyConnectionFailedReason.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyConnectionFailedReason.cpp; sourceTree = "<group>"; };
+		F10DB1C526650107007BFED7 /* EzyThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyThread.cpp; sourceTree = "<group>"; };
+		F10DB1C626650107007BFED7 /* EzyThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyThread.h; sourceTree = "<group>"; };
+		F10DB1C726650107007BFED7 /* EzyScheduleAtFixedRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyScheduleAtFixedRate.h; sourceTree = "<group>"; };
+		F10DB1C826650107007BFED7 /* EzyScheduleAtFixedRate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyScheduleAtFixedRate.cpp; sourceTree = "<group>"; };
+		F10DB1CA26650107007BFED7 /* EzyReleasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyReleasePool.h; sourceTree = "<group>"; };
+		F10DB1CB26650107007BFED7 /* EzyAutoReleasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyAutoReleasePool.h; sourceTree = "<group>"; };
+		F10DB1CC26650107007BFED7 /* EzyReleasePool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyReleasePool.cpp; sourceTree = "<group>"; };
+		F10DB1CD26650107007BFED7 /* EzyAutoReleasePool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyAutoReleasePool.cpp; sourceTree = "<group>"; };
+		F10DB1CF26650107007BFED7 /* EzyRequest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyRequest.cpp; sourceTree = "<group>"; };
+		F10DB1D026650107007BFED7 /* EzyRequestSerializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyRequestSerializer.cpp; sourceTree = "<group>"; };
+		F10DB1D126650107007BFED7 /* EzyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyRequest.h; sourceTree = "<group>"; };
+		F10DB1D226650107007BFED7 /* EzyRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyRequestSerializer.h; sourceTree = "<group>"; };
+		F10DB1D426650107007BFED7 /* EzyEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEventType.h; sourceTree = "<group>"; };
+		F10DB1D526650107007BFED7 /* EzyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyEvent.h; sourceTree = "<group>"; };
+		F10DB1D626650107007BFED7 /* EzyEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyEvent.cpp; sourceTree = "<group>"; };
+		F10DB1D726650107007BFED7 /* EzyEventType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyEventType.cpp; sourceTree = "<group>"; };
+		F10DB1D926650107007BFED7 /* EzyRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyRef.h; sourceTree = "<group>"; };
+		F10DB1DA26650107007BFED7 /* EzyRef.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyRef.cpp; sourceTree = "<group>"; };
+		F10DB1DC26650107007BFED7 /* EzySocketDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketDelegate.h; sourceTree = "<group>"; };
+		F10DB1DD26650107007BFED7 /* EzySocketAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketAdapter.h; sourceTree = "<group>"; };
+		F10DB1DE26650107007BFED7 /* EzySocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketClient.h; sourceTree = "<group>"; };
+		F10DB1DF26650107007BFED7 /* EzySocketReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketReader.h; sourceTree = "<group>"; };
+		F10DB1E026650107007BFED7 /* EzyTcpSocketClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyTcpSocketClient.cpp; sourceTree = "<group>"; };
+		F10DB1E126650107007BFED7 /* EzySocketClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketClient.cpp; sourceTree = "<group>"; };
+		F10DB1E226650107007BFED7 /* EzySocketAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketAdapter.cpp; sourceTree = "<group>"; };
+		F10DB1E326650107007BFED7 /* EzySocketDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketDefine.h; sourceTree = "<group>"; };
+		F10DB1E426650107007BFED7 /* EzyTcpSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyTcpSocketClient.h; sourceTree = "<group>"; };
+		F10DB1E526650107007BFED7 /* EzySocketCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketCore.cpp; sourceTree = "<group>"; };
+		F10DB1E626650107007BFED7 /* EzySocketPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketPool.h; sourceTree = "<group>"; };
+		F10DB1E726650107007BFED7 /* EzyUdpSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyUdpSocketClient.h; sourceTree = "<group>"; };
+		F10DB1E826650107007BFED7 /* EzyUTSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyUTSocketClient.h; sourceTree = "<group>"; };
+		F10DB1E926650107007BFED7 /* EzySender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySender.h; sourceTree = "<group>"; };
+		F10DB1EA26650107007BFED7 /* EzySocketCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketCore.h; sourceTree = "<group>"; };
+		F10DB1EB26650107007BFED7 /* EzyMainEventsLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyMainEventsLoop.cpp; sourceTree = "<group>"; };
+		F10DB1EC26650107007BFED7 /* EzyPingSchedule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyPingSchedule.cpp; sourceTree = "<group>"; };
+		F10DB1ED26650107007BFED7 /* EzySocketWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzySocketWriter.h; sourceTree = "<group>"; };
+		F10DB1EE26650107007BFED7 /* EzySocketPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketPool.cpp; sourceTree = "<group>"; };
+		F10DB1EF26650107007BFED7 /* EzySocketReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketReader.cpp; sourceTree = "<group>"; };
+		F10DB1F026650107007BFED7 /* EzyPingSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyPingSchedule.h; sourceTree = "<group>"; };
+		F10DB1F126650107007BFED7 /* EzyUTSocketClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyUTSocketClient.cpp; sourceTree = "<group>"; };
+		F10DB1F226650107007BFED7 /* EzyUdpSocketClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzyUdpSocketClient.cpp; sourceTree = "<group>"; };
+		F10DB1F326650107007BFED7 /* EzySocketWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EzySocketWriter.cpp; sourceTree = "<group>"; };
+		F10DB1F426650107007BFED7 /* EzyMainEventsLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzyMainEventsLoop.h; sourceTree = "<group>"; };
+		F10DB2D026650116007BFED7 /* ezyfox-client.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "ezyfox-client.xcodeproj"; path = "client/socket/platform/apple/ezyfox-client.xcodeproj"; sourceTree = "<group>"; };
+		F10DB2D926650921007BFED7 /* SocketProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProxy.swift; sourceTree = "<group>"; };
+		F10DB2DE266540BD007BFED7 /* EzyEncryptionProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EzyEncryptionProxy.h; sourceTree = "<group>"; };
+		F10DB2DF26654319007BFED7 /* EzyEncryptionProxy.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EzyEncryptionProxy.mm; sourceTree = "<group>"; };
+		F10DB2E12665F219007BFED7 /* EzyByteArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EzyByteArray.cpp; sourceTree = "<group>"; };
+		F10DB2E22665F219007BFED7 /* EzyByteArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EzyByteArray.h; sourceTree = "<group>"; };
+		F10DB2E42665F42F007BFED7 /* NSByteArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSByteArray.h; sourceTree = "<group>"; };
+		F10DB2E52665F554007BFED7 /* NSByArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSByArray.m; sourceTree = "<group>"; };
+		F10DB2E826660901007BFED7 /* EzyClientConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EzyClientConfig.swift; sourceTree = "<group>"; };
+		F14DC1BF26E37C6500F70721 /* EzyPingConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyPingConfig.swift; sourceTree = "<group>"; };
+		F14DC1C226E37C6500F70721 /* EzyReconnectConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EzyReconnectConfig.swift; sourceTree = "<group>"; };
+		F18F94DF266A01F2004790E8 /* EzyNull.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EzyNull.cpp; sourceTree = "<group>"; };
+		F18F94E0266A01F2004790E8 /* EzyNull.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EzyNull.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F10DAFA4266500AD007BFED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18F9513266B539B004790E8 /* libezyfox-client.a in Frameworks */,
+				3647E84AEC7E33CF2A0CB711 /* Pods_swift_connection.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D009E8D04C0477AEFFCC9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A83D942D2F9132956078BA5 /* Pods_ezyfox_ssl.framework */,
+				E951D42ACF9EA7A837173FCB /* Pods_swift_connection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1C7B27F41F8ADA5ED21C23D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD0B61DF31F8A90F364E12 /* Pods-swift-connection.debug.xcconfig */,
+				CADD210735CFC7BFE3505135 /* Pods-swift-connection.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F10DAF9E266500AD007BFED7 = {
+			isa = PBXGroup;
+			children = (
+				F10DB2D026650116007BFED7 /* ezyfox-client.xcodeproj */,
+				F10DAFA9266500AD007BFED7 /* src */,
+				F10DAFD526650103007BFED7 /* client */,
+				F10DAFA8266500AD007BFED7 /* Products */,
+				C1C7B27F41F8ADA5ED21C23D /* Pods */,
+				3D009E8D04C0477AEFFCC9B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F10DAFA8266500AD007BFED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFA7266500AD007BFED7 /* swift-connection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F10DAFA9266500AD007BFED7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */,
+				F10DAFAC266500AD007BFED7 /* ContentView.swift */,
+				F10DAFAE266500AE007BFED7 /* Assets.xcassets */,
+				F10DAFB3266500AE007BFED7 /* Info.plist */,
+				F10DAFB0266500AE007BFED7 /* Preview Content */,
+				F10DB2D926650921007BFED7 /* SocketProxy.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F10DAFB0266500AE007BFED7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFB1266500AE007BFED7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F10DAFD526650103007BFED7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB2E7266608D8007BFED7 /* config */,
+				F10DB2DD266540A3007BFED7 /* codec */,
+				F10DAFD626650103007BFED7 /* serializer */,
+				F10DAFE126650103007BFED7 /* logger */,
+				F10DAFE326650103007BFED7 /* proxy */,
+				F10DAFE626650103007BFED7 /* EzyEntities.swift */,
+				F10DAFE726650103007BFED7 /* EzyConstants.swift */,
+				F10DAFE826650103007BFED7 /* EzyClients.swift */,
+				F10DAFE926650103007BFED7 /* util */,
+				F10DAFEC26650103007BFED7 /* EzyEventEmitter.mm */,
+				F10DAFED26650103007BFED7 /* EzyMethodNames.h */,
+				F10DAFEE26650103007BFED7 /* EzyClient.swift */,
+				F10DAFEF26650103007BFED7 /* .gitmodules */,
+				F10DAFF026650103007BFED7 /* math */,
+				F10DAFF326650103007BFED7 /* README.md */,
+				F10DAFF426650103007BFED7 /* EzyManagers.swift */,
+				F10DAFF526650103007BFED7 /* EzyHandlers.swift */,
+				F10DAFF626650103007BFED7 /* .gitignore */,
+				F10DAFF726650103007BFED7 /* EzySetup.swift */,
+				F10DAFF826650103007BFED7 /* EzyClientProxy.mm */,
+				F10DAFF926650103007BFED7 /* ezyfox-client-bridging-header.h */,
+				F10DAFFA26650103007BFED7 /* EzyMethodNames.mm */,
+				F10DAFFB26650103007BFED7 /* EzyEventEmitter.h */,
+				F10DAFFC26650103007BFED7 /* exception */,
+				F10DAFFF26650103007BFED7 /* EzyClientProxy.h */,
+				F10DB00026650103007BFED7 /* socket */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F10DAFD626650103007BFED7 /* serializer */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFD726650103007BFED7 /* EzyNativeDataSerializer.mm */,
+				F10DAFD826650103007BFED7 /* EzyClientConfigSerializer.mm */,
+				F10DAFD926650103007BFED7 /* EzyNativeDataDeserializer.h */,
+				F10DAFDA26650103007BFED7 /* EzyNativeDataSerializer.h */,
+				F10DAFDB26650103007BFED7 /* EzyNativeDataDeserializer.mm */,
+				F10DAFDC26650103007BFED7 /* EzyEventSerializer.h */,
+				F10DAFDD26650103007BFED7 /* EzyNativeSerializers.h */,
+				F10DAFDE26650103007BFED7 /* EzyClientConfigSerializer.h */,
+				F10DAFDF26650103007BFED7 /* EzyEventSerializer.mm */,
+				F10DAFE026650103007BFED7 /* EzyNativeSerializers.mm */,
+			);
+			path = serializer;
+			sourceTree = "<group>";
+		};
+		F10DAFE126650103007BFED7 /* logger */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFE226650103007BFED7 /* EzyLogger.swift */,
+			);
+			path = logger;
+			sourceTree = "<group>";
+		};
+		F10DAFE326650103007BFED7 /* proxy */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFE426650103007BFED7 /* EzyMethodProxy.mm */,
+				F10DAFE526650103007BFED7 /* EzyMethodProxy.h */,
+			);
+			path = proxy;
+			sourceTree = "<group>";
+		};
+		F10DAFE926650103007BFED7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFEA26650103007BFED7 /* EzyNativeStrings.mm */,
+				F10DAFEB26650103007BFED7 /* EzyNativeStrings.h */,
+				F10DB2E42665F42F007BFED7 /* NSByteArray.h */,
+				F10DB2E52665F554007BFED7 /* NSByArray.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F10DAFF026650103007BFED7 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFF126650103007BFED7 /* EzyNSNumber.m */,
+				F10DAFF226650103007BFED7 /* EzyNSNumber.h */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		F10DAFFC26650103007BFED7 /* exception */ = {
+			isa = PBXGroup;
+			children = (
+				F10DAFFD26650103007BFED7 /* EzyMethodCallException.mm */,
+				F10DAFFE26650103007BFED7 /* EzyMethodCallException.h */,
+			);
+			path = exception;
+			sourceTree = "<group>";
+		};
+		F10DB00026650103007BFED7 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00126650103007BFED7 /* CMakeLists.txt */,
+				F10DB00226650103007BFED7 /* CODING_CONVENSION.md */,
+				F10DB00326650103007BFED7 /* platform */,
+				F10DB16C26650106007BFED7 /* README.md */,
+				F10DB16D26650106007BFED7 /* .gitignore */,
+				F10DB16E26650106007BFED7 /* src */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		F10DB00326650103007BFED7 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00426650103007BFED7 /* apple */,
+				F10DB00826650103007BFED7 /* android */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		F10DB00426650103007BFED7 /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00526650103007BFED7 /* ezyfox-client.xcodeproj */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		F10DB00626650103007BFED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1F726650107007BFED7 /* libezyfox-client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F10DB00826650103007BFED7 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00926650103007BFED7 /* local.properties */,
+				F10DB00A26650103007BFED7 /* gradle */,
+				F10DB00E26650103007BFED7 /* gradlew */,
+				F10DB00F26650103007BFED7 /* .gitignore */,
+				F10DB01026650103007BFED7 /* build.gradle */,
+				F10DB01126650103007BFED7 /* .gradle */,
+				F10DB03626650103007BFED7 /* gradle.properties */,
+				F10DB03726650103007BFED7 /* build */,
+				F10DB15826650106007BFED7 /* gradlew.bat */,
+				F10DB15926650106007BFED7 /* jni */,
+				F10DB15C26650106007BFED7 /* .idea */,
+				F10DB16926650106007BFED7 /* src */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		F10DB00A26650103007BFED7 /* gradle */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00B26650103007BFED7 /* wrapper */,
+			);
+			path = gradle;
+			sourceTree = "<group>";
+		};
+		F10DB00B26650103007BFED7 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB00C26650103007BFED7 /* gradle-wrapper.jar */,
+				F10DB00D26650103007BFED7 /* gradle-wrapper.properties */,
+			);
+			path = wrapper;
+			sourceTree = "<group>";
+		};
+		F10DB01126650103007BFED7 /* .gradle */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB01226650103007BFED7 /* 6.7.1 */,
+				F10DB02326650103007BFED7 /* vcs-1 */,
+				F10DB02526650103007BFED7 /* buildOutputCleanup */,
+				F10DB02926650103007BFED7 /* configuration-cache */,
+				F10DB02B26650103007BFED7 /* checksums */,
+				F10DB02F26650103007BFED7 /* 6.1.1 */,
+			);
+			path = .gradle;
+			sourceTree = "<group>";
+		};
+		F10DB01226650103007BFED7 /* 6.7.1 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB01326650103007BFED7 /* executionHistory */,
+				F10DB01626650103007BFED7 /* vcsMetadata-1 */,
+				F10DB01726650103007BFED7 /* gc.properties */,
+				F10DB01826650103007BFED7 /* fileChanges */,
+				F10DB01A26650103007BFED7 /* javaCompile */,
+				F10DB01F26650103007BFED7 /* fileHashes */,
+			);
+			path = 6.7.1;
+			sourceTree = "<group>";
+		};
+		F10DB01326650103007BFED7 /* executionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB01426650103007BFED7 /* executionHistory.lock */,
+				F10DB01526650103007BFED7 /* executionHistory.bin */,
+			);
+			path = executionHistory;
+			sourceTree = "<group>";
+		};
+		F10DB01626650103007BFED7 /* vcsMetadata-1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "vcsMetadata-1";
+			sourceTree = "<group>";
+		};
+		F10DB01826650103007BFED7 /* fileChanges */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB01926650103007BFED7 /* last-build.bin */,
+			);
+			path = fileChanges;
+			sourceTree = "<group>";
+		};
+		F10DB01A26650103007BFED7 /* javaCompile */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB01B26650103007BFED7 /* classAnalysis.bin */,
+				F10DB01C26650103007BFED7 /* javaCompile.lock */,
+				F10DB01D26650103007BFED7 /* taskHistory.bin */,
+				F10DB01E26650103007BFED7 /* jarAnalysis.bin */,
+			);
+			path = javaCompile;
+			sourceTree = "<group>";
+		};
+		F10DB01F26650103007BFED7 /* fileHashes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB02026650103007BFED7 /* fileHashes.lock */,
+				F10DB02126650103007BFED7 /* fileHashes.bin */,
+				F10DB02226650103007BFED7 /* resourceHashesCache.bin */,
+			);
+			path = fileHashes;
+			sourceTree = "<group>";
+		};
+		F10DB02326650103007BFED7 /* vcs-1 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB02426650103007BFED7 /* gc.properties */,
+			);
+			path = "vcs-1";
+			sourceTree = "<group>";
+		};
+		F10DB02526650103007BFED7 /* buildOutputCleanup */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB02626650103007BFED7 /* cache.properties */,
+				F10DB02726650103007BFED7 /* outputFiles.bin */,
+				F10DB02826650103007BFED7 /* buildOutputCleanup.lock */,
+			);
+			path = buildOutputCleanup;
+			sourceTree = "<group>";
+		};
+		F10DB02926650103007BFED7 /* configuration-cache */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB02A26650103007BFED7 /* gc.properties */,
+			);
+			path = "configuration-cache";
+			sourceTree = "<group>";
+		};
+		F10DB02B26650103007BFED7 /* checksums */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB02C26650103007BFED7 /* checksums.lock */,
+				F10DB02D26650103007BFED7 /* md5-checksums.bin */,
+				F10DB02E26650103007BFED7 /* sha1-checksums.bin */,
+			);
+			path = checksums;
+			sourceTree = "<group>";
+		};
+		F10DB02F26650103007BFED7 /* 6.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03026650103007BFED7 /* vcsMetadata-1 */,
+				F10DB03126650103007BFED7 /* gc.properties */,
+				F10DB03226650103007BFED7 /* fileChanges */,
+				F10DB03426650103007BFED7 /* fileHashes */,
+			);
+			path = 6.1.1;
+			sourceTree = "<group>";
+		};
+		F10DB03026650103007BFED7 /* vcsMetadata-1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "vcsMetadata-1";
+			sourceTree = "<group>";
+		};
+		F10DB03226650103007BFED7 /* fileChanges */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03326650103007BFED7 /* last-build.bin */,
+			);
+			path = fileChanges;
+			sourceTree = "<group>";
+		};
+		F10DB03426650103007BFED7 /* fileHashes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03526650103007BFED7 /* fileHashes.lock */,
+			);
+			path = fileHashes;
+			sourceTree = "<group>";
+		};
+		F10DB03726650103007BFED7 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03826650103007BFED7 /* generated */,
+				F10DB05326650104007BFED7 /* intermediates */,
+				F10DB14726650106007BFED7 /* tmp */,
+				F10DB14C26650106007BFED7 /* outputs */,
+				F10DB15526650106007BFED7 /* reports */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F10DB03826650103007BFED7 /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03926650103007BFED7 /* res */,
+				F10DB04026650103007BFED7 /* source */,
+				F10DB04E26650104007BFED7 /* ap_generated_sources */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+		F10DB03926650103007BFED7 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03A26650103007BFED7 /* pngs */,
+				F10DB03D26650103007BFED7 /* resValues */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		F10DB03A26650103007BFED7 /* pngs */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03B26650103007BFED7 /* release */,
+				F10DB03C26650103007BFED7 /* debug */,
+			);
+			path = pngs;
+			sourceTree = "<group>";
+		};
+		F10DB03B26650103007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB03C26650103007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB03D26650103007BFED7 /* resValues */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB03E26650103007BFED7 /* release */,
+				F10DB03F26650103007BFED7 /* debug */,
+			);
+			path = resValues;
+			sourceTree = "<group>";
+		};
+		F10DB03E26650103007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB03F26650103007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB04026650103007BFED7 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04126650103007BFED7 /* buildConfig */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		F10DB04126650103007BFED7 /* buildConfig */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04226650103007BFED7 /* release */,
+				F10DB04826650104007BFED7 /* debug */,
+			);
+			path = buildConfig;
+			sourceTree = "<group>";
+		};
+		F10DB04226650103007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04326650103007BFED7 /* com */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB04326650103007BFED7 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04426650104007BFED7 /* tvd12 */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		F10DB04426650104007BFED7 /* tvd12 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04526650104007BFED7 /* ezyfox */,
+			);
+			path = tvd12;
+			sourceTree = "<group>";
+		};
+		F10DB04526650104007BFED7 /* ezyfox */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04626650104007BFED7 /* client */,
+			);
+			path = ezyfox;
+			sourceTree = "<group>";
+		};
+		F10DB04626650104007BFED7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04726650104007BFED7 /* BuildConfig.java */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F10DB04826650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04926650104007BFED7 /* com */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB04926650104007BFED7 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04A26650104007BFED7 /* tvd12 */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		F10DB04A26650104007BFED7 /* tvd12 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04B26650104007BFED7 /* ezyfox */,
+			);
+			path = tvd12;
+			sourceTree = "<group>";
+		};
+		F10DB04B26650104007BFED7 /* ezyfox */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04C26650104007BFED7 /* client */,
+			);
+			path = ezyfox;
+			sourceTree = "<group>";
+		};
+		F10DB04C26650104007BFED7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04D26650104007BFED7 /* BuildConfig.java */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F10DB04E26650104007BFED7 /* ap_generated_sources */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB04F26650104007BFED7 /* release */,
+				F10DB05126650104007BFED7 /* debug */,
+			);
+			path = ap_generated_sources;
+			sourceTree = "<group>";
+		};
+		F10DB04F26650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05026650104007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB05026650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB05126650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05226650104007BFED7 /* out */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB05226650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB05326650104007BFED7 /* intermediates */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05426650104007BFED7 /* symbol_list_with_package_name */,
+				F10DB05926650104007BFED7 /* lint-cache */,
+				F10DB06226650104007BFED7 /* res */,
+				F10DB06726650104007BFED7 /* data_binding_layout_info_type_merge */,
+				F10DB06A26650104007BFED7 /* packaged_res */,
+				F10DB06D26650104007BFED7 /* library_assets */,
+				F10DB07226650104007BFED7 /* annotations_zip */,
+				F10DB07526650104007BFED7 /* merged_res_blame_folder */,
+				F10DB07826650104007BFED7 /* annotation_processor_list */,
+				F10DB08126650104007BFED7 /* incremental */,
+				F10DB0A326650104007BFED7 /* local_only_symbol_list */,
+				F10DB0A826650104007BFED7 /* aapt_friendly_merged_manifests */,
+				F10DB0B126650104007BFED7 /* compile_library_classes_jar */,
+				F10DB0B626650104007BFED7 /* compile_and_runtime_not_namespaced_r_class_jar */,
+				F10DB0BB26650104007BFED7 /* compile_r_class_jar */,
+				F10DB0C026650104007BFED7 /* merged_java_res */,
+				F10DB0C526650105007BFED7 /* data_binding_layout_info_type_package */,
+				F10DB0CA26650105007BFED7 /* compile_symbol_list */,
+				F10DB0CF26650105007BFED7 /* lint_publish_jar */,
+				F10DB0D126650105007BFED7 /* annotations_typedef_file */,
+				F10DB0D626650105007BFED7 /* javac */,
+				F10DB0E526650105007BFED7 /* manifest_merge_blame_file */,
+				F10DB0EA26650105007BFED7 /* merged_jni_libs */,
+				F10DB0EF26650105007BFED7 /* aar_libs_directory */,
+				F10DB0F426650105007BFED7 /* ndkBuild */,
+				F10DB11B26650105007BFED7 /* library_manifest */,
+				F10DB12026650105007BFED7 /* aar_main_jar */,
+				F10DB12526650105007BFED7 /* aar_metadata */,
+				F10DB12A26650105007BFED7 /* merged_shaders */,
+				F10DB12F26650105007BFED7 /* generated_proguard_file */,
+				F10DB13226650105007BFED7 /* packaged_manifests */,
+				F10DB13726650105007BFED7 /* library_and_local_jars_jni */,
+				F10DB13C26650105007BFED7 /* merged_consumer_proguard_file */,
+				F10DB13F26650106007BFED7 /* runtime_library_classes_jar */,
+				F10DB14426650106007BFED7 /* public_res */,
+			);
+			path = intermediates;
+			sourceTree = "<group>";
+		};
+		F10DB05426650104007BFED7 /* symbol_list_with_package_name */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05526650104007BFED7 /* release */,
+				F10DB05726650104007BFED7 /* debug */,
+			);
+			path = symbol_list_with_package_name;
+			sourceTree = "<group>";
+		};
+		F10DB05526650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05626650104007BFED7 /* package-aware-r.txt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB05726650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05826650104007BFED7 /* package-aware-r.txt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB05926650104007BFED7 /* lint-cache */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05A26650104007BFED7 /* maven.google */,
+				F10DB06126650104007BFED7 /* api-versions-0-31.bin */,
+			);
+			path = "lint-cache";
+			sourceTree = "<group>";
+		};
+		F10DB05A26650104007BFED7 /* maven.google */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05B26650104007BFED7 /* master-index.xml */,
+				F10DB05C26650104007BFED7 /* com */,
+			);
+			path = maven.google;
+			sourceTree = "<group>";
+		};
+		F10DB05C26650104007BFED7 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05D26650104007BFED7 /* android */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		F10DB05D26650104007BFED7 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05E26650104007BFED7 /* tools */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		F10DB05E26650104007BFED7 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB05F26650104007BFED7 /* build */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		F10DB05F26650104007BFED7 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06026650104007BFED7 /* group-index.xml */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F10DB06226650104007BFED7 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06326650104007BFED7 /* compiled */,
+				F10DB06526650104007BFED7 /* merged */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		F10DB06326650104007BFED7 /* compiled */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06426650104007BFED7 /* release */,
+			);
+			path = compiled;
+			sourceTree = "<group>";
+		};
+		F10DB06426650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB06526650104007BFED7 /* merged */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06626650104007BFED7 /* release */,
+			);
+			path = merged;
+			sourceTree = "<group>";
+		};
+		F10DB06626650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB06726650104007BFED7 /* data_binding_layout_info_type_merge */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06826650104007BFED7 /* release */,
+			);
+			path = data_binding_layout_info_type_merge;
+			sourceTree = "<group>";
+		};
+		F10DB06826650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06926650104007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB06926650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB06A26650104007BFED7 /* packaged_res */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06B26650104007BFED7 /* release */,
+				F10DB06C26650104007BFED7 /* debug */,
+			);
+			path = packaged_res;
+			sourceTree = "<group>";
+		};
+		F10DB06B26650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB06C26650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB06D26650104007BFED7 /* library_assets */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06E26650104007BFED7 /* release */,
+				F10DB07026650104007BFED7 /* debug */,
+			);
+			path = library_assets;
+			sourceTree = "<group>";
+		};
+		F10DB06E26650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB06F26650104007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB06F26650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB07026650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07126650104007BFED7 /* out */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB07126650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB07226650104007BFED7 /* annotations_zip */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07326650104007BFED7 /* release */,
+				F10DB07426650104007BFED7 /* debug */,
+			);
+			path = annotations_zip;
+			sourceTree = "<group>";
+		};
+		F10DB07326650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB07426650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB07526650104007BFED7 /* merged_res_blame_folder */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07626650104007BFED7 /* release */,
+			);
+			path = merged_res_blame_folder;
+			sourceTree = "<group>";
+		};
+		F10DB07626650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07726650104007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB07726650104007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB07826650104007BFED7 /* annotation_processor_list */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07926650104007BFED7 /* debugUnitTest */,
+				F10DB07B26650104007BFED7 /* release */,
+				F10DB07D26650104007BFED7 /* releaseUnitTest */,
+				F10DB07F26650104007BFED7 /* debug */,
+			);
+			path = annotation_processor_list;
+			sourceTree = "<group>";
+		};
+		F10DB07926650104007BFED7 /* debugUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07A26650104007BFED7 /* annotationProcessors.json */,
+			);
+			path = debugUnitTest;
+			sourceTree = "<group>";
+		};
+		F10DB07B26650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07C26650104007BFED7 /* annotationProcessors.json */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB07D26650104007BFED7 /* releaseUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB07E26650104007BFED7 /* annotationProcessors.json */,
+			);
+			path = releaseUnitTest;
+			sourceTree = "<group>";
+		};
+		F10DB07F26650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08026650104007BFED7 /* annotationProcessors.json */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB08126650104007BFED7 /* incremental */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08226650104007BFED7 /* mergeReleaseShaders */,
+				F10DB08426650104007BFED7 /* debug-mergeJavaRes */,
+				F10DB08726650104007BFED7 /* mergeReleaseJniLibFolders */,
+				F10DB08926650104007BFED7 /* packageDebugAssets */,
+				F10DB08B26650104007BFED7 /* mergeReleaseResources */,
+				F10DB09026650104007BFED7 /* packageDebugResources */,
+				F10DB09526650104007BFED7 /* packageReleaseResources */,
+				F10DB09A26650104007BFED7 /* release-mergeJavaRes */,
+				F10DB09D26650104007BFED7 /* mergeDebugJniLibFolders */,
+				F10DB09F26650104007BFED7 /* mergeDebugShaders */,
+				F10DB0A126650104007BFED7 /* packageReleaseAssets */,
+			);
+			path = incremental;
+			sourceTree = "<group>";
+		};
+		F10DB08226650104007BFED7 /* mergeReleaseShaders */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08326650104007BFED7 /* merger.xml */,
+			);
+			path = mergeReleaseShaders;
+			sourceTree = "<group>";
+		};
+		F10DB08426650104007BFED7 /* debug-mergeJavaRes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08526650104007BFED7 /* zip-cache */,
+				F10DB08626650104007BFED7 /* merge-state */,
+			);
+			path = "debug-mergeJavaRes";
+			sourceTree = "<group>";
+		};
+		F10DB08526650104007BFED7 /* zip-cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "zip-cache";
+			sourceTree = "<group>";
+		};
+		F10DB08726650104007BFED7 /* mergeReleaseJniLibFolders */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08826650104007BFED7 /* merger.xml */,
+			);
+			path = mergeReleaseJniLibFolders;
+			sourceTree = "<group>";
+		};
+		F10DB08926650104007BFED7 /* packageDebugAssets */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08A26650104007BFED7 /* merger.xml */,
+			);
+			path = packageDebugAssets;
+			sourceTree = "<group>";
+		};
+		F10DB08B26650104007BFED7 /* mergeReleaseResources */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB08C26650104007BFED7 /* compile-file-map.properties */,
+				F10DB08D26650104007BFED7 /* merged.dir */,
+				F10DB08E26650104007BFED7 /* stripped.dir */,
+				F10DB08F26650104007BFED7 /* merger.xml */,
+			);
+			path = mergeReleaseResources;
+			sourceTree = "<group>";
+		};
+		F10DB08D26650104007BFED7 /* merged.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = merged.dir;
+			sourceTree = "<group>";
+		};
+		F10DB08E26650104007BFED7 /* stripped.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stripped.dir;
+			sourceTree = "<group>";
+		};
+		F10DB09026650104007BFED7 /* packageDebugResources */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB09126650104007BFED7 /* compile-file-map.properties */,
+				F10DB09226650104007BFED7 /* merged.dir */,
+				F10DB09326650104007BFED7 /* stripped.dir */,
+				F10DB09426650104007BFED7 /* merger.xml */,
+			);
+			path = packageDebugResources;
+			sourceTree = "<group>";
+		};
+		F10DB09226650104007BFED7 /* merged.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = merged.dir;
+			sourceTree = "<group>";
+		};
+		F10DB09326650104007BFED7 /* stripped.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stripped.dir;
+			sourceTree = "<group>";
+		};
+		F10DB09526650104007BFED7 /* packageReleaseResources */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB09626650104007BFED7 /* compile-file-map.properties */,
+				F10DB09726650104007BFED7 /* merged.dir */,
+				F10DB09826650104007BFED7 /* stripped.dir */,
+				F10DB09926650104007BFED7 /* merger.xml */,
+			);
+			path = packageReleaseResources;
+			sourceTree = "<group>";
+		};
+		F10DB09726650104007BFED7 /* merged.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = merged.dir;
+			sourceTree = "<group>";
+		};
+		F10DB09826650104007BFED7 /* stripped.dir */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stripped.dir;
+			sourceTree = "<group>";
+		};
+		F10DB09A26650104007BFED7 /* release-mergeJavaRes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB09B26650104007BFED7 /* zip-cache */,
+				F10DB09C26650104007BFED7 /* merge-state */,
+			);
+			path = "release-mergeJavaRes";
+			sourceTree = "<group>";
+		};
+		F10DB09B26650104007BFED7 /* zip-cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "zip-cache";
+			sourceTree = "<group>";
+		};
+		F10DB09D26650104007BFED7 /* mergeDebugJniLibFolders */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB09E26650104007BFED7 /* merger.xml */,
+			);
+			path = mergeDebugJniLibFolders;
+			sourceTree = "<group>";
+		};
+		F10DB09F26650104007BFED7 /* mergeDebugShaders */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A026650104007BFED7 /* merger.xml */,
+			);
+			path = mergeDebugShaders;
+			sourceTree = "<group>";
+		};
+		F10DB0A126650104007BFED7 /* packageReleaseAssets */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A226650104007BFED7 /* merger.xml */,
+			);
+			path = packageReleaseAssets;
+			sourceTree = "<group>";
+		};
+		F10DB0A326650104007BFED7 /* local_only_symbol_list */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A426650104007BFED7 /* release */,
+				F10DB0A626650104007BFED7 /* debug */,
+			);
+			path = local_only_symbol_list;
+			sourceTree = "<group>";
+		};
+		F10DB0A426650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A526650104007BFED7 /* R-def.txt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0A626650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A726650104007BFED7 /* R-def.txt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0A826650104007BFED7 /* aapt_friendly_merged_manifests */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0A926650104007BFED7 /* release */,
+				F10DB0AD26650104007BFED7 /* debug */,
+			);
+			path = aapt_friendly_merged_manifests;
+			sourceTree = "<group>";
+		};
+		F10DB0A926650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0AA26650104007BFED7 /* aapt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0AA26650104007BFED7 /* aapt */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0AB26650104007BFED7 /* AndroidManifest.xml */,
+				F10DB0AC26650104007BFED7 /* output-metadata.json */,
+			);
+			path = aapt;
+			sourceTree = "<group>";
+		};
+		F10DB0AD26650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0AE26650104007BFED7 /* aapt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0AE26650104007BFED7 /* aapt */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0AF26650104007BFED7 /* AndroidManifest.xml */,
+				F10DB0B026650104007BFED7 /* output-metadata.json */,
+			);
+			path = aapt;
+			sourceTree = "<group>";
+		};
+		F10DB0B126650104007BFED7 /* compile_library_classes_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0B226650104007BFED7 /* release */,
+				F10DB0B426650104007BFED7 /* debug */,
+			);
+			path = compile_library_classes_jar;
+			sourceTree = "<group>";
+		};
+		F10DB0B226650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0B326650104007BFED7 /* classes.jar */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0B426650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0B526650104007BFED7 /* classes.jar */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0B626650104007BFED7 /* compile_and_runtime_not_namespaced_r_class_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0B726650104007BFED7 /* debugUnitTest */,
+				F10DB0B926650104007BFED7 /* releaseUnitTest */,
+			);
+			path = compile_and_runtime_not_namespaced_r_class_jar;
+			sourceTree = "<group>";
+		};
+		F10DB0B726650104007BFED7 /* debugUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0B826650104007BFED7 /* R.jar */,
+			);
+			path = debugUnitTest;
+			sourceTree = "<group>";
+		};
+		F10DB0B926650104007BFED7 /* releaseUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0BA26650104007BFED7 /* R.jar */,
+			);
+			path = releaseUnitTest;
+			sourceTree = "<group>";
+		};
+		F10DB0BB26650104007BFED7 /* compile_r_class_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0BC26650104007BFED7 /* release */,
+				F10DB0BE26650104007BFED7 /* debug */,
+			);
+			path = compile_r_class_jar;
+			sourceTree = "<group>";
+		};
+		F10DB0BC26650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0BD26650104007BFED7 /* R.jar */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0BE26650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0BF26650104007BFED7 /* R.jar */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0C026650104007BFED7 /* merged_java_res */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C126650104007BFED7 /* release */,
+				F10DB0C326650104007BFED7 /* debug */,
+			);
+			path = merged_java_res;
+			sourceTree = "<group>";
+		};
+		F10DB0C126650104007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C226650104007BFED7 /* out.jar */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0C326650104007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C426650104007BFED7 /* out.jar */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0C526650105007BFED7 /* data_binding_layout_info_type_package */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C626650105007BFED7 /* release */,
+				F10DB0C826650105007BFED7 /* debug */,
+			);
+			path = data_binding_layout_info_type_package;
+			sourceTree = "<group>";
+		};
+		F10DB0C626650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C726650105007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0C726650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB0C826650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0C926650105007BFED7 /* out */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0C926650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB0CA26650105007BFED7 /* compile_symbol_list */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0CB26650105007BFED7 /* release */,
+				F10DB0CD26650105007BFED7 /* debug */,
+			);
+			path = compile_symbol_list;
+			sourceTree = "<group>";
+		};
+		F10DB0CB26650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0CC26650105007BFED7 /* R.txt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0CD26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0CE26650105007BFED7 /* R.txt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0CF26650105007BFED7 /* lint_publish_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D026650105007BFED7 /* global */,
+			);
+			path = lint_publish_jar;
+			sourceTree = "<group>";
+		};
+		F10DB0D026650105007BFED7 /* global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
+		F10DB0D126650105007BFED7 /* annotations_typedef_file */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D226650105007BFED7 /* release */,
+				F10DB0D426650105007BFED7 /* debug */,
+			);
+			path = annotations_typedef_file;
+			sourceTree = "<group>";
+		};
+		F10DB0D226650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D326650105007BFED7 /* typedefs.txt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0D426650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D526650105007BFED7 /* typedefs.txt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0D626650105007BFED7 /* javac */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D726650105007BFED7 /* release */,
+				F10DB0DE26650105007BFED7 /* debug */,
+			);
+			path = javac;
+			sourceTree = "<group>";
+		};
+		F10DB0D726650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D826650105007BFED7 /* classes */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0D826650105007BFED7 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0D926650105007BFED7 /* com */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		F10DB0D926650105007BFED7 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0DA26650105007BFED7 /* tvd12 */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		F10DB0DA26650105007BFED7 /* tvd12 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0DB26650105007BFED7 /* ezyfox */,
+			);
+			path = tvd12;
+			sourceTree = "<group>";
+		};
+		F10DB0DB26650105007BFED7 /* ezyfox */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0DC26650105007BFED7 /* client */,
+			);
+			path = ezyfox;
+			sourceTree = "<group>";
+		};
+		F10DB0DC26650105007BFED7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0DD26650105007BFED7 /* BuildConfig.class */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F10DB0DE26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0DF26650105007BFED7 /* classes */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0DF26650105007BFED7 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E026650105007BFED7 /* com */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		F10DB0E026650105007BFED7 /* com */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E126650105007BFED7 /* tvd12 */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		F10DB0E126650105007BFED7 /* tvd12 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E226650105007BFED7 /* ezyfox */,
+			);
+			path = tvd12;
+			sourceTree = "<group>";
+		};
+		F10DB0E226650105007BFED7 /* ezyfox */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E326650105007BFED7 /* client */,
+			);
+			path = ezyfox;
+			sourceTree = "<group>";
+		};
+		F10DB0E326650105007BFED7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E426650105007BFED7 /* BuildConfig.class */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		F10DB0E526650105007BFED7 /* manifest_merge_blame_file */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E626650105007BFED7 /* release */,
+				F10DB0E826650105007BFED7 /* debug */,
+			);
+			path = manifest_merge_blame_file;
+			sourceTree = "<group>";
+		};
+		F10DB0E626650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E726650105007BFED7 /* manifest-merger-blame-release-report.txt */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0E826650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0E926650105007BFED7 /* manifest-merger-blame-debug-report.txt */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0EA26650105007BFED7 /* merged_jni_libs */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0EB26650105007BFED7 /* release */,
+				F10DB0ED26650105007BFED7 /* debug */,
+			);
+			path = merged_jni_libs;
+			sourceTree = "<group>";
+		};
+		F10DB0EB26650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0EC26650105007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0EC26650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB0ED26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0EE26650105007BFED7 /* out */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0EE26650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB0EF26650105007BFED7 /* aar_libs_directory */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F026650105007BFED7 /* release */,
+				F10DB0F226650105007BFED7 /* debug */,
+			);
+			path = aar_libs_directory;
+			sourceTree = "<group>";
+		};
+		F10DB0F026650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F126650105007BFED7 /* libs */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0F126650105007BFED7 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		F10DB0F226650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F326650105007BFED7 /* libs */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB0F326650105007BFED7 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		F10DB0F426650105007BFED7 /* ndkBuild */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F526650105007BFED7 /* release */,
+				F10DB10826650105007BFED7 /* debug */,
+			);
+			path = ndkBuild;
+			sourceTree = "<group>";
+		};
+		F10DB0F526650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F626650105007BFED7 /* obj */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB0F626650105007BFED7 /* obj */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F726650105007BFED7 /* local */,
+			);
+			path = obj;
+			sourceTree = "<group>";
+		};
+		F10DB0F726650105007BFED7 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F826650105007BFED7 /* armeabi-v7a */,
+				F10DB0FC26650105007BFED7 /* x86 */,
+				F10DB10026650105007BFED7 /* arm64-v8a */,
+				F10DB10426650105007BFED7 /* x86_64 */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		F10DB0F826650105007BFED7 /* armeabi-v7a */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0F926650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt */,
+				F10DB0FA26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt */,
+				F10DB0FB26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt */,
+			);
+			path = "armeabi-v7a";
+			sourceTree = "<group>";
+		};
+		F10DB0FC26650105007BFED7 /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB0FD26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stderr.txt */,
+				F10DB0FE26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.command.txt */,
+				F10DB0FF26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stdout.txt */,
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		F10DB10026650105007BFED7 /* arm64-v8a */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10126650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt */,
+				F10DB10226650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt */,
+				F10DB10326650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.command.txt */,
+			);
+			path = "arm64-v8a";
+			sourceTree = "<group>";
+		};
+		F10DB10426650105007BFED7 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10526650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.command.txt */,
+				F10DB10626650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stdout.txt */,
+				F10DB10726650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stderr.txt */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
+		F10DB10826650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10926650105007BFED7 /* obj */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB10926650105007BFED7 /* obj */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10A26650105007BFED7 /* local */,
+			);
+			path = obj;
+			sourceTree = "<group>";
+		};
+		F10DB10A26650105007BFED7 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10B26650105007BFED7 /* armeabi-v7a */,
+				F10DB10F26650105007BFED7 /* x86 */,
+				F10DB11326650105007BFED7 /* arm64-v8a */,
+				F10DB11726650105007BFED7 /* x86_64 */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		F10DB10B26650105007BFED7 /* armeabi-v7a */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB10C26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stderr.txt */,
+				F10DB10D26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.command.txt */,
+				F10DB10E26650105007BFED7 /* android_gradle_generate_ndk_build_json_armeabi-v7a.stdout.txt */,
+			);
+			path = "armeabi-v7a";
+			sourceTree = "<group>";
+		};
+		F10DB10F26650105007BFED7 /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11026650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stderr.txt */,
+				F10DB11126650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.command.txt */,
+				F10DB11226650105007BFED7 /* android_gradle_generate_ndk_build_json_x86.stdout.txt */,
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		F10DB11326650105007BFED7 /* arm64-v8a */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11426650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stderr.txt */,
+				F10DB11526650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.stdout.txt */,
+				F10DB11626650105007BFED7 /* android_gradle_generate_ndk_build_json_arm64-v8a.command.txt */,
+			);
+			path = "arm64-v8a";
+			sourceTree = "<group>";
+		};
+		F10DB11726650105007BFED7 /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11826650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.command.txt */,
+				F10DB11926650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stdout.txt */,
+				F10DB11A26650105007BFED7 /* android_gradle_generate_ndk_build_json_x86_64.stderr.txt */,
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
+		F10DB11B26650105007BFED7 /* library_manifest */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11C26650105007BFED7 /* release */,
+				F10DB11E26650105007BFED7 /* debug */,
+			);
+			path = library_manifest;
+			sourceTree = "<group>";
+		};
+		F10DB11C26650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11D26650105007BFED7 /* AndroidManifest.xml */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB11E26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB11F26650105007BFED7 /* AndroidManifest.xml */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB12026650105007BFED7 /* aar_main_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12126650105007BFED7 /* release */,
+				F10DB12326650105007BFED7 /* debug */,
+			);
+			path = aar_main_jar;
+			sourceTree = "<group>";
+		};
+		F10DB12126650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12226650105007BFED7 /* classes.jar */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB12326650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12426650105007BFED7 /* classes.jar */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB12526650105007BFED7 /* aar_metadata */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12626650105007BFED7 /* release */,
+				F10DB12826650105007BFED7 /* debug */,
+			);
+			path = aar_metadata;
+			sourceTree = "<group>";
+		};
+		F10DB12626650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12726650105007BFED7 /* aar-metadata.properties */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB12826650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12926650105007BFED7 /* aar-metadata.properties */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB12A26650105007BFED7 /* merged_shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12B26650105007BFED7 /* release */,
+				F10DB12D26650105007BFED7 /* debug */,
+			);
+			path = merged_shaders;
+			sourceTree = "<group>";
+		};
+		F10DB12B26650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12C26650105007BFED7 /* out */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB12C26650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB12D26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB12E26650105007BFED7 /* out */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB12E26650105007BFED7 /* out */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = out;
+			sourceTree = "<group>";
+		};
+		F10DB12F26650105007BFED7 /* generated_proguard_file */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13026650105007BFED7 /* release */,
+				F10DB13126650105007BFED7 /* debug */,
+			);
+			path = generated_proguard_file;
+			sourceTree = "<group>";
+		};
+		F10DB13026650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB13126650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB13226650105007BFED7 /* packaged_manifests */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13326650105007BFED7 /* release */,
+				F10DB13526650105007BFED7 /* debug */,
+			);
+			path = packaged_manifests;
+			sourceTree = "<group>";
+		};
+		F10DB13326650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13426650105007BFED7 /* output-metadata.json */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB13526650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13626650105007BFED7 /* output-metadata.json */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB13726650105007BFED7 /* library_and_local_jars_jni */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13826650105007BFED7 /* release */,
+				F10DB13A26650105007BFED7 /* debug */,
+			);
+			path = library_and_local_jars_jni;
+			sourceTree = "<group>";
+		};
+		F10DB13826650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13926650105007BFED7 /* jni */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB13926650105007BFED7 /* jni */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = jni;
+			sourceTree = "<group>";
+		};
+		F10DB13A26650105007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13B26650105007BFED7 /* jni */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB13B26650105007BFED7 /* jni */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = jni;
+			sourceTree = "<group>";
+		};
+		F10DB13C26650105007BFED7 /* merged_consumer_proguard_file */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB13D26650105007BFED7 /* release */,
+				F10DB13E26650106007BFED7 /* debug */,
+			);
+			path = merged_consumer_proguard_file;
+			sourceTree = "<group>";
+		};
+		F10DB13D26650105007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB13E26650106007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB13F26650106007BFED7 /* runtime_library_classes_jar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14026650106007BFED7 /* release */,
+				F10DB14226650106007BFED7 /* debug */,
+			);
+			path = runtime_library_classes_jar;
+			sourceTree = "<group>";
+		};
+		F10DB14026650106007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14126650106007BFED7 /* classes.jar */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB14226650106007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14326650106007BFED7 /* classes.jar */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB14426650106007BFED7 /* public_res */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14526650106007BFED7 /* release */,
+				F10DB14626650106007BFED7 /* debug */,
+			);
+			path = public_res;
+			sourceTree = "<group>";
+		};
+		F10DB14526650106007BFED7 /* release */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
+		F10DB14626650106007BFED7 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		F10DB14726650106007BFED7 /* tmp */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14826650106007BFED7 /* compileDebugJavaWithJavac */,
+				F10DB14A26650106007BFED7 /* compileReleaseJavaWithJavac */,
+			);
+			path = tmp;
+			sourceTree = "<group>";
+		};
+		F10DB14826650106007BFED7 /* compileDebugJavaWithJavac */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14926650106007BFED7 /* source-classes-mapping.txt */,
+			);
+			path = compileDebugJavaWithJavac;
+			sourceTree = "<group>";
+		};
+		F10DB14A26650106007BFED7 /* compileReleaseJavaWithJavac */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14B26650106007BFED7 /* source-classes-mapping.txt */,
+			);
+			path = compileReleaseJavaWithJavac;
+			sourceTree = "<group>";
+		};
+		F10DB14C26650106007BFED7 /* outputs */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14D26650106007BFED7 /* logs */,
+				F10DB15026650106007BFED7 /* aar */,
+			);
+			path = outputs;
+			sourceTree = "<group>";
+		};
+		F10DB14D26650106007BFED7 /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB14E26650106007BFED7 /* manifest-merger-debug-report.txt */,
+				F10DB14F26650106007BFED7 /* manifest-merger-release-report.txt */,
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
+		F10DB15026650106007BFED7 /* aar */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB15126650106007BFED7 /* ezyfox-client-debug.aar */,
+				F10DB15226650106007BFED7 /* ezyfox-client-release.aar */,
+				F10DB15326650106007BFED7 /* android-release.aar */,
+				F10DB15426650106007BFED7 /* android-debug.aar */,
+			);
+			path = aar;
+			sourceTree = "<group>";
+		};
+		F10DB15526650106007BFED7 /* reports */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB15626650106007BFED7 /* lint-results.xml */,
+				F10DB15726650106007BFED7 /* lint-results.html */,
+			);
+			path = reports;
+			sourceTree = "<group>";
+		};
+		F10DB15926650106007BFED7 /* jni */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB15A26650106007BFED7 /* Android.mk */,
+				F10DB15B26650106007BFED7 /* Application.mk */,
+			);
+			path = jni;
+			sourceTree = "<group>";
+		};
+		F10DB15C26650106007BFED7 /* .idea */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB15D26650106007BFED7 /* jarRepositories.xml */,
+				F10DB15E26650106007BFED7 /* gradle.xml */,
+				F10DB15F26650106007BFED7 /* vcs.xml */,
+				F10DB16026650106007BFED7 /* .gitignore */,
+				F10DB16126650106007BFED7 /* workspace.xml */,
+				F10DB16226650106007BFED7 /* modules.xml */,
+				F10DB16326650106007BFED7 /* modules */,
+				F10DB16526650106007BFED7 /* misc.xml */,
+				F10DB16626650106007BFED7 /* compiler.xml */,
+				F10DB16726650106007BFED7 /* caches */,
+			);
+			path = .idea;
+			sourceTree = "<group>";
+		};
+		F10DB16326650106007BFED7 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB16426650106007BFED7 /* android.iml */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		F10DB16726650106007BFED7 /* caches */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB16826650106007BFED7 /* build_file_checksums.ser */,
+			);
+			path = caches;
+			sourceTree = "<group>";
+		};
+		F10DB16926650106007BFED7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB16A26650106007BFED7 /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F10DB16A26650106007BFED7 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB16B26650106007BFED7 /* AndroidManifest.xml */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		F10DB16E26650106007BFED7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB16F26650106007BFED7 /* handler */,
+				F10DB18026650106007BFED7 /* EzyClient.h */,
+				F10DB18126650106007BFED7 /* EzyClients.h */,
+				F10DB18226650106007BFED7 /* EzyUTClient.h */,
+				F10DB18326650106007BFED7 /* EzyUTClient.cpp */,
+				F10DB18426650106007BFED7 /* logger */,
+				F10DB18726650106007BFED7 /* util */,
+				F10DB18A26650106007BFED7 /* config */,
+				F10DB18D26650106007BFED7 /* entity */,
+				F10DB1A026650106007BFED7 /* codec */,
+				F10DB1A926650106007BFED7 /* EzyClient.cpp */,
+				F10DB1AA26650106007BFED7 /* setup */,
+				F10DB1AD26650106007BFED7 /* EzyClients.cpp */,
+				F10DB1AE26650106007BFED7 /* EzyHeaders.h */,
+				F10DB1AF26650106007BFED7 /* manager */,
+				F10DB1B826650106007BFED7 /* EzyMacro.h */,
+				F10DB1B926650106007BFED7 /* constant */,
+				F10DB1C426650107007BFED7 /* concurrent */,
+				F10DB1C926650107007BFED7 /* gc */,
+				F10DB1CE26650107007BFED7 /* request */,
+				F10DB1D326650107007BFED7 /* event */,
+				F10DB1D826650107007BFED7 /* base */,
+				F10DB1DB26650107007BFED7 /* socket */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F10DB16F26650106007BFED7 /* handler */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB17026650106007BFED7 /* EzyPluginDataHandlers.h */,
+				F10DB17126650106007BFED7 /* EzyEventHandler.h */,
+				F10DB17226650106007BFED7 /* EzyEventHandlers.cpp */,
+				F10DB17326650106007BFED7 /* EzyDataHandlers.cpp */,
+				F10DB17426650106007BFED7 /* EzyPluginDataHandler.h */,
+				F10DB17526650106007BFED7 /* EzyDataHandlers.h */,
+				F10DB17626650106007BFED7 /* EzyEventHandlers.h */,
+				F10DB17726650106007BFED7 /* EzyAppDataHandler.h */,
+				F10DB17826650106007BFED7 /* EzyEventHandler.cpp */,
+				F10DB17926650106007BFED7 /* EzyDataHandler.h */,
+				F10DB17A26650106007BFED7 /* EzyAppDataHandlers.cpp */,
+				F10DB17B26650106007BFED7 /* EzyAppDataHandlers.h */,
+				F10DB17C26650106007BFED7 /* EzyPluginDataHandlers.cpp */,
+				F10DB17D26650106007BFED7 /* EzyPluginDataHandler.cpp */,
+				F10DB17E26650106007BFED7 /* EzyAppDataHandler.cpp */,
+				F10DB17F26650106007BFED7 /* EzyDataHandler.cpp */,
+			);
+			path = handler;
+			sourceTree = "<group>";
+		};
+		F10DB18426650106007BFED7 /* logger */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB18526650106007BFED7 /* EzyLogger.cpp */,
+				F10DB18626650106007BFED7 /* EzyLogger.h */,
+			);
+			path = logger;
+			sourceTree = "<group>";
+		};
+		F10DB18726650106007BFED7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB18826650106007BFED7 /* EzyStack.h */,
+				F10DB18926650106007BFED7 /* EzyMaps.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F10DB18A26650106007BFED7 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB18B26650106007BFED7 /* EzyClientConfig.h */,
+				F10DB18C26650106007BFED7 /* EzyClientConfig.cpp */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		F10DB18D26650106007BFED7 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB18E26650106007BFED7 /* EzyApp.cpp */,
+				F10DB18F26650106007BFED7 /* EzyString.cpp */,
+				F10DB19026650106007BFED7 /* EzyUser.h */,
+				F10DB19126650106007BFED7 /* EzyZone.cpp */,
+				F10DB19226650106007BFED7 /* EzyPrimitive.cpp */,
+				F10DB19326650106007BFED7 /* EzyPlugin.h */,
+				F10DB19426650106007BFED7 /* EzyObject.cpp */,
+				F10DB19526650106007BFED7 /* EzyPrimitive.h */,
+				F10DB19626650106007BFED7 /* EzyArray.h */,
+				F10DB19726650106007BFED7 /* EzyValue.h */,
+				F10DB19826650106007BFED7 /* EzyArray.cpp */,
+				F10DB19926650106007BFED7 /* EzyValue.cpp */,
+				F10DB19A26650106007BFED7 /* EzyZone.h */,
+				F10DB19B26650106007BFED7 /* EzyApp.h */,
+				F10DB19C26650106007BFED7 /* EzyObject.h */,
+				F10DB19D26650106007BFED7 /* EzyUser.cpp */,
+				F10DB19E26650106007BFED7 /* EzyPlugin.cpp */,
+				F10DB19F26650106007BFED7 /* EzyString.h */,
+				F10DB2E12665F219007BFED7 /* EzyByteArray.cpp */,
+				F10DB2E22665F219007BFED7 /* EzyByteArray.h */,
+				F18F94DF266A01F2004790E8 /* EzyNull.cpp */,
+				F18F94E0266A01F2004790E8 /* EzyNull.h */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		F10DB1A026650106007BFED7 /* codec */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1A126650106007BFED7 /* EzyDataEncoder.h */,
+				F10DB1A226650106007BFED7 /* EzyMessage.h */,
+				F10DB1A326650106007BFED7 /* EzyMessage.cpp */,
+				F10DB1A426650106007BFED7 /* EzyDataDecoder.cpp */,
+				F10DB1A526650106007BFED7 /* EzyEncryption.h */,
+				F10DB1A626650106007BFED7 /* EzyEncryption.cpp */,
+				F10DB1A726650106007BFED7 /* EzyDataDecoder.h */,
+				F10DB1A826650106007BFED7 /* EzyDataEncoder.cpp */,
+			);
+			path = codec;
+			sourceTree = "<group>";
+		};
+		F10DB1AA26650106007BFED7 /* setup */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1AB26650106007BFED7 /* EzySetup.cpp */,
+				F10DB1AC26650106007BFED7 /* EzySetup.h */,
+			);
+			path = setup;
+			sourceTree = "<group>";
+		};
+		F10DB1AF26650106007BFED7 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1B026650106007BFED7 /* EzyHandlerManager.h */,
+				F10DB1B126650106007BFED7 /* EzyPluginManager.cpp */,
+				F10DB1B226650106007BFED7 /* EzyAppManager.cpp */,
+				F10DB1B326650106007BFED7 /* EzyHandlerManager.cpp */,
+				F10DB1B426650106007BFED7 /* EzyPingManager.cpp */,
+				F10DB1B526650106007BFED7 /* EzyAppManager.h */,
+				F10DB1B626650106007BFED7 /* EzyPingManager.h */,
+				F10DB1B726650106007BFED7 /* EzyPluginManager.h */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		F10DB1B926650106007BFED7 /* constant */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1BA26650106007BFED7 /* EzyStatusCode.h */,
+				F10DB1BB26650106007BFED7 /* EzyConnectionStatus.cpp */,
+				F10DB1BC26650106007BFED7 /* EzyConnectionStatus.h */,
+				F10DB1BD26650106007BFED7 /* EzyCommand.cpp */,
+				F10DB1BE26650107007BFED7 /* EzyTransportType.h */,
+				F10DB1BF26650107007BFED7 /* EzyConnectionFailedReason.h */,
+				F10DB1C026650107007BFED7 /* EzyDisconnectReason.h */,
+				F10DB1C126650107007BFED7 /* EzyCommand.h */,
+				F10DB1C226650107007BFED7 /* EzyDisconnectReason.cpp */,
+				F10DB1C326650107007BFED7 /* EzyConnectionFailedReason.cpp */,
+			);
+			path = constant;
+			sourceTree = "<group>";
+		};
+		F10DB1C426650107007BFED7 /* concurrent */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1C526650107007BFED7 /* EzyThread.cpp */,
+				F10DB1C626650107007BFED7 /* EzyThread.h */,
+				F10DB1C726650107007BFED7 /* EzyScheduleAtFixedRate.h */,
+				F10DB1C826650107007BFED7 /* EzyScheduleAtFixedRate.cpp */,
+			);
+			path = concurrent;
+			sourceTree = "<group>";
+		};
+		F10DB1C926650107007BFED7 /* gc */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1CA26650107007BFED7 /* EzyReleasePool.h */,
+				F10DB1CB26650107007BFED7 /* EzyAutoReleasePool.h */,
+				F10DB1CC26650107007BFED7 /* EzyReleasePool.cpp */,
+				F10DB1CD26650107007BFED7 /* EzyAutoReleasePool.cpp */,
+			);
+			path = gc;
+			sourceTree = "<group>";
+		};
+		F10DB1CE26650107007BFED7 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1CF26650107007BFED7 /* EzyRequest.cpp */,
+				F10DB1D026650107007BFED7 /* EzyRequestSerializer.cpp */,
+				F10DB1D126650107007BFED7 /* EzyRequest.h */,
+				F10DB1D226650107007BFED7 /* EzyRequestSerializer.h */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		F10DB1D326650107007BFED7 /* event */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1D426650107007BFED7 /* EzyEventType.h */,
+				F10DB1D526650107007BFED7 /* EzyEvent.h */,
+				F10DB1D626650107007BFED7 /* EzyEvent.cpp */,
+				F10DB1D726650107007BFED7 /* EzyEventType.cpp */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		F10DB1D826650107007BFED7 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1D926650107007BFED7 /* EzyRef.h */,
+				F10DB1DA26650107007BFED7 /* EzyRef.cpp */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		F10DB1DB26650107007BFED7 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB1DC26650107007BFED7 /* EzySocketDelegate.h */,
+				F10DB1DD26650107007BFED7 /* EzySocketAdapter.h */,
+				F10DB1DE26650107007BFED7 /* EzySocketClient.h */,
+				F10DB1DF26650107007BFED7 /* EzySocketReader.h */,
+				F10DB1E026650107007BFED7 /* EzyTcpSocketClient.cpp */,
+				F10DB1E126650107007BFED7 /* EzySocketClient.cpp */,
+				F10DB1E226650107007BFED7 /* EzySocketAdapter.cpp */,
+				F10DB1E326650107007BFED7 /* EzySocketDefine.h */,
+				F10DB1E426650107007BFED7 /* EzyTcpSocketClient.h */,
+				F10DB1E526650107007BFED7 /* EzySocketCore.cpp */,
+				F10DB1E626650107007BFED7 /* EzySocketPool.h */,
+				F10DB1E726650107007BFED7 /* EzyUdpSocketClient.h */,
+				F10DB1E826650107007BFED7 /* EzyUTSocketClient.h */,
+				F10DB1E926650107007BFED7 /* EzySender.h */,
+				F10DB1EA26650107007BFED7 /* EzySocketCore.h */,
+				F10DB1EB26650107007BFED7 /* EzyMainEventsLoop.cpp */,
+				F10DB1EC26650107007BFED7 /* EzyPingSchedule.cpp */,
+				F10DB1ED26650107007BFED7 /* EzySocketWriter.h */,
+				F10DB1EE26650107007BFED7 /* EzySocketPool.cpp */,
+				F10DB1EF26650107007BFED7 /* EzySocketReader.cpp */,
+				F10DB1F026650107007BFED7 /* EzyPingSchedule.h */,
+				F10DB1F126650107007BFED7 /* EzyUTSocketClient.cpp */,
+				F10DB1F226650107007BFED7 /* EzyUdpSocketClient.cpp */,
+				F10DB1F326650107007BFED7 /* EzySocketWriter.cpp */,
+				F10DB1F426650107007BFED7 /* EzyMainEventsLoop.h */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		F10DB2D126650116007BFED7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB2D526650116007BFED7 /* libezyfox-client.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F10DB2DD266540A3007BFED7 /* codec */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB2DE266540BD007BFED7 /* EzyEncryptionProxy.h */,
+				F10DB2DF26654319007BFED7 /* EzyEncryptionProxy.mm */,
+			);
+			path = codec;
+			sourceTree = "<group>";
+		};
+		F10DB2E7266608D8007BFED7 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F10DB2E826660901007BFED7 /* EzyClientConfig.swift */,
+				F14DC1BF26E37C6500F70721 /* EzyPingConfig.swift */,
+				F14DC1C226E37C6500F70721 /* EzyReconnectConfig.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10DAFA6266500AD007BFED7 /* swift-connection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10DAFCC266500AE007BFED7 /* Build configuration list for PBXNativeTarget "swift-connection" */;
+			buildPhases = (
+				9CE5B1166E17B13D7F3AA0E3 /* [CP] Check Pods Manifest.lock */,
+				F10DAFA3266500AD007BFED7 /* Sources */,
+				F10DAFA4266500AD007BFED7 /* Frameworks */,
+				F10DAFA5266500AD007BFED7 /* Resources */,
+				7CF12854D6572AA2A3B4E747 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swift-connection";
+			productName = "swift-connection";
+			productReference = F10DAFA7266500AD007BFED7 /* swift-connection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F10DAF9F266500AD007BFED7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F10DAFA6266500AD007BFED7 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = F10DAFA2266500AD007BFED7 /* Build configuration list for PBXProject "swift-connection" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F10DAF9E266500AD007BFED7;
+			productRefGroup = F10DAFA8266500AD007BFED7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F10DB2D126650116007BFED7 /* Products */;
+					ProjectRef = F10DB2D026650116007BFED7 /* ezyfox-client.xcodeproj */;
+				},
+				{
+					ProductGroup = F10DB00626650103007BFED7 /* Products */;
+					ProjectRef = F10DB00526650103007BFED7 /* ezyfox-client.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F10DAFA6266500AD007BFED7 /* swift-connection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F10DB1F726650107007BFED7 /* libezyfox-client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libezyfox-client.a";
+			remoteRef = F10DB1F626650107007BFED7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F10DB2D526650116007BFED7 /* libezyfox-client.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libezyfox-client.a";
+			remoteRef = F10DB2D426650116007BFED7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F10DAFA5266500AD007BFED7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10DAFAF266500AE007BFED7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CF12854D6572AA2A3B4E747 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-connection/Pods-swift-connection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-connection/Pods-swift-connection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift-connection/Pods-swift-connection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CE5B1166E17B13D7F3AA0E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift-connection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F10DAFA3266500AD007BFED7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C8B42E26745AC600180869 /* EzyEncryption.cpp in Sources */,
+				F10DB1FE26650107007BFED7 /* EzyMethodProxy.mm in Sources */,
+				F10DB20926650107007BFED7 /* EzyHandlers.swift in Sources */,
+				F10DB20C26650107007BFED7 /* EzyClientProxy.mm in Sources */,
+				F10DAFAD266500AD007BFED7 /* ContentView.swift in Sources */,
+				F10DB2E62665F554007BFED7 /* NSByArray.m in Sources */,
+				F10DAFAB266500AD007BFED7 /* ezyfox_sslApp.swift in Sources */,
+				F10DB2E926660901007BFED7 /* EzyClientConfig.swift in Sources */,
+				F10DB20D26650107007BFED7 /* EzyMethodNames.mm in Sources */,
+				F10DB20026650107007BFED7 /* EzyConstants.swift in Sources */,
+				F10DB1FF26650107007BFED7 /* EzyEntities.swift in Sources */,
+				F10DB2DA26650921007BFED7 /* SocketProxy.swift in Sources */,
+				F10DB20B26650107007BFED7 /* EzySetup.swift in Sources */,
+				F10DB20126650107007BFED7 /* EzyClients.swift in Sources */,
+				F10DB2E026654319007BFED7 /* EzyEncryptionProxy.mm in Sources */,
+				F10DB1FD26650107007BFED7 /* EzyLogger.swift in Sources */,
+				F10DB20E26650107007BFED7 /* EzyMethodCallException.mm in Sources */,
+				F10DB20226650107007BFED7 /* EzyNativeStrings.mm in Sources */,
+				F10DB1F826650107007BFED7 /* EzyNativeDataSerializer.mm in Sources */,
+				F14DC1C426E37C6500F70721 /* EzyReconnectConfig.swift in Sources */,
+				F10DB1FB26650107007BFED7 /* EzyEventSerializer.mm in Sources */,
+				F10DB20626650107007BFED7 /* EzyNSNumber.m in Sources */,
+				F10DB20826650107007BFED7 /* EzyManagers.swift in Sources */,
+				F14DC1C326E37C6500F70721 /* EzyPingConfig.swift in Sources */,
+				F10DB20326650107007BFED7 /* EzyEventEmitter.mm in Sources */,
+				F10DB1FC26650107007BFED7 /* EzyNativeSerializers.mm in Sources */,
+				F10DB20426650107007BFED7 /* EzyClient.swift in Sources */,
+				F10DB1FA26650107007BFED7 /* EzyNativeDataDeserializer.mm in Sources */,
+				F10DB1F926650107007BFED7 /* EzyClientConfigSerializer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F10DAFCA266500AE007BFED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F10DAFCB266500AE007BFED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F10DAFCD266500AE007BFED7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FD0B61DF31F8A90F364E12 /* Pods-swift-connection.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"src/Preview Content\"";
+				DEVELOPMENT_TEAM = 76JURWHY44;
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"EZY_DEBUG=1",
+					"EZY_SSL_ENABLE=1",
+				);
+				INFOPLIST_FILE = src/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tvd12.swift-connection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "client/ezyfox-client-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10DAFCE266500AE007BFED7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CADD210735CFC7BFE3505135 /* Pods-swift-connection.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"src/Preview Content\"";
+				DEVELOPMENT_TEAM = 76JURWHY44;
+				ENABLE_PREVIEWS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"EZY_DEBUG=1",
+					"EZY_SSL_ENABLE=1",
+				);
+				INFOPLIST_FILE = src/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tvd12.swift-connection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "client/ezyfox-client-bridging-header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10DAFA2266500AD007BFED7 /* Build configuration list for PBXProject "swift-connection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10DAFCA266500AE007BFED7 /* Debug */,
+				F10DAFCB266500AE007BFED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10DAFCC266500AE007BFED7 /* Build configuration list for PBXNativeTarget "swift-connection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10DAFCD266500AE007BFED7 /* Debug */,
+				F10DAFCE266500AE007BFED7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F10DAF9F266500AD007BFED7 /* Project object */;
+}
