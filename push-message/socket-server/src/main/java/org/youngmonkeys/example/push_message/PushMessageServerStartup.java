@@ -7,6 +7,7 @@ import com.tvd12.ezyfoxserver.ext.EzyAbstractPluginEntryLoader;
 import com.tvd12.ezyfoxserver.ext.EzyAppEntry;
 import com.tvd12.ezyfoxserver.ext.EzyPluginEntry;
 import com.tvd12.ezyfoxserver.setting.*;
+import com.tvd12.ezyfoxserver.support.annotation.EzyDisallowRequest;
 import com.tvd12.ezyfoxserver.support.entry.EzyDefaultAppEntry;
 import com.tvd12.ezyfoxserver.support.entry.EzyDefaultPluginEntry;
 
@@ -43,7 +44,7 @@ public class PushMessageServerStartup {
 
     public static class AppEntryLoader extends EzyAbstractAppEntryLoader {
         @Override
-        public EzyAppEntry load() throws Exception {
+        public EzyAppEntry load() {
             return new AppEntry();
         }
     }
@@ -59,11 +60,12 @@ public class PushMessageServerStartup {
 
     public static class PluginEntryLoader extends EzyAbstractPluginEntryLoader {
         @Override
-        public EzyPluginEntry load() throws Exception {
+        public EzyPluginEntry load() {
             return new PluginEntry();
         }
     }
 
+    @EzyDisallowRequest
     public static class PluginEntry extends EzyDefaultPluginEntry {
         @Override
         protected String[] getScanablePackages() {

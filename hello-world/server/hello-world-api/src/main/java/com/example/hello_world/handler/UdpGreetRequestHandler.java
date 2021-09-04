@@ -31,8 +31,20 @@ public class UdpGreetRequestHandler
 			.command(UDP_GREET)
 			.udpTransport()
 			.param("message", greeting.greet(who))
+			.param("negativeFixInt1", (byte)-1)
+			.param("maxByte", Byte.MAX_VALUE)
+			.param("minByte", Byte.MIN_VALUE)
+			.param("maxShort", Short.MAX_VALUE)
+			.param("minShort", Short.MIN_VALUE)
+			.param("maxInt", Integer.MAX_VALUE)
+			.param("minInt", Integer.MIN_VALUE)
+			.param("maxLong", Long.MAX_VALUE)
+			.param("minLong", Long.MIN_VALUE)
+			.param("maxFloat", Float.MAX_VALUE)
+			.param("minFloat", Float.MIN_VALUE)
+			.param("maxDouble", Double.MAX_VALUE)
+			.param("minDouble", Double.MIN_VALUE)
 			.session(session)
 			.execute();
 	}
-	
 }
