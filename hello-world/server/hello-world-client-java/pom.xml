@@ -13,7 +13,7 @@
 	<url>https://youngmonkeys.org/</url>
 	
 	<properties>
-		<ezyfox.client.version>1.1.3</ezyfox.client.version>
+		<ezyfox.client.version>1.1.6</ezyfox.client.version>
 	</properties>
 	
 	<dependencies>

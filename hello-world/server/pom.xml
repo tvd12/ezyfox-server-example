@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.tvd12</groupId>
 		<artifactId>ezyfox</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</parent>
 
 	<groupId>com.tvd12.ezyfoxserver</groupId>
@@ -19,7 +19,7 @@
 	<url>https://youngmonkeys.org/</url>
 
 	<properties>
-		<ezy.server.version>1.1.9</ezy.server.version>
+		<ezy.server.version>1.2.0</ezy.server.version>
 	</properties>
 
 	<profiles>
