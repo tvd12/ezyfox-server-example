@@ -22,6 +22,12 @@ public class SocketProxy {
             .setZoneName(zoneName: ZONE_NAME)
             .setEnableSSL()
 //            .setEnableDebug()
+        _ = config.ping
+            .setPingPeriod(pingPeriod: 3000)
+            .setMaxLostPingCount(maxLostPingCount: 3)
+        _ = config.reconnect
+            .setReconnectPeriod(reconnectPeriod: 1000)
+            .setMaxReconnectCount(maxReconnectCount: 10)
         let clients = EzyClients.getInstance()!
         client = clients.newClient(config: config)
         let setup = client.setup!
@@ -41,8 +47,8 @@ public class SocketProxy {
     }
     
     public func connectToServer() {
-//        let host = "127.0.0.1"
-        let host = "ws.tvd12.com"
+        let host = "127.0.0.1"
+//        let host = "ws.tvd12.com"
         client.connect(host: host, port: 3005)
     }
 }

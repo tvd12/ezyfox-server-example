@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3647E84AEC7E33CF2A0CB711 /* Pods_swift_connection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E951D42ACF9EA7A837173FCB /* Pods_swift_connection.framework */; };
-		F10DAFAB266500AD007BFED7 /* ezyfox_sslApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */; };
+		F10DAFAB266500AD007BFED7 /* swift_connectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFAA266500AD007BFED7 /* swift_connectionApp.swift */; };
 		F10DAFAD266500AD007BFED7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFAC266500AD007BFED7 /* ContentView.swift */; };
 		F10DAFAF266500AE007BFED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10DAFAE266500AE007BFED7 /* Assets.xcassets */; };
 		F10DB1F826650107007BFED7 /* EzyNativeDataSerializer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10DAFD726650103007BFED7 /* EzyNativeDataSerializer.mm */; };
@@ -64,7 +64,7 @@
 		E951D42ACF9EA7A837173FCB /* Pods_swift_connection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_connection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FD0B61DF31F8A90F364E12 /* Pods-swift-connection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-connection.debug.xcconfig"; path = "Target Support Files/Pods-swift-connection/Pods-swift-connection.debug.xcconfig"; sourceTree = "<group>"; };
 		F10DAFA7266500AD007BFED7 /* swift-connection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-connection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ezyfox_sslApp.swift; sourceTree = "<group>"; };
+		F10DAFAA266500AD007BFED7 /* swift_connectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_connectionApp.swift; sourceTree = "<group>"; };
 		F10DAFAC266500AD007BFED7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F10DAFAE266500AE007BFED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F10DAFB1266500AE007BFED7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 		F10DAFA9266500AD007BFED7 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F10DAFAA266500AD007BFED7 /* ezyfox_sslApp.swift */,
+				F10DAFAA266500AD007BFED7 /* swift_connectionApp.swift */,
 				F10DAFAC266500AD007BFED7 /* ContentView.swift */,
 				F10DAFAE266500AE007BFED7 /* Assets.xcassets */,
 				F10DAFB3266500AE007BFED7 /* Info.plist */,
@@ -2915,7 +2915,7 @@
 				F10DB20C26650107007BFED7 /* EzyClientProxy.mm in Sources */,
 				F10DAFAD266500AD007BFED7 /* ContentView.swift in Sources */,
 				F10DB2E62665F554007BFED7 /* NSByArray.m in Sources */,
-				F10DAFAB266500AD007BFED7 /* ezyfox_sslApp.swift in Sources */,
+				F10DAFAB266500AD007BFED7 /* swift_connectionApp.swift in Sources */,
 				F10DB2E926660901007BFED7 /* EzyClientConfig.swift in Sources */,
 				F10DB20D26650107007BFED7 /* EzyMethodNames.mm in Sources */,
 				F10DB20026650107007BFED7 /* EzyConstants.swift in Sources */,
