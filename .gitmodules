@@ -4,3 +4,6 @@
 [submodule "push-message/client_flutter/ezyfox_server_flutter_client"]
 	path = push-message/client_flutter/ezyfox_server_flutter_client
 	url = https://github.com/youngmonkeys/ezyfox-server-flutter-client.git
+[submodule "hello-csharp/ezyfox-server-csharp-client"]
+        path = hello-csharp/ezyfox-server-csharp-client
+        url = https://github.com/youngmonkeys/ezyfox-server-csharp-client.git

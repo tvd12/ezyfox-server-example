@@ -28,14 +28,16 @@
 			<build>
 				<plugins>
 					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.0.0</version>
 						<executions>
 							<execution>
 								<phase>install</phase>
 								<configuration>
-									<tasks>
-										<ant antfile="${project.basedir}/build.xml" />
-									</tasks>
+									<target>
+										<ant antfile="${project.basedir}/build.xml"/>
+									</target>
 								</configuration>
 								<goals>
 									<goal>run</goal>
