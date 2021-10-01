@@ -7,3 +7,6 @@
 [submodule "hello-csharp/ezyfox-server-csharp-client"]
         path = hello-csharp/ezyfox-server-csharp-client
         url = https://github.com/youngmonkeys/ezyfox-server-csharp-client.git
+[submodule "swift-connection/client"]
+	path = swift-connection/client
+	url = https://github.com/youngmonkeys/ezyfox-server-swift-client.git
