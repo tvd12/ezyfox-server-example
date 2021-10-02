@@ -80,7 +80,7 @@ namespace com.tvd12.ezyfoxserver.client
                 .append("list2", list2)
                 .build();
 
-            int expectedListCount = 1 + 1 + list1.Count + list2.Count;
+            int expectedListCount = 1 + 1 + 1 + list2.Count;
             if (array.size() != expectedListCount)
             {
                 throw new ArgumentException("expected: " + expectedListCount + " but: " + array.size());
