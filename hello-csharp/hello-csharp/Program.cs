@@ -92,9 +92,12 @@ namespace com.tvd12.ezyfoxserver.client
                 throw new ArgumentException("expected: " + expectedDictCount + " but: " + array.size());
             }
             Console.WriteLine("array: " + array);
-            Console.WriteLine("obj: " + obj);
+            Console.WriteLine("\n\nobj: " + obj);
 
-            Console.WriteLine("long from double" + obj.get<long>("a"));
+            Console.WriteLine("\n\nclone array: " + array.Clone());
+            Console.WriteLine("\n\nclone obj: " + obj.Clone());
+
+            Console.WriteLine("\n\nlong from double" + obj.get<long>("a"));
 
             Console.WriteLine("sbyte from sbyte: " + obj.get<sbyte>("sbyte"));
             Console.WriteLine("byte from sbyte: " + obj.get<byte>("sbyte"));
