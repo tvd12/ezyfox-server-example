@@ -39,6 +39,81 @@ namespace com.tvd12.ezyfoxserver.client
 
     class MainClass
     {
+        public static void Main(string[] args)
+        {
+            Thread.CurrentThread.Name = "main";
+
+            entityTest();
+            datetimeTest();
+
+            EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
+
+            EzyClientConfig clientConfig = EzyClientConfig
+                .builder()
+                .clientName("freetanks")
+                .zoneName("example")
+                .build();
+            EzyClients clients = EzyClients.getInstance();
+            //EzyClient client = clients.newDefaultClient(clientConfig);
+            EzyClient client = new EzyUTClient(clientConfig);
+            clients.addClient(client);
+            EzySetup setup = client.setup();
+            setup.addEventHandler(EzyEventType.CONNECTION_SUCCESS, new EzyConnectionSuccessHandler());
+            setup.addEventHandler(EzyEventType.CONNECTION_FAILURE, new EzyConnectionFailureHandler());
+            setup.addEventHandler(EzyEventType.DISCONNECTION, new EzyDisconnectionHandler());
+            setup.addDataHandler(EzyCommand.HANDSHAKE, new ExHandshakeEventHandler());
+            setup.addDataHandler(EzyCommand.LOGIN, new ExLoginSuccessHandler());
+            //setup.addDataHandler(EzyCommand.LOGIN_ERROR, new ExLoginErrorHandler());
+            setup.addDataHandler(EzyCommand.APP_ACCESS, new ExAccessAppHandler());
+            setup.addDataHandler(EzyCommand.UDP_HANDSHAKE, new UdpHandshakeHandler());
+
+            EzyAppSetup appSetup = setup.setupApp("hello-world");
+            //appSetup.addDataHandler(Commands.ERROR, new ErrorResponseHandler());
+            appSetup.addDataHandler(Commands.ACCESS_LOBBY_ROOM, new AccessLobbyResponseHandler());
+            appSetup.addDataHandler(Commands.ROOM_INFO, new RoomInfoResponseHandler());
+            appSetup.addDataHandler(Commands.SYNC_POSITION, new SyncPositionHandler());
+
+            client.connect("ws.tvd12.com", 3005);
+            //client.connect("127.0.0.1", 3005);
+
+            int time = 0;
+
+            while (true)
+            {
+                Thread.Sleep(3);
+                client.processEvents();
+                time += 3;
+                if (time > 5000)
+                {
+                    //client.disconnect(401);
+                    time = 0;
+                    //break;
+                }
+            }
+
+            //mainEventsLoopTest();
+        }
+
+        private static void mainEventsLoopTest()
+        {
+            //Thread.Sleep(3000);
+
+            //Console.WriteLine("client shutted down");
+
+            //EzyMainEventsLoop mainEventsLoop = new EzyMainEventsLoop();
+            //mainEventsLoop.start();
+
+            //IList<EzyClient> cachedClients = new List<EzyClient>();
+
+            //while(true) 
+            //{
+            //    Thread.Sleep(3);
+            //    clients.getClients(cachedClients);
+            //    foreach (EzyClient one in cachedClients)
+            //        one.processEvents();
+            //}
+        }
+
         private static void entityTest()
         {
             IDictionary<String, Double> dict1 = new Dictionary<String, Double>();
@@ -179,81 +254,6 @@ namespace com.tvd12.ezyfoxserver.client
             long offset = EzyDateTimes.getOffsetMillis(now, DateTime.Now);
             Console.WriteLine("offset: " + offset);
             Console.WriteLine("status int: " + (int)EzySocketStatus.CONNECTED);
-        }
-
-        public static void Main(string[] args)
-        {
-            Thread.CurrentThread.Name = "main";
-
-            entityTest();
-            datetimeTest();
-
-            EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
-
-            EzyClientConfig clientConfig = EzyClientConfig
-                .builder()
-                .clientName("freetanks")
-                .zoneName("example")
-                .build();
-            EzyClients clients = EzyClients.getInstance();
-            //EzyClient client = clients.newDefaultClient(clientConfig);
-            EzyClient client = new EzyUTClient(clientConfig);
-            clients.addClient(client);
-            EzySetup setup = client.setup();
-            setup.addEventHandler(EzyEventType.CONNECTION_SUCCESS, new EzyConnectionSuccessHandler());
-            setup.addEventHandler(EzyEventType.CONNECTION_FAILURE, new EzyConnectionFailureHandler());
-            setup.addEventHandler(EzyEventType.DISCONNECTION, new EzyDisconnectionHandler());
-            setup.addDataHandler(EzyCommand.HANDSHAKE, new ExHandshakeEventHandler());
-            setup.addDataHandler(EzyCommand.LOGIN, new ExLoginSuccessHandler());
-            //setup.addDataHandler(EzyCommand.LOGIN_ERROR, new ExLoginErrorHandler());
-            setup.addDataHandler(EzyCommand.APP_ACCESS, new ExAccessAppHandler());
-            setup.addDataHandler(EzyCommand.UDP_HANDSHAKE, new UdpHandshakeHandler());
-
-            EzyAppSetup appSetup = setup.setupApp("hello-world");
-            //appSetup.addDataHandler(Commands.ERROR, new ErrorResponseHandler());
-            appSetup.addDataHandler(Commands.ACCESS_LOBBY_ROOM, new AccessLobbyResponseHandler());
-            appSetup.addDataHandler(Commands.ROOM_INFO, new RoomInfoResponseHandler());
-            appSetup.addDataHandler(Commands.SYNC_POSITION, new SyncPositionHandler());
-
-            client.connect("ws.tvd12.com", 3005);
-            //client.connect("127.0.0.1", 3005);
-
-            int time = 0;
-
-            while (true)
-            {
-                Thread.Sleep(3);
-                client.processEvents();
-                time += 3;
-                if (time > 5000)
-                {
-                    //client.disconnect(401);
-                    time = 0;
-                    //break;
-                }
-            }
-
-            //mainEventsLoopTest();
-        }
-
-        private static void mainEventsLoopTest()
-        {
-            //Thread.Sleep(3000);
-
-            //Console.WriteLine("client shutted down");
-
-            //EzyMainEventsLoop mainEventsLoop = new EzyMainEventsLoop();
-            //mainEventsLoop.start();
-
-            //IList<EzyClient> cachedClients = new List<EzyClient>();
-
-            //while(true) 
-            //{
-            //    Thread.Sleep(3);
-            //    clients.getClients(cachedClients);
-            //    foreach (EzyClient one in cachedClients)
-            //        one.processEvents();
-            //}
         }
     }
 
