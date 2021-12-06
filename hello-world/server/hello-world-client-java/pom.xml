@@ -12,16 +12,11 @@
 	<name>hello-world-client-java</name>
 	<url>https://youngmonkeys.org/</url>
 	
-	<properties>
-		<ezyfox.client.version>1.1.6</ezyfox.client.version>
-	</properties>
-	
 	<dependencies>
 		<dependency>
 			<groupId>com.tvd12</groupId>
 			<artifactId>ezyfox-server-java-client</artifactId>
-			<version>${ezyfox.client.version}</version>
+			<version>${ezy.server.client.version}</version>
 		</dependency>
 	</dependencies>
-
 </project>
