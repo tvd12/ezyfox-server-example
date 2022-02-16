@@ -66,6 +66,30 @@ public class HelloWorldClient {
 		EzyAppSetup appSetup = setup.setupApp(APP_NAME);
 		appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
 		appSetup.addDataHandler("secureChat", new SecureChatResponseHandler());
+		appSetup.addDataHandler("chatAll", new EzyAppDataHandler<EzyData>() {
+            @Override
+            public void handle(EzyApp app, EzyData data) {
+                System.out.println("chatAll: " + data);
+            }
+        });
+		appSetup.addDataHandler("chat1", new EzyAppDataHandler<EzyData>() {
+            @Override
+            public void handle(EzyApp app, EzyData data) {
+                System.out.println("chat1: " + data);
+            }
+        });
+		appSetup.addDataHandler("chatToMe", new EzyAppDataHandler<EzyData>() {
+            @Override
+            public void handle(EzyApp app, EzyData data) {
+                System.out.println("chatToMe: " + data);
+            }
+        });
+		appSetup.addDataHandler("err", new EzyAppDataHandler<EzyData>() {
+		    @Override
+		    public void handle(EzyApp app, EzyData data) {
+		        System.out.println("error: " + data);
+		    }
+        });
 		return client;
 	}
 	
@@ -112,14 +136,34 @@ public class HelloWorldClient {
 					EzyEntityObjects.newObject("who", "Dzung"),
 					true
 			);
+			app.send("chatAll", 
+                EzyEntityObjects.newObject("who", ""),
+                true
+		    );
 			app.send("chat1", 
 					EzyEntityObjects.newObject("who", "Dzung"),
 					true
 			);
+			app.send("chat1", 
+                EzyEntityObjects.newObject("who", ""),
+                true
+		    );
+			app.send("chat1", 
+                EzyEntityObjects.newObject("who", "admin"),
+                true
+            );
 			app.send("chat2", 
 					EzyEntityObjects.newObject("who", "Dzung"),
 					true
 			);
+			app.send("chatToMe", 
+                EzyEntityObjects.newObject("who", "Me"),
+                true
+		    );
+			app.send("chatToMe", 
+                EzyEntityObjects.newObject("who", ""),
+                true
+            );
 		}
 
 	}

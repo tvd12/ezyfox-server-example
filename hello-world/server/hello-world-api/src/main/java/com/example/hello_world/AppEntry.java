@@ -37,11 +37,7 @@ public class AppEntry extends EzySimpleAppEntry {
 	@Override
 	protected String[] getScanablePackages() {
 		return new String[] {
-				"com.example.hello_world.common",
-				"com.example.hello_world.config",
-				"com.example.hello_world.controller",
-				"com.example.hello_world.handler",
-				"com.example.hello_world.request"
+			"com.example.hello_world"
 		};
 	}
 

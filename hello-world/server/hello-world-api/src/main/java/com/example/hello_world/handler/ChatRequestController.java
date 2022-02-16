@@ -2,10 +2,15 @@ package com.example.hello_world.handler;
 
 import com.example.hello_world.common.Greeting;
 import com.example.hello_world.constant.Commands;
+import com.example.hello_world.exception.BadWhoRequestException;
+import com.example.hello_world.exception.InvalidChatRequestException;
 import com.example.hello_world.request.ChatRequest;
+import com.example.hello_world.response.ChatResponse;
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.core.annotation.EzyDoHandle;
 import com.tvd12.ezyfox.core.annotation.EzyRequestController;
+import com.tvd12.ezyfox.core.exception.EzyBadRequestException;
+import com.tvd12.ezyfox.io.EzyStrings;
 import com.tvd12.ezyfox.util.EzyLoggable;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.context.EzyContext;
@@ -39,6 +44,9 @@ public class ChatRequestController extends EzyLoggable {
 			EzyUser user,
 			EzySession session,
 			ChatRequest request) {
+	    if (EzyStrings.isBlank(request.getWho())) {
+	        throw new InvalidChatRequestException("request is blank");
+	    }
 		responseFactory.newObjectResponse()
 			.command(Commands.CHAT_ALL)
 			.param("message", greeting.greet(request.getWho()))
@@ -46,11 +54,25 @@ public class ChatRequestController extends EzyLoggable {
 			.execute();
 	}
 	
+	@EzyDoHandle(Commands.CHAT_TO_ME)
+    public ChatResponse chatToMe(ChatRequest request) {
+	    if (EzyStrings.isBlank(request.getWho())) {
+	        throw new EzyBadRequestException(400, "badRequest");
+	    }
+        return new ChatResponse(greeting.greet(request.getWho()));
+    }
+	
 	@EzyDoHandle(Commands.CHAT_1)
 	public void chatFirst(
 			EzyContext context,
 			EzyUser user,
 			ChatRequest request) {
+	    if (EzyStrings.isBlank(request.getWho())) {
+            throw new IllegalArgumentException("request is blank");
+        }
+        else if (request.getWho().equals("admin")) {
+            throw new BadWhoRequestException("you can not greet admin");
+        }
 		responseFactory.newObjectResponse()
 			.command(Commands.CHAT_1)
 			.param("message", greeting.greet(request.getWho()))

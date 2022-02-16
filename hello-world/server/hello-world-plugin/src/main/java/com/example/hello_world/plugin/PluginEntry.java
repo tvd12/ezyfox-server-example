@@ -44,7 +44,7 @@ public class PluginEntry extends EzySimplePluginEntry {
 	@Override
 	protected String[] getScanablePackages() {
 		return new String[] {
-			"com.example.hello_world.plugin",
+			"com.example.hello_world",
 		};
 	}
 }
