@@ -19,6 +19,7 @@
 	<url>https://youngmonkeys.org/</url>
 
 	<properties>
+		<ezy.http.version>0.2.2</ezy.http.version>
 		<ezy.server.version>1.2.1</ezy.server.version>
 		<ezy.server.client.version>1.1.7</ezy.server.client.version>
 	</properties>
@@ -57,5 +58,6 @@
 		<module>hello-world-common</module>
 		<module>hello-world-startup</module>
 		<module>hello-world-client-java</module>
+		<module>hello-world-rest-api</module>
 	</modules>
 </project>

@@ -9,8 +9,11 @@ import com.example.hello_world.response.ChatResponse;
 import com.tvd12.ezyfox.bean.annotation.EzyAutoBind;
 import com.tvd12.ezyfox.core.annotation.EzyDoHandle;
 import com.tvd12.ezyfox.core.annotation.EzyRequestController;
+import com.tvd12.ezyfox.core.annotation.EzyTryCatch;
+import com.tvd12.ezyfox.core.constant.EzyResponseCommands;
 import com.tvd12.ezyfox.core.exception.EzyBadRequestException;
 import com.tvd12.ezyfox.io.EzyStrings;
+import com.tvd12.ezyfox.util.EzyEntityObjects;
 import com.tvd12.ezyfox.util.EzyLoggable;
 import com.tvd12.ezyfoxserver.context.EzyAppContext;
 import com.tvd12.ezyfoxserver.context.EzyContext;
@@ -84,4 +87,18 @@ public class ChatRequestController extends EzyLoggable {
 	public void chatSecond() {
 		logger.info("some one call chat");
 	}
+	
+	 @EzyTryCatch(BadWhoRequestException.class)
+    public void handle(
+            BadWhoRequestException e,
+            EzyUser user,
+            String cmd, 
+            Object data) {
+        logger.error("try cath BadWhoRequestException, cmd: {}, data: {}", cmd, data, e);
+        responseFactory.newObjectResponse()
+            .command(EzyResponseCommands.ERROR)
+            .data(EzyEntityObjects.newObject("who", "invalid"))
+            .user(user)
+            .execute();
+    }
 }

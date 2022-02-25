@@ -1,8 +1,12 @@
 package com.example.hello_world.client;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.tvd12.ezyfox.entity.EzyArray;
 import com.tvd12.ezyfox.entity.EzyData;
 import com.tvd12.ezyfox.entity.EzyObject;
+import com.tvd12.ezyfox.io.EzyStrings;
 import com.tvd12.ezyfox.util.EzyEntityObjects;
 import com.tvd12.ezyfoxserver.client.EzyClient;
 import com.tvd12.ezyfoxserver.client.EzyClients;
@@ -23,6 +27,8 @@ import com.tvd12.ezyfoxserver.client.request.EzyRequest;
 import com.tvd12.ezyfoxserver.client.setup.EzyAppSetup;
 import com.tvd12.ezyfoxserver.client.setup.EzySetup;
 import com.tvd12.ezyfoxserver.client.socket.EzyMainEventsLoop;
+import com.tvd12.ezyhttp.client.HttpClient;
+import com.tvd12.ezyhttp.client.request.PostRequest;
 
 public class HelloWorldClient {
 	
@@ -100,7 +106,37 @@ public class HelloWorldClient {
 	class ExHandshakeEventHandler extends EzyHandshakeHandler {
 		@Override
 		protected EzyRequest getLoginRequest() {
-			return new EzyLoginRequest(ZONE_NAME, "Dzung", "123456");
+		    final String username = "username";
+		    final String password = "password";
+		    final String accessToken = httpLogin(username, password);
+		    if (EzyStrings.isBlank(accessToken)) {
+		        return new EzyLoginRequest(ZONE_NAME, "Dzung", "123456");
+		    }
+		    return new EzyLoginRequest(
+		        ZONE_NAME,
+		        "",
+		        "",
+		        EzyEntityObjects.newObject("accessToken", accessToken));
+		}
+		
+		private final String httpLogin(String username, String password) {
+		    HttpClient httpClient = HttpClient.builder()
+		        .build();
+		    Map<String, String> requestBody = new HashMap<>();
+		    requestBody.put("username", username);
+		    requestBody.put("password", password);
+		    try {
+		        Map<String, String> response = httpClient.call(
+	                new PostRequest()
+	                    .setURL("http://localhost:8083/api/v1/login")
+	                    .setEntity(requestBody)
+	                    .setResponseType(Map.class)
+	            );
+		        return response.get("accessToken");
+		    } catch (Exception e) {
+		        logger.info("can not login with http, error: {}", e.getMessage());
+            }
+		    return null;
 		}
 	}
 
