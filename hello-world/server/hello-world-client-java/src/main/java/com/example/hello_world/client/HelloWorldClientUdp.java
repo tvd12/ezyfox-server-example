@@ -118,7 +118,7 @@ public class HelloWorldClientUdp {
 		    final String password = "password";
 		    final String accessToken = httpLogin(username, password);
 		    if (EzyStrings.isBlank(accessToken)) {
-		        return new EzyLoginRequest(ZONE_NAME, "Dzung", "123456");
+		        return new EzyLoginRequest(ZONE_NAME, username, password);
 		    }
 		    return new EzyLoginRequest(
 		        ZONE_NAME,

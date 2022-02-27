@@ -29,6 +29,14 @@ public class UserLoginController extends EzyAbstractPluginEventController<EzyUse
 	
 	private void loginWithUsernamePassword(EzyUserLoginEvent event) {
 	    logger.info("handle user {} login in with password", event.getUsername());
+	    String username = event.getUsername();
+	    String password = event.getPassword();
+	    if (username.length() < 6) {
+	        throw new EzyLoginErrorException(EzyLoginError.INVALID_USERNAME);
+	    }
+	    if (password.length() < 6) {
+	        throw new EzyLoginErrorException(EzyLoginError.INVALID_PASSWORD);
+	    }
 	    // write your code here
 	}
 	
