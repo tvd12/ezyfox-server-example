@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>com.tvd12</groupId>
 			<artifactId>ezyfox-server-support</artifactId>
-			<version>${ezy.server.version}</version>
+			<version>${ezy.version}</version>
 		</dependency>
 	</dependencies>
 	

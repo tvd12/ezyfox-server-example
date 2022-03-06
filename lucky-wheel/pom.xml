@@ -19,15 +19,16 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <ezy.http.version>0.1.4</ezy.http.version>
-        <ezy.server.version>1.1.9</ezy.server.version>
+        <ezy.version>1.2.2</ezy.version>
+        <ezy.boot.version>1.0.3</ezy.boot.version>
+        <ezy.http.version>0.2.3</ezy.http.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyfox-server-embedded</artifactId>
-            <version>${ezy.server.version}</version>
+            <version>${ezy.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
@@ -37,12 +38,12 @@
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezydata-mongodb</artifactId>
-            <version>${ezy.server.version}</version>
+            <version>${ezy.version}</version>
         </dependency>
         <dependency>
             <groupId>com.tvd12</groupId>
             <artifactId>ezyfox-boot-autoconfigure</artifactId>
-            <version>1.0.0</version>
+            <version>${ezy.boot.version}</version>
         </dependency>
     </dependencies>
     <profiles>
@@ -54,7 +55,7 @@
                         <directory>src/main/resources</directory>
                         <excludes>
                             <exclude>application.yaml</exclude>
-                            <exclude>log4j.properties</exclude>
+                            <exclude>logback.xml</exclude>
                         </excludes>
                     </resource>
                 </resources>
