@@ -16,7 +16,9 @@ import com.tvd12.ezyfoxserver.setting.EzyAppSetting;
 import com.tvd12.ezyfoxserver.setting.EzyAppSettingBuilder;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSetting;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSettingBuilder;
+import com.tvd12.ezyfoxserver.setting.EzySessionManagementSettingBuilder;
 import com.tvd12.ezyfoxserver.setting.EzySettingsBuilder;
+import com.tvd12.ezyfoxserver.setting.EzySimpleSessionManagementSetting;
 import com.tvd12.ezyfoxserver.setting.EzySimpleSettings;
 import com.tvd12.ezyfoxserver.setting.EzySocketSettingBuilder;
 import com.tvd12.ezyfoxserver.setting.EzyUdpSettingBuilder;
@@ -46,10 +48,18 @@ public class HelloWorldStartup {
 		EzyUdpSettingBuilder udpSettingBuilder = new EzyUdpSettingBuilder()
 				.active(true);
 		
+		EzySimpleSessionManagementSetting sessionManagementSetting =  new EzySessionManagementSettingBuilder()
+		    .sessionMaxIdleTimeInSecond(15)
+		    .sessionMaxWaitingTimeInSecond(15)
+		    .build();
+		sessionManagementSetting.init();
+		    
+		
 		EzySimpleSettings settings = new EzySettingsBuilder()
 				.socket(socketSettingBuilder.build())
 				.udp(udpSettingBuilder.build())
 				.zone(zoneSettingBuilder.build())
+				.sessionManagement(sessionManagementSetting)
 				.build();
 		
 		EzyEmbeddedServer server = EzyEmbeddedServer.builder()

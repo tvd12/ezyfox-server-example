@@ -91,6 +91,7 @@ namespace hello_csharp
                     time = 0;
                     //break;
                 }
+                // Console.WriteLine(client.getNetworkStatistics().getSocketStats().getNetworkStats().getReadBytes());
             }
 
             //mainEventsLoopTest();
