@@ -10,7 +10,6 @@ import com.tvd12.ezyfox.util.EzyLoggable;
 import com.tvd12.ezyfoxserver.entity.EzySession;
 import com.tvd12.ezyfoxserver.event.EzyUserSessionEvent;
 import com.tvd12.ezyfoxserver.support.factory.EzyResponseFactory;
-
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
@@ -18,7 +17,7 @@ import lombok.AllArgsConstructor;
 public class GlobalExceptionHandler extends EzyLoggable {
 
     private final EzyResponseFactory responseFactory;
-    
+
     @EzyTryCatch(InvalidChatRequestException.class)
     public void handle(
         InvalidChatRequestException e,
@@ -33,13 +32,13 @@ public class GlobalExceptionHandler extends EzyLoggable {
             .session(event.getSession())
             .execute();
     }
-    
+
     @EzyTryCatch(IllegalArgumentException.class)
     public void handle(
-            IllegalArgumentException e,
-            EzySession session,
-            String cmd, 
-            @EzyRequestData Object data) {
+        IllegalArgumentException e,
+        EzySession session,
+        String cmd,
+        @EzyRequestData Object data) {
         logger.error("try cath IllegalArgumentException, cmd: {}, data: {}", cmd, data, e);
         responseFactory.newObjectResponse()
             .command(EzyResponseCommands.ERROR)
@@ -47,12 +46,12 @@ public class GlobalExceptionHandler extends EzyLoggable {
             .session(session)
             .execute();
     }
-    
+
     @EzyTryCatch(Exception.class)
     public void handle(
-            Exception e,
-            String cmd, 
-            @EzyRequestData Object data) throws Exception {
+        Exception e,
+        String cmd,
+        @EzyRequestData Object data) throws Exception {
         throw e;
     }
 }

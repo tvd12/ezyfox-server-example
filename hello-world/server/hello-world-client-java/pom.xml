@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.tvd12.ezyfoxserver</groupId>
-		<artifactId>hello-world</artifactId>
-		<version>1.0.0</version>
-	</parent>
-	
-	<artifactId>hello-world-client-java</artifactId>
-	<name>hello-world-client-java</name>
-	<url>https://youngmonkeys.org/</url>
-	
-	<dependencies>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyfox-server-java-client</artifactId>
-			<version>${ezy.server.client.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.tvd12</groupId>
-			<artifactId>ezyhttp-client</artifactId>
-			<version>${ezy.http.version}</version>
-		</dependency>
-	</dependencies>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tvd12.ezyfoxserver</groupId>
+        <artifactId>hello-world</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>hello-world-client-java</artifactId>
+    <name>hello-world-client-java</name>
+    <url>https://youngmonkeys.org/</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezyfox-server-java-client</artifactId>
+            <version>${ezy.server.client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tvd12</groupId>
+            <artifactId>ezyhttp-client</artifactId>
+            <version>${ezy.http.version}</version>
+        </dependency>
+    </dependencies>
 </project>

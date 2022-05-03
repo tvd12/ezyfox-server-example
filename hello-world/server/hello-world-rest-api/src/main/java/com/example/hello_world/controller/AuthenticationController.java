@@ -8,13 +8,12 @@ import com.tvd12.ezyfox.sercurity.EzyBase64;
 import com.tvd12.ezyhttp.server.core.annotation.Controller;
 import com.tvd12.ezyhttp.server.core.annotation.DoPost;
 import com.tvd12.ezyhttp.server.core.annotation.RequestBody;
-
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @Controller("/api/v1")
 public class AuthenticationController {
-    
+
     @DoPost("/login")
     public Object loginPost(
         @RequestBody LoginRequest request

@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.tvd12</groupId>
-		<artifactId>ezyfox</artifactId>
-		<version>1.0.3</version>
-	</parent>
+    <parent>
+        <groupId>com.tvd12</groupId>
+        <artifactId>ezyfox</artifactId>
+        <version>1.0.3</version>
+    </parent>
 
-	<groupId>com.tvd12.ezyfoxserver</groupId>
-	<artifactId>hello-world</artifactId>
-	<version>1.0.0</version>
-	<packaging>pom</packaging>
+    <groupId>com.tvd12.ezyfoxserver</groupId>
+    <artifactId>hello-world</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-	<name>hello-world</name>
-	<url>https://youngmonkeys.org/</url>
+    <name>hello-world</name>
+    <url>https://youngmonkeys.org/</url>
 
-	<properties>
-		<ezy.http.version>0.2.3</ezy.http.version>
-		<ezy.server.version>1.2.2</ezy.server.version>
-		<ezy.server.client.version>1.1.8</ezy.server.client.version>
-	</properties>
+    <properties>
+        <ezy.http.version>0.2.3</ezy.http.version>
+        <ezy.server.version>1.2.2</ezy.server.version>
+        <ezy.server.client.version>1.1.8</ezy.server.client.version>
+    </properties>
 
-	<profiles>
-		<profile>
-			<id>export</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<version>3.0.0</version>
-						<executions>
-							<execution>
-								<phase>install</phase>
-								<configuration>
-									<target>
-										<ant antfile="${project.basedir}/build.xml"/>
-									</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-	<modules>
-		<module>hello-world-plugin</module>
-		<module>hello-world-api</module>
-		<module>hello-world-entry</module>
-		<module>hello-world-common</module>
-		<module>hello-world-startup</module>
-		<module>hello-world-client-java</module>
-		<module>hello-world-rest-api</module>
-	</modules>
+    <profiles>
+        <profile>
+            <id>export</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <phase>install</phase>
+                                <configuration>
+                                    <target>
+                                        <ant antfile="${project.basedir}/build.xml"/>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <modules>
+        <module>hello-world-plugin</module>
+        <module>hello-world-api</module>
+        <module>hello-world-entry</module>
+        <module>hello-world-common</module>
+        <module>hello-world-startup</module>
+        <module>hello-world-client-java</module>
+        <module>hello-world-rest-api</module>
+    </modules>
 </project>

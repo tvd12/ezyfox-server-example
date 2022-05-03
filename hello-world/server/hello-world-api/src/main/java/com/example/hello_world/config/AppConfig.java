@@ -2,7 +2,6 @@ package com.example.hello_world.config;
 
 import com.tvd12.ezyfox.bean.annotation.EzyPropertiesBean;
 import com.tvd12.properties.file.annotation.Property;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +10,7 @@ import lombok.Setter;
 @EzyPropertiesBean
 public class AppConfig {
 
-	@Property("node.name")
-	private String nodeName;
-	
+    @Property("node.name")
+    private String nodeName;
+
 }
