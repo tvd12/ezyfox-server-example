@@ -46,7 +46,8 @@ public class ChatRequestController extends EzyLoggable {
         EzyUserSessionEvent event,
         EzyUser user,
         EzySession session,
-        ChatRequest request) {
+        ChatRequest request
+    ) {
         if (EzyStrings.isBlank(request.getWho())) {
             throw new InvalidChatRequestException("request is blank");
         }
@@ -54,6 +55,21 @@ public class ChatRequestController extends EzyLoggable {
             .command(Commands.CHAT_ALL)
             .param("message", greeting.greet(request.getWho()))
             .users(context.getApp().getUserManager().getUserList())
+            .execute();
+    }
+
+    @EzyDoHandle(Commands.CHAT_ZONE)
+    public void chatZone(
+        EzyAppContext context,
+        ChatRequest request
+    ) {
+        if (EzyStrings.isBlank(request.getWho())) {
+            throw new InvalidChatRequestException("request is blank");
+        }
+        responseFactory.newObjectResponse()
+            .command(Commands.CHAT_ZONE)
+            .param("message", greeting.greet(request.getWho()))
+            .users(context.getParent().getZone().getUserManager().getUserList())
             .execute();
     }
 
@@ -69,7 +85,8 @@ public class ChatRequestController extends EzyLoggable {
     public void chatFirst(
         EzyContext context,
         EzyUser user,
-        ChatRequest request) {
+        ChatRequest request
+    ) {
         if (EzyStrings.isBlank(request.getWho())) {
             throw new IllegalArgumentException("request is blank");
         } else if (request.getWho().equals("admin")) {
@@ -92,7 +109,8 @@ public class ChatRequestController extends EzyLoggable {
         BadWhoRequestException e,
         EzyUser user,
         String cmd,
-        Object data) {
+        Object data
+    ) {
         logger.error("try cath BadWhoRequestException, cmd: {}, data: {}", cmd, data, e);
         responseFactory.newObjectResponse()
             .command(EzyResponseCommands.ERROR)
