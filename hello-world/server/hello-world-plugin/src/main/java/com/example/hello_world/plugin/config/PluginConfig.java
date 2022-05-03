@@ -17,5 +17,4 @@ public class PluginConfig {
         private String host;
         private int port;
     }
-
 }

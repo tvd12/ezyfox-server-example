@@ -38,8 +38,9 @@ public class GlobalExceptionHandler extends EzyLoggable {
         IllegalArgumentException e,
         EzySession session,
         String cmd,
-        @EzyRequestData Object data) {
-        logger.error("try cath IllegalArgumentException, cmd: {}, data: {}", cmd, data, e);
+        @EzyRequestData Object data
+    ) {
+        logger.error("try catch IllegalArgumentException, cmd: {}, data: {}", cmd, data, e);
         responseFactory.newObjectResponse()
             .command(EzyResponseCommands.ERROR)
             .data(EzyEntityObjects.newObject("arguments", "invalid"))
@@ -51,7 +52,8 @@ public class GlobalExceptionHandler extends EzyLoggable {
     public void handle(
         Exception e,
         String cmd,
-        @EzyRequestData Object data) throws Exception {
+        @EzyRequestData Object data
+    ) throws Exception {
         throw e;
     }
 }

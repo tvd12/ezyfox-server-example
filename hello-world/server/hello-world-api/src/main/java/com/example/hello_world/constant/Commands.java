@@ -14,7 +14,5 @@ public final class Commands {
     public static final String CHAT_1 = "chat1";
     public static final String CHAT_2 = "chat2";
 
-    private Commands() {
-    }
-
+    private Commands() {}
 }

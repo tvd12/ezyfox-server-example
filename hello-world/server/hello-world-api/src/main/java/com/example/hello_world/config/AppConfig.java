@@ -12,5 +12,4 @@ public class AppConfig {
 
     @Property("node.name")
     private String nodeName;
-
 }

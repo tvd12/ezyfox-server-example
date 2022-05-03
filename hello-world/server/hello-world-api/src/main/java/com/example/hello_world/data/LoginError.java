@@ -16,5 +16,4 @@ public enum LoginError implements EzyILoginError {
         this.id = id;
         this.message = message;
     }
-
 }

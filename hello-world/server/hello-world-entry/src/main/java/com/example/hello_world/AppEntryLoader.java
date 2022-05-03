@@ -10,5 +10,4 @@ public class AppEntryLoader extends EzyAbstractAppEntryLoader {
     public EzyAppEntry load() throws Exception {
         return EzyClasses.newInstance("com.example.hello_world.AppEntry");
     }
-
 }

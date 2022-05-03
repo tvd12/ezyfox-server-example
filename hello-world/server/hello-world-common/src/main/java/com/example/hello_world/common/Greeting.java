@@ -8,5 +8,4 @@ public class Greeting {
     public String greet(String who) {
         return "Greet " + who + "!";
     }
-
 }

@@ -9,5 +9,4 @@ public class PluginEntryLoader extends EzyAbstractPluginEntryLoader {
     public EzyPluginEntry load() throws Exception {
         return new PluginEntry();
     }
-
 }

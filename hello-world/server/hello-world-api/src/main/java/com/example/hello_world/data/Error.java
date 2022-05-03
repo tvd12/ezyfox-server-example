@@ -21,5 +21,4 @@ public class Error implements Serializable {
 
     @EzyValue("m")
     private final String message;
-
 }

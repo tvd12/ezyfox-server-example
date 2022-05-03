@@ -6,9 +6,11 @@ import com.tvd12.ezyfox.core.annotation.EzyEventHandler;
 import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.controller.EzyAbstractPluginEventController;
 import com.tvd12.ezyfoxserver.event.EzyServerReadyEvent;
+import lombok.Setter;
 
 import static com.tvd12.ezyfoxserver.constant.EzyEventNames.SERVER_READY;
 
+@Setter
 @EzyEventHandler(SERVER_READY)
 public class ServerReadyController
     extends EzyAbstractPluginEventController<EzyServerReadyEvent> {
@@ -20,5 +22,4 @@ public class ServerReadyController
     public void handle(EzyPluginContext ctx, EzyServerReadyEvent event) {
         logger.info("hello-world plugin: fire custom plugin ready, config: {}", pluginConfig);
     }
-
 }

@@ -27,9 +27,10 @@ import java.util.Map;
 
 public class HelloWorldClient {
 
+    private final EzyClient socketClient;
+
     private static final String ZONE_NAME = "example";
     private static final String APP_NAME = "hello-world";
-    private EzyClient socketClient;
 
     public HelloWorldClient() {
         this.socketClient = setup();
@@ -100,7 +101,7 @@ public class HelloWorldClient {
         socketClient.connect(host, port);
     }
 
-    class ExHandshakeEventHandler extends EzyHandshakeHandler {
+    static class ExHandshakeEventHandler extends EzyHandshakeHandler {
         @Override
         protected EzyRequest getLoginRequest() {
             final String username = "username";
@@ -116,7 +117,7 @@ public class HelloWorldClient {
                 EzyEntityObjects.newObject("accessToken", accessToken));
         }
 
-        private final String httpLogin(String username, String password) {
+        private String httpLogin(String username, String password) {
             HttpClient httpClient = HttpClient.builder()
                 .build();
             Map<String, String> requestBody = new HashMap<>();
@@ -137,14 +138,14 @@ public class HelloWorldClient {
         }
     }
 
-    class ExLoginSuccessHandler extends EzyLoginSuccessHandler {
+    static class ExLoginSuccessHandler extends EzyLoginSuccessHandler {
         @Override
         protected void handleLoginSuccess(EzyData responseData) {
             client.send(new EzyAppAccessRequest(APP_NAME));
         }
     }
 
-    class ExAccessAppHandler extends EzyAppAccessHandler {
+    static class ExAccessAppHandler extends EzyAppAccessHandler {
         protected void postHandle(EzyApp app, EzyArray data) {
             sendGreetRequest(app);
             sendSecureChatRequest(app);
@@ -198,19 +199,17 @@ public class HelloWorldClient {
                 true
             );
         }
-
     }
 
-    class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
+    static class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
         public void handle(EzyApp app, EzyObject data) {
             System.out.println("Received greet data: " + data);
         }
     }
 
-    class SecureChatResponseHandler implements EzyAppDataHandler<EzyObject> {
+    static class SecureChatResponseHandler implements EzyAppDataHandler<EzyObject> {
         public void handle(EzyApp app, EzyObject data) {
             System.out.println("Received secure data: " + data);
         }
     }
-
 }

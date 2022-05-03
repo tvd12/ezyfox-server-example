@@ -8,10 +8,6 @@ import com.tvd12.ezyfoxserver.context.EzyPluginContext;
 import com.tvd12.ezyfoxserver.setting.EzyPluginSetting;
 import com.tvd12.ezyfoxserver.support.entry.EzySimplePluginEntry;
 
-/**
- * @author tavandung12
- *
- */
 public class PluginEntry extends EzySimplePluginEntry {
 
     @Override

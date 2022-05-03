@@ -31,5 +31,4 @@ public class BroacastMessageHandler
             .users(userManager.getUserList())
             .execute();
     }
-
 }

@@ -69,37 +69,32 @@ public class HelloWorldClientUdp {
 
         EzyAppSetup appSetup = setup.setupApp(APP_NAME);
         appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
-        appSetup.addDataHandler("udpGreet", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("udpGreet: " + data);
-            }
-        });
+        appSetup.addDataHandler(
+            "udpGreet",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("udpGreet: " + data)
+        );
         appSetup.addDataHandler("secureChat", new SecureChatResponseHandler());
-        appSetup.addDataHandler("chatAll", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chatAll: " + data);
-            }
-        });
-        appSetup.addDataHandler("chat1", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chat1: " + data);
-            }
-        });
-        appSetup.addDataHandler("chatToMe", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chatToMe: " + data);
-            }
-        });
-        appSetup.addDataHandler("err", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("error: " + data);
-            }
-        });
+        appSetup.addDataHandler(
+            "chatAll",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chatAll: " + data)
+        );
+        appSetup.addDataHandler(
+            "chat1",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chat1: " + data)
+        );
+        appSetup.addDataHandler(
+            "chatToMe",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chatToMe: " + data)
+        );
+        appSetup.addDataHandler(
+            "err",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("error: " + data)
+        );
         return client;
     }
 
@@ -107,7 +102,7 @@ public class HelloWorldClientUdp {
         socketClient.connect(host, port);
     }
 
-    class ExHandshakeEventHandler extends EzyHandshakeHandler {
+    static class ExHandshakeEventHandler extends EzyHandshakeHandler {
         @Override
         protected EzyRequest getLoginRequest() {
             final String username = "username";
@@ -123,7 +118,7 @@ public class HelloWorldClientUdp {
                 EzyEntityObjects.newObject("accessToken", accessToken));
         }
 
-        private final String httpLogin(String username, String password) {
+        private String httpLogin(String username, String password) {
             HttpClient httpClient = HttpClient.builder()
                 .build();
             Map<String, String> requestBody = new HashMap<>();
@@ -144,21 +139,21 @@ public class HelloWorldClientUdp {
         }
     }
 
-    class ExLoginSuccessHandler extends EzyLoginSuccessHandler {
+    static class ExLoginSuccessHandler extends EzyLoginSuccessHandler {
         @Override
         protected void handleLoginSuccess(EzyData responseData) {
             client.udpConnect(2611);
         }
     }
 
-    class ExHandshakeSuccessHandler extends EzyUdpHandshakeHandler {
+    static class ExHandshakeSuccessHandler extends EzyUdpHandshakeHandler {
         @Override
         protected void onAuthenticated(EzyArray data) {
             client.send(new EzyAppAccessRequest(APP_NAME));
         }
     }
 
-    class ExAccessAppHandler extends EzyAppAccessHandler {
+    static class ExAccessAppHandler extends EzyAppAccessHandler {
         protected void postHandle(EzyApp app, EzyArray data) {
             sendGreetRequest(app);
             sendUdpGreetRequest(app);
@@ -222,16 +217,15 @@ public class HelloWorldClientUdp {
 
     }
 
-    class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
+    static class ChatGreetResponseHandler implements EzyAppDataHandler<EzyObject> {
         public void handle(EzyApp app, EzyObject data) {
             System.out.println("Received greet data: " + data);
         }
     }
 
-    class SecureChatResponseHandler implements EzyAppDataHandler<EzyObject> {
+    static class SecureChatResponseHandler implements EzyAppDataHandler<EzyObject> {
         public void handle(EzyApp app, EzyObject data) {
             System.out.println("Received secure data: " + data);
         }
     }
-
 }

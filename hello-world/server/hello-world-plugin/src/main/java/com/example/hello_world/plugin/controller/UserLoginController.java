@@ -61,5 +61,4 @@ public class UserLoginController extends EzyAbstractPluginEventController<EzyUse
         }
         return null;
     }
-
 }

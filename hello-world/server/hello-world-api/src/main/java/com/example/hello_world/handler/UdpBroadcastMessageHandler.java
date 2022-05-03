@@ -32,5 +32,4 @@ public class UdpBroadcastMessageHandler
             .users(userManager.getUserList())
             .execute();
     }
-
 }

@@ -20,5 +20,4 @@ public class ServerReadyController
     public void handle(EzyAppContext ctx, EzyServerReadyEvent event) {
         logger.info("hello-world app: fire custom app ready, node name: {}", appConfig.getNodeName());
     }
-
 }

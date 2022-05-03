@@ -40,5 +40,4 @@ public class AppEntry extends EzySimpleAppEntry {
             "com.example.hello_world"
         };
     }
-
 }

@@ -35,6 +35,4 @@ public abstract class ClientRequestHandler
     }
 
     protected abstract void execute() throws EzyBadRequestException;
-
-
 }

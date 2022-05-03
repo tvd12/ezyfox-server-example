@@ -32,5 +32,4 @@ public class GreetRequestHandler
             .session(session)
             .execute();
     }
-
 }

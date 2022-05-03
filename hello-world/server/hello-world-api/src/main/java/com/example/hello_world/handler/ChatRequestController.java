@@ -21,7 +21,9 @@ import com.tvd12.ezyfoxserver.entity.EzySession;
 import com.tvd12.ezyfoxserver.entity.EzyUser;
 import com.tvd12.ezyfoxserver.event.EzyUserSessionEvent;
 import com.tvd12.ezyfoxserver.support.factory.EzyResponseFactory;
+import lombok.Setter;
 
+@Setter
 @EzyRequestController
 public class ChatRequestController extends EzyLoggable {
 
@@ -111,7 +113,7 @@ public class ChatRequestController extends EzyLoggable {
         String cmd,
         Object data
     ) {
-        logger.error("try cath BadWhoRequestException, cmd: {}, data: {}", cmd, data, e);
+        logger.error("try catch BadWhoRequestException, cmd: {}, data: {}", cmd, data, e);
         responseFactory.newObjectResponse()
             .command(EzyResponseCommands.ERROR)
             .data(EzyEntityObjects.newObject("who", "invalid"))

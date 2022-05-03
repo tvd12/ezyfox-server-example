@@ -47,6 +47,7 @@ namespace hello_csharp
             new BindingExample().Run();
             new EntityExample().Run();
             new DateTimeExample().Run();
+            new MsgPackExample().Run();
 
             EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
 

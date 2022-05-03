@@ -61,10 +61,9 @@ public class HelloWorldStartup {
     public static class DecoratedPluginEntryLoader extends PluginEntryLoader {
 
         @Override
-        public EzyPluginEntry load() throws Exception {
+        public EzyPluginEntry load() {
             return new PluginEntry() {
-
-                protected String getPluginPath(EzyPluginSetting setting) {
+                private String getPluginPath() {
                     Path pluginPath = Paths.get("hello-world-plugin");
 					if (!Files.exists(pluginPath)) {
 						pluginPath = Paths.get("../hello-world-plugin");
@@ -74,7 +73,7 @@ public class HelloWorldStartup {
 
                 @Override
                 protected String getConfigFile(EzyPluginSetting setting) {
-                    return Paths.get(getPluginPath(setting), "config", "config.properties")
+                    return Paths.get(getPluginPath(), "config", "config.properties")
                         .toString();
                 }
             };
@@ -84,10 +83,9 @@ public class HelloWorldStartup {
     public static class DecoratedAppEntryLoader extends AppEntryLoader {
 
         @Override
-        public EzyAppEntry load() throws Exception {
+        public EzyAppEntry load() {
             return new AppEntry() {
-
-                protected String getAppPath() {
+                private String getAppPath() {
                     Path pluginPath = Paths.get("hello-world-entry");
 					if (!Files.exists(pluginPath)) {
 						pluginPath = Paths.get("../hello-world-entry");
@@ -103,5 +101,4 @@ public class HelloWorldStartup {
             };
         }
     }
-
 }
