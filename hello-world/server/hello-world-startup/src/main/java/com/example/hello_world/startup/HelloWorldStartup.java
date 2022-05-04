@@ -50,6 +50,14 @@ public class HelloWorldStartup {
             .udp(udpSettingBuilder.build())
             .zone(zoneSettingBuilder.build())
             .sessionManagement(sessionManagementSetting)
+            .addEventController(
+                EzyEventType.SERVER_INITIALIZING,
+                ServerInitializingController.class
+            )
+            .addEventController(
+                EzyEventType.CLIENT_HANDSHAKE,
+                ClientHandshakeController.class
+            )
             .build();
 
         EzyEmbeddedServer server = EzyEmbeddedServer.builder()

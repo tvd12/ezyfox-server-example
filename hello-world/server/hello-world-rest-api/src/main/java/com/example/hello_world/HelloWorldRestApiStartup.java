@@ -1,6 +1,6 @@
 package com.example.hello_world;
 
-import com.tvd12.ezyhttp.core.boot.EzyHttpApplicationBootstrap;
+import com.tvd12.ezyhttp.server.boot.EzyHttpApplicationBootstrap;
 
 public class HelloWorldRestApiStartup {
 
