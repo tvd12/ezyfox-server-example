@@ -27,9 +27,9 @@ import java.util.Map;
 
 public class HelloWorldClientUdp {
 
+    private final EzyClient socketClient;
     private static final String ZONE_NAME = "example";
     private static final String APP_NAME = "hello-world";
-    private EzyClient socketClient;
 
     public HelloWorldClientUdp() {
         this.socketClient = setup();
