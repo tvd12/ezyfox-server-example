@@ -12,7 +12,7 @@ public class ServerInitializingController
     public void handle(EzyServerContext ctx, EzyServerInitializingEvent event) {
         System.out.println("Server's initializing");
         ctx.cmd(EzyAddExceptionHandler.class).add((thread, exception) ->
-            exception.printStackTrace()
+            logger.info("there is an uncaught exception on thread: {}", thread, exception)
         );
     }
 }

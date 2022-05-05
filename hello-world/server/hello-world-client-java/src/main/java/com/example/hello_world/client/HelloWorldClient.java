@@ -70,30 +70,26 @@ public class HelloWorldClient {
         EzyAppSetup appSetup = setup.setupApp(APP_NAME);
         appSetup.addDataHandler("greet", new ChatGreetResponseHandler());
         appSetup.addDataHandler("secureChat", new SecureChatResponseHandler());
-        appSetup.addDataHandler("chatAll", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chatAll: " + data);
-            }
-        });
-        appSetup.addDataHandler("chat1", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chat1: " + data);
-            }
-        });
-        appSetup.addDataHandler("chatToMe", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("chatToMe: " + data);
-            }
-        });
-        appSetup.addDataHandler("err", new EzyAppDataHandler<EzyData>() {
-            @Override
-            public void handle(EzyApp app, EzyData data) {
-                System.out.println("error: " + data);
-            }
-        });
+        appSetup.addDataHandler(
+            "chatAll",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chatAll: " + data)
+        );
+        appSetup.addDataHandler(
+            "chat1",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chat1: " + data)
+        );
+        appSetup.addDataHandler(
+            "chatToMe",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("chatToMe: " + data)
+        );
+        appSetup.addDataHandler(
+            "err",
+            (EzyAppDataHandler<EzyData>) (app, data) ->
+                System.out.println("error: " + data)
+        );
         return client;
     }
 
