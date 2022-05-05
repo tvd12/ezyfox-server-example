@@ -7,6 +7,7 @@ import com.tvd12.ezyfox.binding.EzyDataBinding;
 import com.tvd12.ezyfox.binding.annotation.EzyObjectBinding;
 import com.tvd12.ezyfox.core.annotation.EzyRequestListener;
 import com.tvd12.ezyfox.core.exception.EzyBadRequestException;
+import com.tvd12.ezyfox.entity.EzyObject;
 import lombok.Setter;
 
 import static com.example.hello_world.constant.Commands.UDP_GREET;
@@ -21,11 +22,14 @@ public class UdpGreetRequestHandler
 
     private String who;
 
+    private EzyObject numbers;
+
     @EzyAutoBind
     private Greeting greeting;
 
     @Override
     protected void execute() throws EzyBadRequestException {
+        logger.info("numbers: {}", numbers);
         responseFactory.newObjectResponse()
             .command(UDP_GREET)
             .udpTransport()
