@@ -1,6 +1,6 @@
 package com.tvd12.example.lucky_wheel;
 
-import com.tvd12.ezyhttp.core.boot.EzyHttpApplicationBootstrap;
+import com.tvd12.ezyhttp.server.boot.EzyHttpApplicationBootstrap;
 import com.tvd12.ezyhttp.server.core.asm.ExceptionHandlerImplementer;
 import com.tvd12.ezyhttp.server.core.asm.RequestHandlerImplementer;
 

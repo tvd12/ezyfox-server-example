@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.tvd12</groupId>
         <artifactId>ezyfox</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.4</version>
     </parent>
 
     <groupId>com.tvd12.ezyfoxserver</groupId>
@@ -19,9 +19,9 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <ezy.version>1.2.2</ezy.version>
-        <ezy.boot.version>1.0.3</ezy.boot.version>
-        <ezy.http.version>0.2.3</ezy.http.version>
+        <ezy.version>1.2.3</ezy.version>
+        <ezy.boot.version>1.0.4</ezy.boot.version>
+        <ezy.http.version>1.0.3</ezy.http.version>
     </properties>
 
     <dependencies>
