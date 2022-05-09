@@ -32,7 +32,7 @@ class SocketClientProxy private constructor() {
     inner class ExHandshakeHandler : EzyHandshakeHandler() {
 
         override fun getLoginRequest(): EzyRequest {
-            return EzyLoginRequest(ZONE_NAME, "Dzung", "123456")
+            return EzyLoginRequest(ZONE_NAME, "youngmonkeys", "123456")
         }
     }
 

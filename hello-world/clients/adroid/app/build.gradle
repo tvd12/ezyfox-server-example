@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.tvd12.android.hello_world"
-        minSdkVersion 31
+        minSdkVersion 28
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
