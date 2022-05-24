@@ -117,16 +117,18 @@ public class GameRequestController extends EzyLoggable {
         GameRoom room,
         List<GamePlayer> answeredPlayers
     ) {
-        GamePlayer winner = Collections.max(
-            answeredPlayers,
-            (a, b) -> gameAnswerComparator.compare(a.getAnswer(), b.getAnswer())
-        );
         synchronized (room) {
             // fix concurrent issue
             if (room.getStatus() == RoomStatus.FINISHED) {
                 return;
             }
             room.setStatus(RoomStatus.FINISHED);
+        }
+        GamePlayer winner = Collections.max(
+            answeredPlayers,
+            (a, b) -> gameAnswerComparator.compare(a.getAnswer(), b.getAnswer())
+        );
+        synchronized (room) {
             room.setWinner(winner);
         }
         PlayerManager<GamePlayer> roomPlayerManager = room.getPlayerManager();
