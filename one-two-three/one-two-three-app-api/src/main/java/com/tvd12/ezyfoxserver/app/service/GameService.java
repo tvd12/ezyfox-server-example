@@ -76,8 +76,8 @@ public class GameService {
             () -> {
                 synchronized (room) {
                     room.reset();
-                    callback.run();
                 }
+                callback.run();
             },
             NEW_GAME_DELAY_TIME,
             TimeUnit.SECONDS
