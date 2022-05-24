@@ -65,15 +65,15 @@ public class Client1Test {
         });
 
         EzyAppSetup appSetup = setup.setupApp(ApplicationStartup.ZONE_APP_NAME);
-        appSetup.addDataHandler(EzyResponseCommands.ERROR, (app, data) -> {
-            System.out.println("error: " + data);
-        });
-        appSetup.addDataHandler(Commands.JOIN_GAME, (app, data) -> {
-            System.out.println("join game: " + data);
-        });
-        appSetup.addDataHandler(Commands.ANOTHER_PLAYER_JOIN_GAME, (app, data) -> {
-            System.out.println("another player join game: " + data);
-        });
+        appSetup.addDataHandler(EzyResponseCommands.ERROR, (app, data) ->
+            System.out.println("error: " + data)
+        );
+        appSetup.addDataHandler(Commands.JOIN_GAME, (app, data) ->
+            System.out.println("join game: " + data)
+        );
+        appSetup.addDataHandler(Commands.ANOTHER_PLAYER_JOIN_GAME, (app, data) ->
+            System.out.println("another player join game: " + data)
+        );
         appSetup.addDataHandler(Commands.GAME_STARTED, (app, data) -> {
             System.out.println("new game started");
             app.send(Commands.ANSWER, EzyEntityFactory.newObjectBuilder()
@@ -81,8 +81,8 @@ public class Client1Test {
                 .build()
             );
         });
-        appSetup.addDataHandler(Commands.GAME_FINISHED, (app, data) -> {
-            System.out.println("game finished: " + data);
-        });
+        appSetup.addDataHandler(Commands.GAME_FINISHED, (app, data) ->
+            System.out.println("game finished: " + data)
+        );
     }
 }
