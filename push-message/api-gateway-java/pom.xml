@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.tvd12</groupId>
         <artifactId>ezyfox</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.4</version>
     </parent>
 
     <groupId>org.youngmonkeys.example</groupId>
@@ -20,7 +20,7 @@
 
     <properties>
         <ezyhttp.version>1.0.3</ezyhttp.version>
-        <ezymq.kafka.version>1.1.7</ezymq.kafka.version>
+        <ezymq.kafka.version>1.1.8</ezymq.kafka.version>
     </properties>
 
     <dependencies>
