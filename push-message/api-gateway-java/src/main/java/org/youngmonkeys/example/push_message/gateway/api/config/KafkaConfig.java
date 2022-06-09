@@ -17,7 +17,6 @@ public class KafkaConfig implements EzySingletonFactoryAware, EzyBeanConfig {
     public void config() {
         EzyKafkaProxy kafkaProxy = EzyKafkaProxy.builder()
             .scan("org.youngmonkeys.example.push_message.gateway.api.kafka")
-            .ignoreUnknownComponents(true)
             .build();
         singletonFactory.addSingleton("messageProducer", kafkaProxy.getProducer("message"));
     }

@@ -7,7 +7,8 @@ import com.tvd12.ezyfoxserver.controller.EzyAbstractPluginEventController;
 import com.tvd12.ezyfoxserver.event.EzyUserLoginEvent;
 
 @EzyEventHandler(EzyEventNames.USER_LOGIN)
-public class UserLoginController extends EzyAbstractPluginEventController<EzyUserLoginEvent> {
+public class UserLoginController
+    extends EzyAbstractPluginEventController<EzyUserLoginEvent> {
     @Override
     public void handle(EzyPluginContext context, EzyUserLoginEvent event) {
         logger.info("user: {} logged in", event.getUsername());
