@@ -1,8 +1,8 @@
 package com.tvd12.ezyfoxserver.stresstest;
 
+import com.tvd12.ezyfox.concurrent.EzyEventLoopGroup;
 import com.tvd12.ezyfoxserver.client.EzyClients;
 import com.tvd12.ezyfoxserver.client.EzyWsClient;
-import com.tvd12.ezyfoxserver.client.concurrent.EzyEventLoopGroup;
 import com.tvd12.ezyfoxserver.client.concurrent.EzyNettyEventLoopGroup;
 import com.tvd12.ezyfoxserver.client.socket.EzyMainEventsLoop;
 import io.netty.channel.EventLoopGroup;

@@ -26,7 +26,7 @@ public class UdpBroadcastMessageHandler
         EzyApplication app = appContext.getApp();
         EzyAppUserManager userManager = app.getUserManager();
         responseFactory.newObjectResponse()
-            .udpTransport()
+            .udpOrTcpTransport()
             .command(UDP_BROADCAST_MESSAGE)
             .param("message", message)
             .users(userManager.getUserList())
