@@ -19,8 +19,8 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<ezy.version>1.2.4</ezy.version>
-		<ezy.client.version>1.2.0</ezy.client.version>
+		<ezy.version>1.2.5</ezy.version>
+		<ezy.client.version>1.2.1</ezy.client.version>
 	</properties>
 
 	<profiles>

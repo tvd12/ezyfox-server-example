@@ -19,8 +19,8 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <ezy.version>1.2.4</ezy.version>
-        <ezymq.kafka.version>1.2.0</ezymq.kafka.version>
+        <ezy.version>1.2.5</ezy.version>
+        <ezymq.kafka.version>1.2.1</ezymq.kafka.version>
     </properties>
 
     <dependencies>
