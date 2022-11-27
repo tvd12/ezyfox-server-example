@@ -13,6 +13,7 @@ using com.tvd12.ezyfoxserver.client.entity;
 using com.tvd12.ezyfoxserver.client.factory;
 
 using com.tvd12.ezyfoxserver.client.logger;
+using com.tvd12.ezyfoxserver.client.socket;
 
 namespace hello_csharp
 {
@@ -48,6 +49,7 @@ namespace hello_csharp
             new EntityExample().Run();
             new DateTimeExample().Run();
             new MsgPackExample().Run();
+            new SupportExample().Run();
 
             EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
 
@@ -79,23 +81,23 @@ namespace hello_csharp
             client.connect("ws.tvd12.com", 3005);
             //client.connect("127.0.0.1", 3005);
 
-            int time = 0;
+            //int time = 0;
 
-            while (true)
-            {
-                Thread.Sleep(3);
-                client.processEvents();
-                time += 3;
-                if (time > 5000)
-                {
-                    //client.disconnect(401);
-                    time = 0;
-                    //break;
-                }
-                // Console.WriteLine(client.getNetworkStatistics().getSocketStats().getNetworkStats().getReadBytes());
-            }
+            //while (true)
+            //{
+            //    Thread.Sleep(3);
+            //    client.processEvents();
+            //    time += 3;
+            //    if (time > 5000)
+            //    {
+            //client.disconnect(401);
+            //time = 0;
+            //break;
+            //}
+            // Console.WriteLine(client.getNetworkStatistics().getSocketStats().getNetworkStats().getReadBytes());
+            //}
 
-            //mainEventsLoopTest();
+            mainEventsLoopTest();
         }
 
         private static void mainEventsLoopTest()
@@ -104,8 +106,8 @@ namespace hello_csharp
 
             //Console.WriteLine("client shutted down");
 
-            //EzyMainEventsLoop mainEventsLoop = new EzyMainEventsLoop();
-            //mainEventsLoop.start();
+            EzyMainEventsLoop mainEventsLoop = new EzyMainEventsLoop();
+            mainEventsLoop.start();
 
             //IList<EzyClient> cachedClients = new List<EzyClient>();
 
