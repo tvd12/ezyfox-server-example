@@ -33,7 +33,8 @@ public class HelloWorldStartup {
             .plugin(pluginSettingBuilder.build());
 
         EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
-            .sslActive(true);
+            .sslActive(true)
+            .maxRequestSize(512);
 
         EzyUdpSettingBuilder udpSettingBuilder = new EzyUdpSettingBuilder()
             .active(true);

@@ -102,10 +102,13 @@ public class HelloWorldClient {
         protected EzyRequest getLoginRequest() {
             final String username = "username";
             final String password = "password";
-            final String accessToken = httpLogin(username, password);
+            String accessToken = httpLogin(username, password);
             if (EzyStrings.isBlank(accessToken)) {
                 return new EzyLoginRequest(ZONE_NAME, username, password);
             }
+//            for (int i = 0; i < 10 ; ++i) {
+//                accessToken += accessToken;
+//            }
             return new EzyLoginRequest(
                 ZONE_NAME,
                 "",

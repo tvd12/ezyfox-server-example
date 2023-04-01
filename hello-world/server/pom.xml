@@ -19,9 +19,9 @@
     <url>https://youngmonkeys.org/</url>
 
     <properties>
-        <ezy.http.version>1.0.6</ezy.http.version>
-        <ezy.server.version>1.2.5</ezy.server.version>
-        <ezy.server.client.version>1.2.1</ezy.server.client.version>
+        <ezy.http.version>1.1.4</ezy.http.version>
+        <ezy.server.version>1.2.7</ezy.server.version>
+        <ezy.server.client.version>1.2.4</ezy.server.client.version>
     </properties>
 
     <profiles>
