@@ -47,6 +47,7 @@ public class HelloWorldStartup {
 
 
         EzySimpleSettings settings = new EzySettingsBuilder()
+            .debug(true)
             .socket(socketSettingBuilder.build())
             .udp(udpSettingBuilder.build())
             .zone(zoneSettingBuilder.build())

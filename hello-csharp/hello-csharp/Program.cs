@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Threading;
-using System.Collections.Generic;
 using com.tvd12.ezyfoxserver.client;
-using com.tvd12.ezyfoxserver.client.io;
 using com.tvd12.ezyfoxserver.client.evt;
 using com.tvd12.ezyfoxserver.client.request;
 using com.tvd12.ezyfoxserver.client.config;
@@ -22,6 +20,7 @@ namespace hello_csharp
 
         public static readonly String ERROR = "err";
         public static readonly String GREET = "greet";
+        public static readonly String SECURE_CHAT = "secureChat";
         public static readonly String ROOM_INFO = "roomInfo";
         public static readonly String CREATE_ROOM = "createRoom";
         public static readonly String LEAVE_ROOM = "leaveRoom";
@@ -36,7 +35,6 @@ namespace hello_csharp
         private Commands()
         {
         }
-
     }
 
     class MainClass
@@ -78,8 +76,8 @@ namespace hello_csharp
             appSetup.addDataHandler(Commands.ROOM_INFO, new RoomInfoResponseHandler());
             appSetup.addDataHandler(Commands.SYNC_POSITION, new SyncPositionHandler());
 
-            client.connect("ws.tvd12.com", 3005);
-            //client.connect("127.0.0.1", 3005);
+            //client.connect("ws.tvd12.com", 3005);
+            client.connect("127.0.0.1", 3005);
 
             //int time = 0;
 
@@ -147,6 +145,13 @@ namespace hello_csharp
             //app.send(Commands.ACCESS_LOBBY_ROOM);
             //this.client.send(new EzyAppExitRequest(app.getId()));
             this.client.udpConnect(2611);
+            app.send(
+                Commands.SECURE_CHAT,
+                EzyEntityFactory
+                    .newObjectBuilder()
+                    .append("who", "Young Monkeys")
+                    .build()
+            );
         }
     }
 
