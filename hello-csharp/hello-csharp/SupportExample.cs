@@ -12,7 +12,7 @@ namespace hello_csharp
         {
             EzyBinding binding = new EzyBindingBuilder()
                 .build();
-            SocketProxyManager socketProxyManager = SocketProxyManager
+            EzySocketProxyManager socketProxyManager = EzySocketProxyManager
                 .getInstance();
             socketProxyManager.setDefaultZoneName("example");
             socketProxyManager.init();

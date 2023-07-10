@@ -45,7 +45,6 @@ public class HelloWorldStartup {
             .build();
         sessionManagementSetting.init();
 
-
         EzySimpleSettings settings = new EzySettingsBuilder()
             .debug(true)
             .socket(socketSettingBuilder.build())

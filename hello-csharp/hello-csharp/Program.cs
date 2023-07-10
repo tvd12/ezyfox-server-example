@@ -53,6 +53,7 @@ namespace hello_csharp
 
             EzyClientConfig clientConfig = EzyClientConfig
                 .builder()
+                .enableSSL(false)
                 .clientName("freetanks")
                 .zoneName("example")
                 .build();
@@ -145,13 +146,17 @@ namespace hello_csharp
             //app.send(Commands.ACCESS_LOBBY_ROOM);
             //this.client.send(new EzyAppExitRequest(app.getId()));
             this.client.udpConnect(2611);
-            app.send(
-                Commands.SECURE_CHAT,
-                EzyEntityFactory
-                    .newObjectBuilder()
-                    .append("who", "Young Monkeys")
-                    .build()
-            );
+            if (this.client.isEnableSSL())
+            {
+                app.send(
+                    Commands.SECURE_CHAT,
+                    EzyEntityFactory
+                        .newObjectBuilder()
+                        .append("who", "Young Monkeys")
+                        .build(),
+                    true
+                );
+            }
         }
     }
 

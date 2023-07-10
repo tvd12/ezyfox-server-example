@@ -47,8 +47,8 @@ public class SocketProxy {
     }
     
     public func connectToServer() {
-//        let host = "127.0.0.1"
-        let host = "ws.tvd12.com"
+        let host = "127.0.0.1"
+//        let host = "ws.tvd12.com"
         client.connect(host: host, port: 3005)
     }
 }
