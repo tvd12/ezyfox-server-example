@@ -5,6 +5,7 @@ import com.example.hello_world.AppEntryLoader;
 import com.example.hello_world.plugin.PluginEntry;
 import com.example.hello_world.plugin.PluginEntryLoader;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
+import com.tvd12.ezyfoxserver.constant.SslType;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
 import com.tvd12.ezyfoxserver.ext.EzyAppEntry;
 import com.tvd12.ezyfoxserver.ext.EzyPluginEntry;
@@ -34,6 +35,7 @@ public class HelloWorldStartup {
 
         EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
             .sslActive(true)
+            .sslType(SslType.L4)
             .maxRequestSize(512);
 
         EzyUdpSettingBuilder udpSettingBuilder = new EzyUdpSettingBuilder()
