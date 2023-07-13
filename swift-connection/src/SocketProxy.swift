@@ -70,10 +70,6 @@ class ExHandshakeHandler : EzyHandshakeHandler {
         array.add("12345678912")
         return array
     }
-    
-    override func encryptedLoginRequest() -> Bool {
-        return true;
-    }
 };
 
 class ExLoginSuccessHandler : EzyLoginSuccessHandler {
