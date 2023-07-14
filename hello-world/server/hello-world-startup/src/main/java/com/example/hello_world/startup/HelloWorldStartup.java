@@ -35,7 +35,7 @@ public class HelloWorldStartup {
 
         EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
             .sslActive(true)
-            .sslType(SslType.L4)
+            .sslType(SslType.CERTIFICATION)
             .sslHandshakeTimeout(100000)
             .maxRequestSize(512);
 
