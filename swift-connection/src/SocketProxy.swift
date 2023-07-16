@@ -21,7 +21,8 @@ public class SocketProxy {
             .setClientName(clientName: ZONE_NAME)
             .setZoneName(zoneName: ZONE_NAME)
             .setEnableSSL()
-//            .setEnableDebug()
+            .setSslType(sslType: EzySslType.CERTIFICATION)
+            .setEnableDebug()
         _ = config.ping
             .setPingPeriod(pingPeriod: 3000)
             .setMaxLostPingCount(maxLostPingCount: 3)
