@@ -43,4 +43,8 @@ public class SocketClientSetup {
 //			System.out.println("udp > server response: " + message);
         });
     }
+
+    public void close() {
+        executorService.shutdownNow();
+    }
 }
