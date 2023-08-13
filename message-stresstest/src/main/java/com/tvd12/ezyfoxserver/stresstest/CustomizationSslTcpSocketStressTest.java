@@ -17,7 +17,7 @@ public class CustomizationSslTcpSocketStressTest extends SocketStressTest {
 
     @Override
     protected int clientCount() {
-        return 1;
+        return 200;
     }
 
     @Override

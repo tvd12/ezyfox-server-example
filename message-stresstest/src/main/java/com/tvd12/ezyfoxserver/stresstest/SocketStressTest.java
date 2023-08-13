@@ -20,8 +20,8 @@ public abstract class SocketStressTest {
         ClientConfigFactory clientConfigFactory = new ClientConfigFactory();
         SocketClientSetup setup = new SocketClientSetup("tcp-socket");
         EzyClients clients = EzyClients.getInstance();
-        EzyEventLoopGroup eventLoopGroup = new EzyEventLoopGroup(16);
-        EventLoopGroup nettyEventLoopGroup = new EzyNettyEventLoopGroup(16);
+        EzyEventLoopGroup eventLoopGroup = new EzyEventLoopGroup(32);
+        EventLoopGroup nettyEventLoopGroup = new EzyNettyEventLoopGroup(32);
         new Thread(() -> {
             for (int i = 0; i < clientCount(); i++) {
                 EzyClientConfig.Builder configBuilder = clientConfigFactory

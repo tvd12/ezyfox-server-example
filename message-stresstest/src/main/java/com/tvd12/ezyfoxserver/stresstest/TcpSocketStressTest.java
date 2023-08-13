@@ -16,7 +16,7 @@ public class TcpSocketStressTest extends SocketStressTest {
 
     @Override
     protected int clientCount() {
-        return 1;
+        return 500;
     }
 
     @Override
