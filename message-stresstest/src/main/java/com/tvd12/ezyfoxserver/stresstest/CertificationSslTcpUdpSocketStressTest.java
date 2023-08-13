@@ -2,21 +2,26 @@ package com.tvd12.ezyfoxserver.stresstest;
 
 import com.tvd12.ezyfox.concurrent.EzyEventLoopGroup;
 import com.tvd12.ezyfoxserver.client.EzyClient;
-import com.tvd12.ezyfoxserver.client.EzyTcpClient;
+import com.tvd12.ezyfoxserver.client.EzyUTClient;
 import com.tvd12.ezyfoxserver.client.config.EzyClientConfig;
 import io.netty.channel.EventLoopGroup;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class TcpSocketStressTest extends SocketStressTest {
+public class CertificationSslTcpUdpSocketStressTest extends SocketStressTest {
 
     public static void main(String[] args) {
-        new TcpSocketStressTest().test();
+        new CertificationSslTcpUdpSocketStressTest().test();
     }
 
     @Override
     protected int clientCount() {
         return 1;
+    }
+
+    @Override
+    protected boolean useUdp() {
+        return true;
     }
 
     @Override
@@ -30,7 +35,7 @@ public class TcpSocketStressTest extends SocketStressTest {
         EzyEventLoopGroup eventLoopGroup,
         EventLoopGroup nettyEventLoopGroup
     ) {
-        return new EzyTcpClient(
+        return new EzyUTClient(
             config,
             eventLoopGroup,
             nettyEventLoopGroup

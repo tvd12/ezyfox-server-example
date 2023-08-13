@@ -35,7 +35,7 @@ public class HelloWorldStartup {
 
         EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
             .sslActive(true)
-            .sslType(SslType.CERTIFICATION)
+            .sslType(SslType.CUSTOMIZATION)
             .sslHandshakeTimeout(300)
             .maxRequestSize(512);
 
@@ -47,6 +47,9 @@ public class HelloWorldStartup {
             .sessionMaxWaitingTimeInSecond(15)
             .build();
         sessionManagementSetting.init();
+
+        EzyThreadPoolSizeSettingBuilder threadPoolSizeSettingBuilder = new EzyThreadPoolSizeSettingBuilder()
+            .socketDataReceiver(1);
 
         EzySimpleSettings settings = new EzySettingsBuilder()
             .debug(true)
@@ -62,6 +65,7 @@ public class HelloWorldStartup {
                 EzyEventType.CLIENT_HANDSHAKE,
                 ClientHandshakeController.class
             )
+            .threadPoolSize(threadPoolSizeSettingBuilder.build())
             .build();
 
         EzyEmbeddedServer server = EzyEmbeddedServer.builder()

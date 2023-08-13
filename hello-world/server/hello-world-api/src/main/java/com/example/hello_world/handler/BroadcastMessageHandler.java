@@ -15,7 +15,7 @@ import static com.example.hello_world.constant.Commands.BROADCAST_MESSAGE;
 @EzyPrototype
 @EzyObjectBinding(write = false)
 @EzyRequestListener(BROADCAST_MESSAGE)
-public class BroacastMessageHandler
+public class BroadcastMessageHandler
     extends ClientRequestHandler
     implements EzyDataBinding {
 

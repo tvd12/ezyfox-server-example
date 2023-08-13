@@ -21,7 +21,7 @@ public class WebSocketStressTest extends SocketStressTest {
 
     @Override
     protected int testDurationInSecond() {
-        return 5;
+        return 5 * 60;
     }
 
     @Override

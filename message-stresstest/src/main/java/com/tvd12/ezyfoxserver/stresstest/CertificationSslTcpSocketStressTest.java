@@ -8,15 +8,15 @@ import io.netty.channel.EventLoopGroup;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class TcpSocketStressTest extends SocketStressTest {
+public class CertificationSslTcpSocketStressTest extends SocketStressTest {
 
     public static void main(String[] args) {
-        new TcpSocketStressTest().test();
+        new CertificationSslTcpSocketStressTest().test();
     }
 
     @Override
     protected int clientCount() {
-        return 1;
+        return 500;
     }
 
     @Override

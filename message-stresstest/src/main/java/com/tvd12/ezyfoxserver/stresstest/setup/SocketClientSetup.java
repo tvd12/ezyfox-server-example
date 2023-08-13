@@ -1,6 +1,7 @@
-package com.tvd12.ezyfoxserver.stresstest;
+package com.tvd12.ezyfoxserver.stresstest.setup;
 
 import com.tvd12.ezyfox.concurrent.EzyExecutors;
+import com.tvd12.ezyfox.entity.EzyObject;
 import com.tvd12.ezyfoxserver.client.EzyClient;
 import com.tvd12.ezyfoxserver.client.constant.EzyCommand;
 import com.tvd12.ezyfoxserver.client.setup.EzyAppSetup;
@@ -35,12 +36,16 @@ public class SocketClientSetup {
 
         EzyAppSetup appSetup = setup.setupApp("hello-world");
         appSetup.addDataHandler("broadcastMessage", (app, data) -> {
-//			String message = ((EzyObject)data).get("message", String.class);
-//			System.out.println("tcp > server response: " + message);
+			String message = ((EzyObject)data).get("message", String.class);
+			System.out.println("tcp > server response: " + message);
+        });
+        appSetup.addDataHandler("broadcastSecureMessage", (app, data) -> {
+			String message = ((EzyObject)data).get("message", String.class);
+			System.out.println("tcp secure > server response: " + message);
         });
         appSetup.addDataHandler("udpBroadcastMessage", (app, data) -> {
-//			String message = ((EzyObject)data).get("message", String.class);
-//			System.out.println("udp > server response: " + message);
+            String message = ((EzyObject)data).get("message", String.class);
+            System.out.println("udp > server response: " + message);
         });
     }
 
