@@ -16,7 +16,7 @@ public class WebSocketStressTest extends SocketStressTest {
 
     @Override
     protected int clientCount() {
-        return 100;
+        return 300;
     }
 
     @Override
