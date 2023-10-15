@@ -20,7 +20,7 @@
 
     <properties>
         <ezy.http.version>1.2.0</ezy.http.version>
-        <ezy.server.version>1.2.8</ezy.server.version>
+        <ezy.server.version>1.2.8.1</ezy.server.version>
         <ezy.server.client.version>1.2.5</ezy.server.client.version>
     </properties>
 

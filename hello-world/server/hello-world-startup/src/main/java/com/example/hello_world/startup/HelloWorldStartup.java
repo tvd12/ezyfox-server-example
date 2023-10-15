@@ -5,6 +5,7 @@ import com.example.hello_world.AppEntryLoader;
 import com.example.hello_world.plugin.PluginEntry;
 import com.example.hello_world.plugin.PluginEntryLoader;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
+import com.tvd12.ezyfoxserver.constant.SslType;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
 import com.tvd12.ezyfoxserver.ext.EzyAppEntry;
 import com.tvd12.ezyfoxserver.ext.EzyPluginEntry;
@@ -34,6 +35,8 @@ public class HelloWorldStartup {
 
         EzySocketSettingBuilder socketSettingBuilder = new EzySocketSettingBuilder()
             .sslActive(true)
+            .sslType(SslType.CUSTOMIZATION)
+            .sslHandshakeTimeout(300)
             .maxRequestSize(512);
 
         EzyUdpSettingBuilder udpSettingBuilder = new EzyUdpSettingBuilder()
@@ -44,6 +47,9 @@ public class HelloWorldStartup {
             .sessionMaxWaitingTimeInSecond(15)
             .build();
         sessionManagementSetting.init();
+
+        EzyThreadPoolSizeSettingBuilder threadPoolSizeSettingBuilder = new EzyThreadPoolSizeSettingBuilder()
+            .socketDataReceiver(1);
 
         EzySimpleSettings settings = new EzySettingsBuilder()
             .debug(true)
@@ -59,6 +65,7 @@ public class HelloWorldStartup {
                 EzyEventType.CLIENT_HANDSHAKE,
                 ClientHandshakeController.class
             )
+            .threadPoolSize(threadPoolSizeSettingBuilder.build())
             .build();
 
         EzyEmbeddedServer server = EzyEmbeddedServer.builder()

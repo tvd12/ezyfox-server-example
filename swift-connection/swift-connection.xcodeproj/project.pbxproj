@@ -3074,7 +3074,7 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 					"EZY_DEBUG=1",
-					"EZY_SSL_ENABLE=1",
+					"SSL_ENABLE=1",
 				);
 				INFOPLIST_FILE = src/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3104,7 +3104,7 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 					"EZY_DEBUG=1",
-					"EZY_SSL_ENABLE=1",
+					"SSL_ENABLE=1",
 				);
 				INFOPLIST_FILE = src/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

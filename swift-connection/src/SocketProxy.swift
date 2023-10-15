@@ -21,7 +21,8 @@ public class SocketProxy {
             .setClientName(clientName: ZONE_NAME)
             .setZoneName(zoneName: ZONE_NAME)
             .setEnableSSL()
-//            .setEnableDebug()
+            .setSslType(sslType: EzySslType.CERTIFICATION)
+            .setEnableDebug()
         _ = config.ping
             .setPingPeriod(pingPeriod: 3000)
             .setMaxLostPingCount(maxLostPingCount: 3)
@@ -47,8 +48,8 @@ public class SocketProxy {
     }
     
     public func connectToServer() {
-        let host = "127.0.0.1"
-//        let host = "ws.tvd12.com"
+//        let host = "127.0.0.1"
+        let host = "ws.tvd12.com"
         client.connect(host: host, port: 3005)
     }
 }
@@ -69,10 +70,6 @@ class ExHandshakeHandler : EzyHandshakeHandler {
         array.add("swift123")
         array.add("12345678912")
         return array
-    }
-    
-    override func encryptedLoginRequest() -> Bool {
-        return true;
     }
 };
 

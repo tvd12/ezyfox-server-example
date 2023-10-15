@@ -8,6 +8,8 @@ import com.tvd12.ezyfoxserver.client.concurrent.EzyNettyEventLoopGroup;
 import com.tvd12.ezyfoxserver.client.config.EzyClientConfig;
 import com.tvd12.ezyfoxserver.client.metrics.EzyMetricsRecorder;
 import com.tvd12.ezyfoxserver.client.socket.EzyMainEventsLoop;
+import com.tvd12.ezyfoxserver.stresstest.setup.ClientConfigFactory;
+import com.tvd12.ezyfoxserver.stresstest.setup.SocketClientSetup;
 import io.netty.channel.EventLoopGroup;
 
 import static com.tvd12.ezyfox.util.EzyProcessor.processWithLogException;
@@ -15,15 +17,18 @@ import static com.tvd12.ezyfox.util.EzyProcessor.processWithLogException;
 public abstract class SocketStressTest {
 
     public void test() {
-        DefaultClientConfig clientConfig = new DefaultClientConfig();
+        ClientConfigFactory clientConfigFactory = new ClientConfigFactory();
         SocketClientSetup setup = new SocketClientSetup("tcp-socket");
         EzyClients clients = EzyClients.getInstance();
-        EzyEventLoopGroup eventLoopGroup = new EzyEventLoopGroup(16);
-        EventLoopGroup nettyEventLoopGroup = new EzyNettyEventLoopGroup(16);
+        EzyEventLoopGroup eventLoopGroup = new EzyEventLoopGroup(32);
+        EventLoopGroup nettyEventLoopGroup = new EzyNettyEventLoopGroup(32);
         new Thread(() -> {
             for (int i = 0; i < clientCount(); i++) {
+                EzyClientConfig.Builder configBuilder = clientConfigFactory
+                    .newConfigBuilder(i + 1);
+                decorateConfigBuilder(configBuilder);
                 EzyClient client = newClient(
-                    clientConfig.get(i),
+                    configBuilder.build(),
                     eventLoopGroup,
                     nettyEventLoopGroup
                 );
@@ -63,6 +68,10 @@ public abstract class SocketStressTest {
         };
         mainEventsLoop.start(5);
     }
+
+    protected void decorateConfigBuilder(
+        EzyClientConfig.Builder configBuilder
+    ) {}
 
     protected abstract int clientCount();
 
