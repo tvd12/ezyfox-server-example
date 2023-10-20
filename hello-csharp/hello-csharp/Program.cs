@@ -12,6 +12,7 @@ using com.tvd12.ezyfoxserver.client.factory;
 
 using com.tvd12.ezyfoxserver.client.logger;
 using com.tvd12.ezyfoxserver.client.socket;
+using com.tvd12.ezyfoxserver.client.concurrent;
 
 namespace hello_csharp
 {
@@ -59,7 +60,8 @@ namespace hello_csharp
                 .build();
             EzyClients clients = EzyClients.getInstance();
             //EzyClient client = clients.newDefaultClient(clientConfig);
-            EzyClient client = new EzyUTClient(clientConfig);
+            EzyEventLoopGroup eventLoopGroup = new EzyEventLoopGroup(3);
+            EzyClient client = new EzyUTClient(clientConfig, eventLoopGroup);
             clients.addClient(client);
             EzySetup setup = client.setup();
             setup.addEventHandler(EzyEventType.CONNECTION_SUCCESS, new EzyConnectionSuccessHandler());

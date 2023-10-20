@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -3074,7 +3074,6 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 					"EZY_DEBUG=1",
-					"SSL_ENABLE=1",
 				);
 				INFOPLIST_FILE = src/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3104,7 +3103,6 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 					"EZY_DEBUG=1",
-					"SSL_ENABLE=1",
 				);
 				INFOPLIST_FILE = src/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

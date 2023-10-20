@@ -20,7 +20,7 @@ public class SocketProxy {
         let config = EzyClientConfig()
             .setClientName(clientName: ZONE_NAME)
             .setZoneName(zoneName: ZONE_NAME)
-            .setEnableSSL()
+            .setEnableSSL(enableSSL: false )
             .setSslType(sslType: EzySslType.CERTIFICATION)
             .setEnableDebug()
         _ = config.ping

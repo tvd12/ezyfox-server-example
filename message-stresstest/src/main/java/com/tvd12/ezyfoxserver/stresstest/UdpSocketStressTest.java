@@ -16,7 +16,7 @@ public class UdpSocketStressTest extends SocketStressTest {
 
     @Override
     protected int clientCount() {
-        return 1;
+        return 300;
     }
 
     @Override
