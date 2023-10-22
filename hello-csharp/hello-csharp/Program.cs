@@ -49,6 +49,7 @@ namespace hello_csharp
             new DateTimeExample().Run();
             new MsgPackExample().Run();
             new SupportExample().Run();
+            new FreeMmoTest().Run();
 
             EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
 
@@ -213,5 +214,4 @@ namespace hello_csharp
         }
 
     }
-
 }
