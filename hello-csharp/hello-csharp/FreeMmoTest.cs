@@ -19,11 +19,12 @@ namespace hello_csharp
             EzyClientConfig config = EzyClientConfig.builder()
                 .zoneName("free-game-server")
                 .enableDebug()
+                .enableSSL(true)
                 .build();
             EzyClient client = new EzyUTClient(config);
             setupClient(client);
             EzyClients.getInstance().addClient(client);
-            client.connect("127.0.0.1", 3005);
+            client.connect("178.63.237.228", 3005);
         }
 
         public void setupClient(EzyClient client)

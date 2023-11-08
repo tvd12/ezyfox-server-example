@@ -44,18 +44,21 @@ namespace hello_csharp
         {
             Thread.CurrentThread.Name = "main";
 
+            new RsaExample().Run();
+            new RsaExampleCloneJava().Run();
+            new RsaDecryptExample().Run();
             new BindingExample().Run();
             new EntityExample().Run();
             new DateTimeExample().Run();
             new MsgPackExample().Run();
             new SupportExample().Run();
-            new FreeMmoTest().Run();
+            //new FreeMmoTest().Run();
 
             EzyLoggerFactory.setLoggerLevel(EzyLoggerLevel.DEBUG);
 
             EzyClientConfig clientConfig = EzyClientConfig
                 .builder()
-                .enableSSL(false)
+                //.enableSSL(true)
                 .clientName("freetanks")
                 .zoneName("example")
                 .build();
