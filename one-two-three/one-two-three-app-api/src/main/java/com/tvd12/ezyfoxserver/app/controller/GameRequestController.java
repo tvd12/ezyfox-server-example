@@ -17,6 +17,7 @@ import com.tvd12.ezyfoxserver.entity.EzyUser;
 import com.tvd12.ezyfoxserver.support.factory.EzyResponseFactory;
 import com.tvd12.gamebox.constant.IRoomStatus;
 import com.tvd12.gamebox.constant.RoomStatus;
+import com.tvd12.gamebox.entity.LocatedRoom;
 import com.tvd12.gamebox.manager.PlayerManager;
 import lombok.AllArgsConstructor;
 
@@ -65,7 +66,6 @@ public class GameRequestController extends EzyLoggable {
             .usernames(playerNames)
             .user(user, true)
             .execute();
-
         if (!roomPlayerManager.available()) {
             responseFactory.newObjectResponse()
                 .command(Commands.GAME_STARTED)
