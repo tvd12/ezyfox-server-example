@@ -15,7 +15,7 @@
     <url>https://youngmonkeys.org/</url>
 
     <properties>
-        <ezy.netty.client.version>1.2.2</ezy.netty.client.version>
+        <ezy.netty.client.version>1.2.3</ezy.netty.client.version>
     </properties>
 
     <dependencies>

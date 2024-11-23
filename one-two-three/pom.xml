@@ -22,10 +22,10 @@
         <directory.apps>apps</directory.apps>
         <directory.entries>entries</directory.entries>
         <directory.common>common</directory.common>
-        <ezy.version>1.2.8.1</ezy.version>
-        <ezy.boot.version>1.1.0</ezy.boot.version>
-        <ezy.client.version>1.2.5</ezy.client.version>
-        <gamebox.version>1.2.2</gamebox.version>
+        <ezy.version>1.2.9</ezy.version>
+        <ezy.boot.version>1.1.1</ezy.boot.version>
+        <ezy.client.version>1.2.7</ezy.client.version>
+        <gamebox.version>1.2.4</gamebox.version>
     </properties>
 
     <dependencies>
