@@ -11,6 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Confluent.Kafka" Version="1.7.0" />
-    <PackageReference Include="MessagePack" Version="2.3.75" />
+    <PackageReference Include="MessagePack" Version="2.5.187" />
   </ItemGroup>
 </Project>
