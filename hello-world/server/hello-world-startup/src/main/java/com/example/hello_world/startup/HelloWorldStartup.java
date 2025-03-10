@@ -5,6 +5,7 @@ import com.example.hello_world.AppEntryLoader;
 import com.example.hello_world.plugin.PluginEntry;
 import com.example.hello_world.plugin.PluginEntryLoader;
 import com.tvd12.ezyfoxserver.constant.EzyEventType;
+import com.tvd12.ezyfoxserver.constant.EzyMaxRequestPerSecondAction;
 import com.tvd12.ezyfoxserver.constant.SslType;
 import com.tvd12.ezyfoxserver.embedded.EzyEmbeddedServer;
 import com.tvd12.ezyfoxserver.ext.EzyAppEntry;
@@ -45,6 +46,12 @@ public class HelloWorldStartup {
         EzySimpleSessionManagementSetting sessionManagementSetting = new EzySessionManagementSettingBuilder()
             .sessionMaxIdleTimeInSecond(15)
             .sessionMaxWaitingTimeInSecond(15)
+            .sessionMaxRequestPerSecond(
+                new EzySessionManagementSettingBuilder.EzyMaxRequestPerSecondBuilder()
+                    .value(300)
+                    .action(EzyMaxRequestPerSecondAction.DROP_REQUEST)
+                    .build()
+            )
             .build();
         sessionManagementSetting.init();
 
