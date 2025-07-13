@@ -1,6 +1,10 @@
 
 # ezyfox-sever-spring-example
 
+# Note
+
+For java 17+ please add `--add-opens java.base/java.lang=ALL-UNNAMED` to the vmoptions
+
 # Require
 
 1. Java 8 or higher
